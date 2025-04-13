@@ -91,7 +91,7 @@ body {
   .btn {
     display: inline-block;
     padding: 10px 40px;
-    background-color: #e1b808;
+    background-color: #ffc926;
     color: #333;
     border-radius: 25px;
     text-decoration: none;
@@ -133,11 +133,14 @@ body {
   
   .section-link {
     display: block;
-    background-color: #e1b808;
+    background-color: #ffc926;
     height: 30px;
     border-radius: 15px;
     margin: 0 auto;
-    width: 90%;
+    width: 20%;
+    text-decoration: none;
+    color: #5f5143;
+    
   }
   
   /* Responsive design for mobile */
