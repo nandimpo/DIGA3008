@@ -3,13 +3,13 @@ body {
     margin: 0;
     padding: 0;
     font-family: sans-serif;
-    background-color: #5e564a;
+    background-color: #5f5143;
     color: white;
   }
   
   /* Navigation styling */
   nav {
-    background-color: #635c52;
+    background-color: #5f5143;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -40,7 +40,7 @@ body {
   }
   
   nav ul li a:hover {
-    color: #ffc926;
+    color: #e1b808;
   }
   
   .linkedin-icon {
@@ -73,7 +73,7 @@ body {
   
   .hero h1 {
     font-size: 4.5rem;
-    color: #ffc926; /* Bright yellow color */
+    color: #e1b808; /* Bright yellow color */
     margin-bottom: 15px;
     font-weight: bold;
     letter-spacing: 2px;
@@ -91,7 +91,7 @@ body {
   .btn {
     display: inline-block;
     padding: 10px 40px;
-    background-color: #ffc926;
+    background-color: #e1b808;
     color: #333;
     border-radius: 25px;
     text-decoration: none;
@@ -133,7 +133,7 @@ body {
   
   .section-link {
     display: block;
-    background-color: #ffc926;
+    background-color: #e1b808;
     height: 30px;
     border-radius: 15px;
     margin: 0 auto;
