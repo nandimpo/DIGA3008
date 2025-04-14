@@ -1,272 +1,272 @@
 /* Base styles */
 :root {
-    --background-color: #f5f1e6;
-    --text-color: #333;
-    --accent-color: #e6c619;
-    --border-color: #e38d27;
-    --section-background: #f8f5ee;
-  }
-  
-  body {
-    font-family: Arial, sans-serif;
-    background-color: var(--background-color);
-    margin: 0;
-    padding: 0;
-    color: var(--text-color);
-  }
-  
-  /* Navigation */
-  nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 30px;
-    position: relative;
-  }
-  
-  nav .logo {
-    font-size: 24px;
-    font-weight: bold;
-  }
-  
-  nav ul {
-    display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-  
-  nav ul li {
-    margin: 0 10px;
-  }
-  
-  nav ul li a {
-    text-decoration: none;
-    color: var(--text-color);
-    font-size: 16px;
-    transition: color 0.3s;
-  }
-  
-  nav ul li a:hover {
-    color: var(--accent-color);
-  }
-  
-  .linkedin-icon {
-    color: #0077b5;
-  }
-  
-  #check {
-    display: none;
-  }
-  
-  .burger-button {
-    display: none;
-    cursor: pointer;
-    font-size: 24px;
-  }
-  
-  /* Main header */
-  h2 {
-    text-align: center;
-    margin: 30px 0 20px;
-    font-size: 1.8rem;
-  }
-  
-  p {
-    text-align: center;
-    max-width: 800px;
-    margin: 0 auto 20px;
-    line-height: 1.6;
-    padding: 0 20px;
-  }
-  
-  /* Main navigation buttons */
-  .main-nav {
-    display: flex;
-    justify-content: center;
-    margin: 30px auto;
-    max-width: 800px;
-  }
-  
-  .main-nav a {
-    background-color: var(--accent-color);
-    color: #333;
-    text-decoration: none;
-    padding: 12px 20px;
-    margin: 0 5px;
-    border-radius: 30px;
-    font-weight: bold;
-    text-align: center;
-    transition: background-color 0.3s;
-  }
-  
-  .main-nav a.wide {
-    flex-grow: 2;
-  }
-  
-  .main-nav a:hover {
-    background-color: #d4b616;
-  }
-  
-  /* Design header */
-  .design-header {
-    text-align: center;
-    margin: 50px 0 30px;
-  }
-  
-  .design-header h1 {
-    font-size: 3.5rem;
-    margin: 0;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-  }
-  
-  /* Design grid layout */
+  --background-color: #f5f1e6;
+  --text-color: #333;
+  --accent-color: #e6c619;
+  --border-color: #e38d27;
+  --section-background: #f8f5ee;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--background-color);
+  margin: 0;
+  padding: 0;
+  color: var(--text-color);
+}
+
+/* Navigation */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  position: relative;
+}
+
+nav .logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  margin: 0 10px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: var(--accent-color);
+}
+
+.linkedin-icon {
+  color: #0077b5;
+}
+
+#check {
+  display: none;
+}
+
+.burger-button {
+  display: none;
+  cursor: pointer;
+  font-size: 24px;
+}
+
+/* Main header */
+h2 {
+  text-align: center;
+  margin: 30px 0 20px;
+  font-size: 1.8rem;
+}
+
+p {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 20px;
+  line-height: 1.6;
+  padding: 0 20px;
+}
+
+/* Main navigation buttons */
+.main-nav {
+  display: flex;
+  justify-content: center;
+  margin: 30px auto;
+  max-width: 800px;
+}
+
+.main-nav a {
+  background-color: var(--accent-color);
+  color: #333;
+  text-decoration: none;
+  padding: 12px 20px;
+  margin: 0 5px;
+  border-radius: 30px;
+  font-weight: bold;
+  text-align: center;
+  transition: background-color 0.3s;
+}
+
+.main-nav a.wide {
+  flex-grow: 2;
+}
+
+.main-nav a:hover {
+  background-color: #d4b616;
+}
+
+/* Design header */
+.design-header {
+  text-align: center;
+  margin: 50px 0 30px;
+}
+
+.design-header h1 {
+  font-size: 3.5rem;
+  margin: 0;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+/* Design grid layout */
+.design-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.design-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 15px;
+}
+
+.design-box {
+  border: 2px solid var(--border-color);
+  border-radius: 10px;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--section-background);
+  text-decoration: none;
+  color: var(--text-color);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.design-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.featured-work {
+  background-color: var(--section-background);
+  padding: 20px;
+  border-radius: 10px;
+  height: 100%;
+}
+
+.featured-work h3 {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 30px;
+  font-size: 1.5rem;
+}
+
+.work-line {
+  height: 2px;
+  background-color: var(--text-color);
+  margin: 20px 0;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Links styling */
+a {
+  color: var(--text-color);
+  text-decoration: underline;
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: var(--border-color);
+}
+
+/* Revised link list for design sections */
+.design-links {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 15px;
+  max-width: 800px;
+  margin: 30px auto;
+}
+
+.design-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 150px;
+  border: 2px solid var(--border-color);
+  border-radius: 10px;
+  text-decoration: none;
+  color: var(--text-color);
+  background-color: var(--section-background);
+  transition: transform 0.3s, box-shadow 0.3s;
+  padding: 15px;
+}
+
+.design-links a:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  color: var(--border-color);
+}
+
+/* Responsive styles */
+@media (max-width: 900px) {
   .design-container {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-  }
-  
-  .design-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    gap: 15px;
-  }
-  
-  .design-box {
-    border: 2px solid var(--border-color);
-    border-radius: 10px;
-    height: 150px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--section-background);
-    text-decoration: none;
-    color: var(--text-color);
-    transition: transform 0.3s, box-shadow 0.3s;
-  }
-  
-  .design-box:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    grid-template-columns: 1fr;
   }
   
   .featured-work {
-    background-color: var(--section-background);
-    padding: 20px;
-    border-radius: 10px;
-    height: 100%;
+    margin-top: 20px;
   }
   
-  .featured-work h3 {
+  .main-nav {
+    flex-direction: column;
+  }
+  
+  .main-nav a {
+    margin: 5px 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .design-grid, .design-links {
+    grid-template-columns: 1fr;
+  }
+  
+  .burger-button {
+    display: block;
+  }
+  
+  nav ul {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--background-color);
+    top: 80px;
+    left: -100%;
     text-align: center;
-    margin-top: 0;
-    margin-bottom: 30px;
-    font-size: 1.5rem;
+    transition: all 0.5s;
+    flex-direction: column;
+    z-index: 100;
   }
   
-  .work-line {
-    height: 2px;
-    background-color: var(--text-color);
+  nav ul li {
     margin: 20px 0;
-    width: 70%;
-    margin-left: auto;
-    margin-right: auto;
   }
   
-  /* Links styling */
-  a {
-    color: var(--text-color);
-    text-decoration: underline;
-    transition: color 0.3s;
+  #check:checked ~ ul {
+    left: 0;
   }
-  
-  a:hover {
-    color: var(--border-color);
-  }
-  
-  /* Revised link list for design sections */
-  .design-links {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    gap: 15px;
-    max-width: 800px;
-    margin: 30px auto;
-  }
-  
-  .design-links a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    height: 150px;
-    border: 2px solid var(--border-color);
-    border-radius: 10px;
-    text-decoration: none;
-    color: var(--text-color);
-    background-color: var(--section-background);
-    transition: transform 0.3s, box-shadow 0.3s;
-    padding: 15px;
-  }
-  
-  .design-links a:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    color: var(--border-color);
-  }
-  
-  /* Responsive styles */
-  @media (max-width: 900px) {
-    .design-container {
-      grid-template-columns: 1fr;
-    }
-    
-    .featured-work {
-      margin-top: 20px;
-    }
-    
-    .main-nav {
-      flex-direction: column;
-    }
-    
-    .main-nav a {
-      margin: 5px 0;
-    }
-  }
-  
-  @media (max-width: 600px) {
-    .design-grid, .design-links {
-      grid-template-columns: 1fr;
-    }
-    
-    .burger-button {
-      display: block;
-    }
-    
-    nav ul {
-      position: fixed;
-      width: 100%;
-      height: 100vh;
-      background-color: var(--background-color);
-      top: 80px;
-      left: -100%;
-      text-align: center;
-      transition: all 0.5s;
-      flex-direction: column;
-      z-index: 100;
-    }
-    
-    nav ul li {
-      margin: 20px 0;
-    }
-    
-    #check:checked ~ ul {
-      left: 0;
-    }
-  }
+}
