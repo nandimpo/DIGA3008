@@ -15,16 +15,16 @@
 /* Base styles */
 :root {
   --background-color: #5F5143;
-  --text-color: #333;
+  --text-color:#5F5143;
   --heading-color: #EBE4D2;
   --card-heading-color: #D17609;
-  --accent-color: #e6c619;
-  --border-color: #e38d27;
-  --section-background: #f8f5ee;
+  --accent-color:#E1B808;
+  --border-color: #D17609;
+  --section-background:#EBE4D2;
 }
 
 body {
-  font-family: 'body font', Arial, sans-serif;
+  font-family: 'body font', Montserrat , sans-serif;
   background-color: var(--background-color);
   margin: 0;
   padding: 0;
@@ -33,7 +33,7 @@ body {
 
 /* Heading styles */
 h1, h2, h3, .logo {
-  font-family: 'heading font', Arial, sans-serif;
+  font-family: 'heading font',Grown, sans-serif;
   color: var(--heading-color);
 }
 
@@ -128,7 +128,7 @@ p {
 }
 
 .main-nav a:hover {
-  background-color: #d4b616;
+  background-color: #E1B808;
 }
 
 /* Design header */
