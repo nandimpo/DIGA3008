@@ -141,13 +141,13 @@
   }
   
   .read-more-btn:hover {
-    background-color: #cca300;
+    background-color:#E1B808;
   }
   
   /* Dropdown Content */
   .dropdown-content {
     display: none;
-    background-color: #f9f9f9;
+    background-color: #EBE4D2;
     padding: 15px;
     margin: 0 20px 20px;
     border-radius: 8px;
