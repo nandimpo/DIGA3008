@@ -3,20 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Nandi's website</title>
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="../CSS/Essays.css">
+    <script src="https://kit.fontawesome.com/89fd46d92d.js" crossorigin="anonymous"></script>
 </head>
-
-<nav class="menu">
-    
-    <a href="../index.html">Home</a>
-    <a href="../Blogs/BlogsHome.html">Blogs</a>
-    <a href="../Design/DesignHome.html">Design</a>
-    <a href="../Portfolio/Portfoliohome.html">Portfolio</a>
-    <a href="../Scripts/Scriptshome.html">Scripts</a>
-
-</nav>
 <body>
+    <nav>
+        <input type="checkbox" id="check" />
+        <label for="check" class="burger-button">
+            <i class="fa-solid fa-bars"></i>
+        </label>
+        <label class="logo">NM</label>
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../Blogs/BlogsHome.html">Blogs</a></li>
+            <li><a href="../Design/DesignHome.html">Design</a></li>
+            <li><a href="../Scripts/Scriptshome.html">Scripts</a></li>
+            <li><a href="../Portfolio/Portfoliohome.html">Portfolio</a></li>
+            <li><a href="#" class="linkedin-icon"><i class="fa-brands fa-linkedin"></i></a></li>
+        </ul>
+    </nav>
     
-    <h2> Welcome to my essays!</h2>
+    <div class="essays-container">
+        <h1 class="essays-title">Essays</h1>
+        
+        <ul class="categories">
+            <li><a href="Design.html">Design</a></li>
+            <li><a href="Animation.html">Animation</a></li>
+            <li><a href="Writing.html">Writing</a></li>
+        </ul>
+        
+        <div class="essay-section">
+            <div class="essay-items">
+                <div class="essay-item" id="essay1-item">
+                    <h2 class="essay-title">Essay 1</h2>
+                    <a href="#essay1" class="view-all">View all</a>
+                    <div class="arrow"></div>
+                </div>
+                
+                <div class="essay-item" id="essay2-item">
+                    <h2 class="essay-title">Essay 2</h2>
+                    <a href="#essay2" class="view-all">View all</a>
+                    <div class="arrow"></div>
+                </div>
+            </div>
+            
+            <div class="preview-container">
+                <div id="essay1" class="essay-preview">
+                    <p class="coming-soon">coming soon</p>
+                </div>
+                
+                <div id="essay2" class="essay-preview">
+                    <p class="coming-soon">coming soon</p>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
