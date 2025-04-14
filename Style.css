@@ -85,7 +85,7 @@ nav ul li a:hover {
   font-weight: bold;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
   position: relative;
-  order: -1; /* This ensures the heading appears before the image */
+  order: -1; 
 }
 
 .hero img {
