@@ -25,14 +25,52 @@
         </ul>
     </nav>
   
-    
+    <div class="script-sections">
+        <div id="css-section" class="script-section">
+            <h2>CSS</h2>
+            <p class="description">Cascading Style Sheets is a style sheet language used for specifying the presentation and styling of a document written in a markup language such as HTML or XML</p>
+            <button class="read-more-btn">read more</button>
+            <div class="dropdown-content">
+                <p>Coming soon! More detailed CSS information will be available in the future.</p>
+            </div>
+        </div>
+        
+        <div id="html-section" class="script-section">
+            <h2>HTML</h2>
+            <p class="description">Hypertext Markup Language is the standard markup language for documents designed to be displayed in a web browser. It defines the content and structure of web content.</p>
+            <button class="read-more-btn">read more</button>
+            <div class="dropdown-content">
+                <p>Coming soon! More detailed HTML information will be available in the future.</p>
+            </div>
+        </div>
+        
+        <div id="java-section" class="script-section">
+            <h2>JAVA</h2>
+            <p class="description">Java is a high-level, general-purpose, memory-safe, object-oriented programming language.</p>
+            <button class="read-more-btn">read more</button>
+            <div class="dropdown-content">
+                <p>Coming soon! More detailed Java information will be available in the future.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Add event listeners to the "read more" buttons
+        document.addEventListener('DOMContentLoaded', function() {
+            const readMoreButtons = document.querySelectorAll('.read-more-btn');
+            
+            readMoreButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Toggle the dropdown content
+                    const dropdownContent = this.nextElementSibling;
+                    if (dropdownContent.style.display === "block") {
+                        dropdownContent.style.display = "none";
+                    } else {
+                        dropdownContent.style.display = "block";
+                    }
+                });
+            });
+        });
+    </script>
 </body>
-
-<h2> CSS</h2>
-<p> Read more</p>
-<h2> HTML</h2>
-<p> Read more</p>
-<h2> Javs</h2>
-<p> Read more- Coming soon </p>
-
 </html>
