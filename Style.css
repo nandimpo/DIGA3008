@@ -1,4 +1,4 @@
-/* Font declarations */
+/* Font */
 @font-face {
   font-family: 'body font';
   src: url(Montserrat-SemiBold);
@@ -156,12 +156,12 @@ nav ul li a:hover {
   border-radius: 15px;
   margin-bottom: 15px;
   font-size: 0.9rem;
-  height: 40px; /* Fixed height for all description boxes */
-  width: 80%; /* Consistent width */
+  height: 40px; 
+  width: 80%; 
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: hidden; /* Prevent text overflow */
+  overflow: hidden; 
   margin: 0 auto 15px;
 }
 

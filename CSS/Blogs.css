@@ -22,7 +22,7 @@ body {
     color: #333;
     line-height: 1.6;
     font-family: 'body font', 'Montserrat', sans-serif;
-    padding-top: 80px; /* Add padding to account for fixed navbar */
+    padding-top: 80px;
 }
 
 /* Navigation Styles */
@@ -178,12 +178,12 @@ img {
     max-width: 100%;
     height: auto;
     border-radius: 5px;
-    box-shadow: 0 0 15px 5px rgba(24, 112, 64, 0.7); /* #187040 Green glow effect */
+    box-shadow: 0 0 15px 5px rgba(24, 112, 64, 0.7); 
     transition: box-shadow 0.3s ease;
 }
 
 img:hover {
-    box-shadow: 0 0 20px 8px rgba(24, 112, 64, 0.9); /* Enhanced #187040 green glow on hover */
+    box-shadow: 0 0 20px 8px rgba(24, 112, 64, 0.9); 
 }
 
 /* LinkedIn Icon */

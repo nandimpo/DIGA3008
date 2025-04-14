@@ -1,4 +1,4 @@
-/* Font face definitions */
+/* Font face */
 @font-face {
   font-family: 'body font';
   src: url(Montserrat-SemiBold);
@@ -12,13 +12,13 @@
 /* Base styles */
 :root {
   --background-color: #5f5143;
-  --text-color: #EBE4D2;  /* Changed to #EBE4D2 for better visibility */
+  --text-color: #EBE4D2;  
   --accent-color: #D17609;
   --border-color: #ccc;
 }
 
 body {
-  font-family: 'body font', sans-serif;  /* Added the custom font */
+  font-family: 'body font', sans-serif; 
   background-color: var(--background-color);
   margin: 0;
   padding: 0;
