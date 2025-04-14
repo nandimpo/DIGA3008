@@ -5,30 +5,69 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nandi's website</title>
     <link rel="stylesheet" href="normalize.css">
-    <link rel="stylesheet" href="../CSS/Scripts(Home).css">
+    <link rel="stylesheet" href="../CSS/Design(home).css">
     <script src="https://kit.fontawesome.com/89fd46d92d.js" crossorigin="anonymous"></script>
 </head>
-<nav class="menu">
-    
-    <a href="../index.html">Home</a>
-    <a href="../Blogs/BlogsHome.html">Blogs</a>
-    <a href="../Design/DesignHome.html">Design</a>
-    <a href="../Scripts/Scriptshome.html">Scripts</a>
-    <a href="../Portfolio/Portfoliohome.html">Portfolio</a></li>
-</nav>
 <body>
-    
-    <h2> Get some insight into my website design process</h2>
-    <p>The goal of my website is for users to understand who I am as a designer. I would also like my website to be user friendly. There it will be clear, understandable and accessible.I would like my website to be warm , welcoming and inviting
-    </p>
+    <nav>
+        <input type="checkbox" id="check" />
+        <label for="check" class="burger-button">
+            <i class="fa-solid fa-bars"></i>
+        </label>
+        <label for="logo" class="logo">NM</label>
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../Blogs/BlogsHome.html">Blogs</a></li>
+            <li><a href="../Portfolio/Portfoliohome.html">Portfolio</a></li>
+            <li><a href="../Scripts/Scriptshome.html">Scripts</a></li>
+            <li><a href="#" class="active">Design</a></li>
+            <li><a href="#" class="linkedin-icon"><i class="fa-brands fa-linkedin"></i></a></li>
+        </ul>
+    </nav>
 
-    <p> My design process began with some <a href="Wireframes.html">wireframes</a> and then I conducted some<a href="Designresearch.html"> research.</a></p>
-    
-    
-    <h3> <a href="Wireframes.html">Wireframes</a> </h3>
+    <div class="design-header">
+        <h1>Design</h1>
+        <h2>Get some insight into my website design process</h2>
+        <p>The goal of my website is for users to understand who I am as a designer. I would also like my website to be user friendly. There it will be clear, understandable and accessible. I would like my website to be warm, welcoming and inviting.</p>
+    </div>
 
-    <h3> <a href="Designresearch.html"> Design research.</a> </h3>
+    <div class="main-nav">
+        <a href="../Blogs/BlogsHome.html">Blogs</a>
+        <a href="../Portfolio/Portfoliohome.html" class="wide">Portfolio</a>
+        <a href="../Scripts/Scriptshome.html">Scripts</a>
+    </div>
 
+    <div class="design-container">
+        <div class="design-grid">
+            <a href="Wireframes.html" class="design-box">
+                <h3>Wireframes</h3>
+            </a>
+            <a href="Designresearch.html" class="design-box">
+                <h3>・</h3>
+            </a>
+            <a href="DesignInspiration.html" class="design-box">
+                <h3>・</h3>
+            </a>
+            <a href="Style Guides.html" class="design-box">
+                <h3>Design Process</h3>
+            </a>
+            <a href="Style process documentation.html" class="design-box">
+                <h3>・</h3>
+            </a>
+            <a href="Documentation of your IxD process.html" class="design-box">
+                <h3>・</h3>
+            </a>
+        </div>
+
+        <div class="featured-work">
+            <h3>Featured Work</h3>
+            <div class="work-line"></div>
+            <div class="work-line"></div>
+            <div class="work-line"></div>
+        </div>
+    </div>
+
+   
 
 </body>
 </html>
