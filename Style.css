@@ -17,7 +17,7 @@ nav {
 }
 
 .logo {
-  color: white;
+  color: #EBE4D2;
   font-weight: bold;
   font-size: 1.8rem;
 }
@@ -34,7 +34,7 @@ nav ul li {
 }
 
 nav ul li a {
-  color: white;
+  color: #EBE4D2;
   text-decoration: none;
   transition: 0.3s;
   font-size: 1.2rem;
@@ -59,7 +59,7 @@ nav ul li a:hover {
 
 .burger-button {
   font-size: 24px;
-  color: white;
+  color:#EBE4D2;
   cursor: pointer;
   display: none;
 }
@@ -76,7 +76,7 @@ nav ul li a:hover {
 
 .hero h1 {
   font-size: 3.5rem;
-  color: #ffc107;
+  color: #E1B808;
   margin-bottom: 15px;
   font-weight: bold;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
@@ -100,7 +100,7 @@ nav ul li a:hover {
   padding: 15px;
   border-radius: 5px;
   display: inline-block;
-  color: white;
+  color: #EBE4D2;
   position: absolute;
   left: 50%;
   top: 65%; /* Moved down from 50% to 65% to position it more in the center of the image */
@@ -129,14 +129,14 @@ nav ul li a:hover {
 
 .section h2 {
   font-size: 1.4rem;
-  color: white;
+  color:#EBE4D2;
   margin-bottom: 15px;
   font-weight: normal;
 }
 
 .description {
   display: inline-block;
-  background-color: white;
+  background-color: #EBE4D2;
   color: #333;
   padding: 5px 10px;
   border-radius: 15px;
@@ -146,13 +146,13 @@ nav ul li a:hover {
 
 .section-link {
   display: block;
-  background-color: #ffc107;
+  background-color: #E1B808;
   padding: 10px 0;
   border-radius: 25px;
   margin: 0 auto;
-  width: 60%; /* Reduced width from 80% to 60% */
+  width: 40%; /* Reduced width from 80% to 60% */
   text-decoration: none;
-  color: #333;
+  color:#5F5143;
   font-size: 0.9rem;
   font-weight: bold;
 }
