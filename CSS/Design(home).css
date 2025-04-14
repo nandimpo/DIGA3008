@@ -1,18 +1,40 @@
+.design-box h3 {
+  color: var(--card-heading-color);
+  font-weight: bold;
+}/* Font Imports */
+@font-face {
+  font-family: 'heading font';
+  src: url(Grown.ttf);
+}
+
+@font-face {
+  font-family: 'body font';
+  src: url(Montserrat-SemiBold);
+}
+
 /* Base styles */
 :root {
-  --background-color: #f5f1e6;
+  --background-color: #5F5143;
   --text-color: #333;
+  --heading-color: #EBE4D2;
+  --card-heading-color: #D17609;
   --accent-color: #e6c619;
   --border-color: #e38d27;
   --section-background: #f8f5ee;
 }
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'body font', Arial, sans-serif;
   background-color: var(--background-color);
   margin: 0;
   padding: 0;
   color: var(--text-color);
+}
+
+/* Heading styles */
+h1, h2, h3, .logo {
+  font-family: 'heading font', Arial, sans-serif;
+  color: var(--heading-color);
 }
 
 /* Navigation */
@@ -42,9 +64,10 @@ nav ul li {
 
 nav ul li a {
   text-decoration: none;
-  color: var(--text-color);
+  color: var(--heading-color);
   font-size: 16px;
   transition: color 0.3s;
+  font-family: 'heading font', Arial, sans-serif;
 }
 
 nav ul li a:hover {
@@ -168,6 +191,7 @@ p {
   margin-top: 0;
   margin-bottom: 30px;
   font-size: 1.5rem;
+  color: var(--card-heading-color);
 }
 
 .work-line {
@@ -219,6 +243,12 @@ a:hover {
   transform: translateY(-5px);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   color: var(--border-color);
+}
+
+/* Fix for featured work list */
+.featured-work li {
+  text-align: left;
+  margin-bottom: 10px;
 }
 
 /* Responsive styles */
