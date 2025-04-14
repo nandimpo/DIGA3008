@@ -18,7 +18,7 @@
 
 /* Main Content Adjustments for Fixed Nav */
 body {
-    background-color: #f5f5f5;
+    background-color: #EBE4D2;
     color: #333;
     line-height: 1.6;
     font-family: 'body font', 'Montserrat', sans-serif;
@@ -27,7 +27,7 @@ body {
 
 /* Navigation Styles */
 nav {
-    background-color: #6b5d4f;
+    background-color: #5F5143;
     width: 100%;
     height: 80px;
     padding: 0 50px;
@@ -40,12 +40,6 @@ nav {
     justify-content: space-between;
 }
 
-nav .logo {
-    font-family: 'heading font', 'Georgia', serif;
-    color: #fff;
-    font-size: 28px;
-    font-weight: bold;
-}
 
 nav ul {
     display: flex;
@@ -58,7 +52,7 @@ nav ul li {
 }
 
 nav ul li a {
-    font-family: 'heading font', 'Georgia', serif;
+    font-family: 'heading font', 'Grown.ttf', serif;
     color: #fff;
     text-decoration: none;
     font-size: 18px;
@@ -101,18 +95,18 @@ article {
 }
 
 h2.p-name {
-    font-family: 'heading font', 'Georgia', serif;
-    color: #6b5d4f;
+    font-family: 'heading font', 'Grown.ttf', serif;
+    color:  #5F5143;
     font-size: 36px;
     margin-bottom: 15px;
     text-align: center;
     padding: 10px 0;
-    border-bottom: 2px solid #6b5d4f;
+    border-bottom: 2px solid  #5F5143;
 }
 
 h3 {
-    font-family: 'heading font', 'Georgia', serif;
-    color: #6b5d4f;
+    font-family: 'heading font', 'Grown/ttf', serif;
+    color: #5F5143;
     margin: 25px 0 15px;
     font-size: 24px;
 }
@@ -138,7 +132,7 @@ li {
 
 /* Button Styles */
 button {
-    background-color: #6b5d4f;
+    background-color: #5F5143;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -149,7 +143,7 @@ button {
 }
 
 button:hover {
-    background-color: #857565;
+    background-color: #D17609;
 }
 
 button a {
@@ -159,14 +153,14 @@ button a {
 
 /* Footer Navigation */
 .menu {
-    background-color: #6b5d4f;
+    background-color:  #5F5143;
     padding: 15px;
     text-align: center;
     width: 100%;
 }
 
 .menu a {
-    font-family: 'heading font', 'Georgia', serif;
+    font-family: 'heading font', 'Grown.ttf', serif;
     color: white;
     text-decoration: none;
     margin: 0 15px;
@@ -176,7 +170,7 @@ button a {
 }
 
 .menu a:hover {
-    color: #e6d7c3;
+    color: #D17609;
 }
 
 /* Image Green Glow Effect */
@@ -243,25 +237,4 @@ img:hover {
     nav ul li a {
         font-size: 20px;
     }
-}
-
-/* Header Styles */
-header {
-    background-color: #6b5d4f;
-    color: white;
-    text-align: center;
-    padding: 60px 0;
-    margin-bottom: 30px;
-}
-
-header h1 {
-    font-family: 'heading font', 'Georgia', serif;
-    font-size: 48px;
-    margin-bottom: 15px;
-}
-
-header p {
-    font-size: 18px;
-    max-width: 600px;
-    margin: 0 auto;
 }

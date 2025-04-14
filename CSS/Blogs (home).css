@@ -13,12 +13,12 @@
 :root {
   --background-color: #5f5143;
   --text-color: #EBE4D2;  /* Changed to #EBE4D2 for better visibility */
-  --accent-color: #daa520;
+  --accent-color: #D17609;
   --border-color: #ccc;
 }
 
 body {
-  font-family: 'body font', Arial, sans-serif;  /* Added the custom font */
+  font-family: 'body font', sans-serif;  /* Added the custom font */
   background-color: var(--background-color);
   margin: 0;
   padding: 0;
@@ -179,7 +179,7 @@ h2 {
   bottom: 10px;
   left: 10px;
   background-color: var(--accent-color);
-  color: white;
+  color: #EBE4D2;
   padding: 5px 15px;
   border-radius: 20px;
   font-size: 14px;
@@ -190,7 +190,7 @@ h2 {
 }
 
 .blog-post-button:hover {
-  background-color: #c69500;
+  background-color: #E1B808;
   transform: scale(1.05);
 }
 
