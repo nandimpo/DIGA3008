@@ -9,33 +9,29 @@
 }
 
 body {
-    background-color: #e9e5dd;
+    background-color: #f5f1e6;
 }
 
 /* Navigation Bar Styling */
 nav {
-    height: 60px;
     width: 100%;
-    background-color: #fff;
-    position: fixed;
-    top: 0;
-    z-index: 999;
+    background-color: #ebe4d2 ;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 20px;
+    padding: 10px 20px;
+    color: #fff;
 }
 
 .logo {
     font-size: 24px;
     font-weight: bold;
-    color: #333;
+    color: #fff;
 }
 
 nav ul {
     display: flex;
     list-style: none;
-    margin-right: 10px;
 }
 
 nav ul li {
@@ -44,21 +40,22 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: #333;
+    color: #fff;
     font-weight: 500;
     font-size: 16px;
     transition: 0.3s;
+    padding: 5px 10px;
+    border-radius: 5px;
 }
 
 nav ul li a:hover {
-    color: #e6b800;
+    background-color: rgba(255, 255, 255, 0.2);
 }
 
 .linkedin-icon {
-    font-size: 20px;
-    background-color: #0077b5;
-    color: white;
-    padding: 5px;
+    color: #0077b5;
+    background-color: #fff;
+    padding: 5px 8px;
     border-radius: 5px;
 }
 
@@ -68,21 +65,21 @@ nav ul li a:hover {
 
 .burger-button {
     display: none;
+    cursor: pointer;
+    font-size: 24px;
+    color: #fff;
 }
 
 /* Header Section */
 .header {
     color: white;
-    min-height: px;
-    margin-top: 60px;
-    padding: 40px;
+    padding: 80px 40px 40px;
     position: relative;
     text-align: center;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
     align-items: center;
-    background: none;
+    background-color: #3a4f41;
     overflow: hidden;
 }
 
@@ -93,7 +90,8 @@ nav ul li a:hover {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    z-index: -1;
+    z-index: 0;
+    opacity: 0.7;
 }
 
 .header h1 {
@@ -104,6 +102,7 @@ nav ul li a:hover {
     position: relative;
     z-index: 2;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    letter-spacing: 5px;
 }
 
 .header p {
@@ -130,7 +129,7 @@ nav ul li a:hover {
 .nav-button {
     background-color: #e6b800;
     color: #333;
-    padding: 15px 40px;
+    padding: 12px 30px;
     border-radius: 30px;
     text-decoration: none;
     font-weight: bold;
@@ -146,7 +145,7 @@ nav ul li a:hover {
 
 /* Featured Work Section */
 .featured-work {
-    background-color: #5f5143;
+    background-color: #f5f1e6;
     padding: 60px 20px;
     text-align: center;
     position: relative;
@@ -158,11 +157,13 @@ nav ul li a:hover {
     font-weight: bold;
     margin-bottom: 20px;
     text-transform: uppercase;
+    color: #333;
 }
 
 .featured-work p {
     margin-bottom: 40px;
     font-size: 18px;
+    color: #333;
 }
 
 .work-categories {
@@ -171,7 +172,7 @@ nav ul li a:hover {
     flex-wrap: wrap;
     gap: 80px;
     position: relative;
-    margin-bottom: 60px;
+    margin-bottom: 50px;
 }
 
 .category {
@@ -187,6 +188,8 @@ nav ul li a:hover {
     font-weight: bold;
     font-size: 22px;
     transition: transform 0.3s, background-color 0.3s;
+    position: relative;
+    text-transform: uppercase;
 }
 
 .category:hover {
@@ -194,72 +197,104 @@ nav ul li a:hover {
     background-color: #cca300;
 }
 
-.explanation {
+.category::after {
+    content: '';
     position: absolute;
-    top: 50%;
+    bottom: -10px;
     left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    font-size: 16px;
-    color: #333;
-    width: 200px;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 2px;
+    background-color: #333;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.category:hover::after {
+    opacity: 1;
 }
 
 /* Media Queries for Responsiveness */
 @media (max-width: 952px) {
     nav {
-        padding: 0 30px;
+        padding: 10px 20px;
     }
     
     .logo {
-        font-size: 24px;
+        font-size: 22px;
     }
     
     nav ul li a {
         font-size: 14px;
     }
+    
+    .header h1 {
+        font-size: 60px;
+    }
 }
 
-@media (max-width: 858px) {
+@media (max-width: 768px) {
     .header h1 {
-        font-size: 56px;
+        font-size: 50px;
     }
     
     .header p {
         max-width: 100%;
     }
     
-    .header {
-        min-height: 500px;
-    }
-    
     .category {
         width: 180px;
         height: 180px;
+        font-size: 20px;
     }
     
     .work-categories {
         gap: 50px;
     }
+    
+    .nav-buttons {
+        flex-wrap: wrap;
+    }
 }
 
 @media (max-width: 480px) {
-    .header {
-        min-height: 400px;
+    .burger-button {
+        display: block;
+    }
+    
+    nav ul {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background-color: #3a4f41;
+        top: 60px;
+        left: -100%;
+        text-align: center;
+        transition: all 0.5s;
+        flex-direction: column;
+        z-index: 100;
+    }
+    
+    nav ul li {
+        margin: 20px 0;
+    }
+    
+    #check:checked ~ ul {
+        left: 0;
     }
     
     .header h1 {
-        font-size: 42px;
-    }
-    
-    .nav-buttons {
-        flex-direction: column;
-        align-items: center;
+        font-size: 40px;
     }
     
     .category {
         width: 150px;
         height: 150px;
         font-size: 18px;
+    }
+    
+    .nav-buttons {
+        flex-direction: column;
+        align-items: center;
     }
 }
