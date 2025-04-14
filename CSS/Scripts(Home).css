@@ -14,7 +14,7 @@ body {
 
 /* Navigation Bar Styling */
 nav {
-    height: 80px;
+    height: 60px;
     width: 100%;
     background-color: #fff;
     position: fixed;
@@ -23,11 +23,11 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 50px;
+    padding: 0 20px;
 }
 
 .logo {
-    font-size: 28px;
+    font-size: 24px;
     font-weight: bold;
     color: #333;
 }
@@ -35,6 +35,7 @@ nav {
 nav ul {
     display: flex;
     list-style: none;
+    margin-right: 10px;
 }
 
 nav ul li {
@@ -55,6 +56,10 @@ nav ul li a:hover {
 
 .linkedin-icon {
     font-size: 20px;
+    background-color: #0077b5;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
 }
 
 #check {
@@ -62,22 +67,33 @@ nav ul li a:hover {
 }
 
 .burger-button {
-    font-size: 24px;
-    cursor: pointer;
     display: none;
 }
 
 /* Header Section */
 .header {
-    background-color: #333;
     color: white;
-    height: 300px;
-    margin-top: 80px;
-    padding: 50px;
+    min-height: px;
+    margin-top: 60px;
+    padding: 40px;
     position: relative;
-    background-image: url('path-to-your-background-image.jpg');
-    background-size: cover;
-    background-position: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    background: none;
+    overflow: hidden;
+}
+
+.header img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
 }
 
 .header h1 {
@@ -85,31 +101,43 @@ nav ul li a:hover {
     font-weight: bold;
     text-transform: uppercase;
     margin-bottom: 20px;
+    position: relative;
+    z-index: 2;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .header p {
-    font-size: 18px;
-    max-width: 70%;
-    margin-bottom: 30px;
+    font-size: 16px;
+    max-width: 80%;
+    margin: 0 auto 30px auto;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
 /* Navigation Buttons */
 .nav-buttons {
     display: flex;
-    justify-content: flex-start;
-    gap: 20px;
+    justify-content: center;
+    gap: 30px;
     margin-top: 30px;
+    margin-bottom: 40px;
+    position: relative;
+    z-index: 2;
 }
 
 .nav-button {
     background-color: #e6b800;
     color: #333;
-    padding: 12px 30px;
-    border-radius: 25px;
+    padding: 15px 40px;
+    border-radius: 30px;
     text-decoration: none;
     font-weight: bold;
     transition: background-color 0.3s;
     display: inline-block;
+    text-align: center;
+    min-width: 120px;
 }
 
 .nav-button:hover {
@@ -118,29 +146,37 @@ nav ul li a:hover {
 
 /* Featured Work Section */
 .featured-work {
-    background-color: #e9e5dd;
-    padding: 50px;
+    background-color: #5f5143;
+    padding: 60px 20px;
     text-align: center;
+    position: relative;
+    z-index: 3;
 }
 
 .featured-work h2 {
     font-size: 36px;
     font-weight: bold;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     text-transform: uppercase;
+}
+
+.featured-work p {
+    margin-bottom: 40px;
+    font-size: 18px;
 }
 
 .work-categories {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 30px;
+    gap: 80px;
     position: relative;
+    margin-bottom: 60px;
 }
 
 .category {
-    width: 150px;
-    height: 150px;
+    width: 220px;
+    height: 220px;
     background-color: #e6b800;
     border-radius: 50%;
     display: flex;
@@ -149,6 +185,7 @@ nav ul li a:hover {
     text-decoration: none;
     color: #333;
     font-weight: bold;
+    font-size: 22px;
     transition: transform 0.3s, background-color 0.3s;
 }
 
@@ -184,37 +221,6 @@ nav ul li a:hover {
 }
 
 @media (max-width: 858px) {
-    .burger-button {
-        display: block;
-    }
-    
-    nav ul {
-        position: fixed;
-        width: 100%;
-        height: 100vh;
-        background: #333;
-        top: 80px;
-        left: -100%;
-        flex-direction: column;
-        align-items: center;
-        justify-content: flex-start;
-        padding-top: 50px;
-        transition: all 0.5s;
-    }
-    
-    nav ul li {
-        margin: 20px 0;
-    }
-    
-    nav ul li a {
-        color: white;
-        font-size: 18px;
-    }
-    
-    #check:checked ~ ul {
-        left: 0;
-    }
-    
     .header h1 {
         font-size: 56px;
     }
@@ -223,13 +229,25 @@ nav ul li a:hover {
         max-width: 100%;
     }
     
+    .header {
+        min-height: 500px;
+    }
+    
     .category {
-        width: 120px;
-        height: 120px;
+        width: 180px;
+        height: 180px;
+    }
+    
+    .work-categories {
+        gap: 50px;
     }
 }
 
 @media (max-width: 480px) {
+    .header {
+        min-height: 400px;
+    }
+    
     .header h1 {
         font-size: 42px;
     }
@@ -240,7 +258,8 @@ nav ul li a:hover {
     }
     
     .category {
-        width: 100px;
-        height: 100px;
+        width: 150px;
+        height: 150px;
+        font-size: 18px;
     }
 }
