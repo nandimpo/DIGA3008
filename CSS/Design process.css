@@ -26,7 +26,7 @@ body {
 
 /* Navigation styles */
 nav {
-    background-color: #f5f5dc; /* Light beige color as in the image */
+    background-color: #EBE4D2;
     width: 100%;
     display: flex;
     align-items: center;
@@ -64,7 +64,7 @@ nav ul li a {
 nav ul li a.active, 
 nav ul li a:hover {
     background-color: #5F5143;
-    color: white;
+    color:#EBE4D2;
     border-radius: 3px;
 }
 
@@ -114,7 +114,7 @@ h2, .wireframes-heading {
 }
 
 .text-box {
-    background-color: white;
+    background-color:#EBE4D2;
     width: 80%;
     max-width: 500px;
     height: 180px;
@@ -161,14 +161,14 @@ img {
     margin: 15px auto;
     max-width: 100%;
     height: auto;
-    border: 3px solid #f5f5dc;
+    border: 3px solid #EBE4D2;
     box-shadow: 0 0 15px 2px #187040;
 }
 
 /* Button styles */
 button {
     background-color: #5F5143;
-    color: white;
+    color:#EBE4D2;
     border: 2px solid #f5f5dc;
     padding: 10px 20px;
     border-radius: 5px;
@@ -185,7 +185,7 @@ button a {
 
 /* Footer navigation */
 .menu {
-    background-color: #f5f5dc;
+    background-color:#EBE4D2;
     padding: 15px 0;
     display: flex;
     justify-content: center;
@@ -204,7 +204,7 @@ button a {
         position: fixed;
         width: 100%;
         height: 100vh;
-        background-color: #f5f5dc;
+        background-color: #EBE4D2;
         top: 60px;
         left: -100%;
         flex-direction: column;
