@@ -24,7 +24,7 @@
   
   body {
     font-family: 'body font', sans-serif;
-    background-color: #f8f5dc;
+    background-color: #EBE4D2;
     background-image: radial-gradient(#ccc 1px, transparent 0);
     background-size: 20px 20px;
     display: flex;
@@ -35,7 +35,7 @@
   nav {
     height: 80px;
     width: 100%;
-    background-color: #f8f5dc;
+    background-color:#EBE4D2;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -45,7 +45,7 @@
   nav .logo {
     font-family: 'heading font', serif;
     font-size: 24px;
-    color: #664f40;
+    color:#5F5143;
   }
   
   nav ul {
@@ -59,13 +59,13 @@
   
   nav ul li a {
     font-family: 'heading font', serif;
-    color: #664f40;
+    color:#5F5143;
     font-size: 18px;
     transition: all 0.3s ease;
   }
   
   nav ul li a:hover {
-    color: #9e8770;
+    color:#5F5143;
   }
   
   nav ul li .linkedin-icon {
@@ -80,7 +80,7 @@
   /* Main content section */
   main {
     flex: 1;
-    background-color: #664f40;
+    background-color:#5F5143;
     padding: 40px;
     margin: 0;
     width: 100%;
@@ -93,7 +93,7 @@
     font-size: 60px;
     text-align: center;
     margin-bottom: 40px;
-    color: #f8f5dc;
+    color: #EBE4D2;
   }
   
   /* Category navigation */
@@ -104,7 +104,7 @@
   }
   
   .categories li a {
-    color: #e7cf7a;
+    color: #E1B808;
     font-size: 20px;
     transition: all 0.3s ease;
   }
@@ -180,8 +180,8 @@
     cursor: pointer;
     display: inline-block;
     padding: 8px 15px;
-    background: #e7cf7a;
-    color: #664f40;
+    background: #E1B808;
+    color:#5F5143;
     font-size: 16px;
     line-height: 2;
     border-radius: 15px;
@@ -192,7 +192,7 @@
   }
   
   .read-more-trigger:hover {
-    background-color: #d9c05e;
+    background-color: #E1B808;
   }
   
   .read-more-wrap {
@@ -227,7 +227,7 @@
       position: fixed;
       top: 80px;
       left: -100%;
-      background: #f8f5dc;
+      background: #EBE4D2;
       width: 100%;
       flex-direction: column;
       padding: 20px 0;
