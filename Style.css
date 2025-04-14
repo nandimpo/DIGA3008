@@ -2,9 +2,9 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
-  background-color: #5f5143;
+  background-color: #EBE4D2;
   color: white;
-  font-size: 14px; /* Reduced base font size */
+  font-size: 14px;
 }
 
 /* Navigation styling */
@@ -13,13 +13,13 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 5px 10px; /* Reduced padding */
+  padding: 5px 10px;
 }
 
 .logo {
   color: white;
   font-weight: bold;
-  font-size: 1.8rem; /* Smaller logo */
+  font-size: 1.8rem;
 }
 
 nav ul {
@@ -30,14 +30,14 @@ nav ul {
 }
 
 nav ul li {
-  margin-left: 15px; /* Reduced margin */
+  margin-left: 15px;
 }
 
 nav ul li a {
   color: white;
   text-decoration: none;
   transition: 0.3s;
-  font-size: 1.2rem; /* Smaller navigation text */
+  font-size: 1.2rem;
 }
 
 nav ul li a:hover {
@@ -46,11 +46,11 @@ nav ul li a:hover {
 
 .linkedin-icon {
   display: inline-block;
-  background-color: white;
-  color: #0077b5 !important;
-  border-radius: 4px; /* Smaller radius */
-  padding: 2px 6px; /* Reduced padding */
-  font-size: 1.2rem; /* Smaller icon */
+  background-color: #0077b5;
+  color: white !important;
+  border-radius: 4px;
+  padding: 2px 6px;
+  font-size: 1.2rem;
 }
 
 #check {
@@ -58,7 +58,7 @@ nav ul li a:hover {
 }
 
 .burger-button {
-  font-size: 24px; /* Smaller burger button */
+  font-size: 24px;
   color: white;
   cursor: pointer;
   display: none;
@@ -68,80 +68,69 @@ nav ul li a:hover {
 .hero {
   position: relative;
   text-align: center;
-  padding: 15px 20px; /* Significantly reduced padding */
-  overflow: hidden;
-}
-
-.hero img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: 0;
-  opacity: 0.9;
-}
-
-.hero h1, 
-.hero p, 
-.hero a {
-  position: relative;
-  z-index: 1;
+  background-color: #EBE4D2;
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
 }
 
 .hero h1 {
-  font-size: 3.5rem; /* Much smaller heading */
-  color: #ffc926;
-  margin-bottom: 15px; /* Reduced margin */
+  font-size: 3.5rem;
+  color: #ffc107;
+  margin-bottom: 15px;
   font-weight: bold;
-  letter-spacing: 2px; /* Reduced letter spacing */
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  position: relative;
+  order: -1; /* This ensures the heading appears before the image */
+}
+
+.hero img {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  order: 0;
 }
 
 .hero-text {
-  font-size: 0.9rem; /* Smaller hero text */
-  line-height: 1.4; /* Tighter line height */
+  font-size: 0.9rem;
+  line-height: 1.4;
   margin: 0 auto;
-  max-width: 600px; /* Narrower max-width */
-  margin-bottom: 20px; /* Reduced margin */
-  background-color: rgba(0, 0, 0, 0.3);
-  padding: 15px; /* Reduced padding */
-  border-radius: 8px; /* Smaller radius */
+  max-width: 700px;
+  background-color: rgba(73, 66, 58, 0.7);
+  padding: 15px;
+  border-radius: 5px;
   display: inline-block;
-}
-
-.btn {
-  display: inline-block;
-  padding: 8px 25px; /* Reduced padding */
-  background-color: #ffc926;
-  color: #333;
-  border-radius: 20px; /* Smaller radius */
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 0.9rem; /* Smaller button text */
+  color: white;
+  position: absolute;
+  left: 50%;
+  top: 65%; /* Moved down from 50% to 65% to position it more in the center of the image */
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  margin-top: 15px; /* Added extra spacing from the top */
 }
 
 /* Sections styling */
 .sections-container {
-  padding: 15px; /* Reduced padding */
+  background-color: #5f5143;
+  padding: 20px;
 }
 
 .section-row {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 20px; /* Reduced margin */
+  margin-bottom: 20px;
 }
 
 .section {
   flex-basis: 48%;
   text-align: center;
+  padding: 20px 10px;
 }
 
 .section h2 {
-  font-size: 1.4rem; /* Smaller section headings */
-  color: #e0e0e0;
-  margin-bottom: 10px; /* Reduced margin */
+  font-size: 1.4rem;
+  color: white;
+  margin-bottom: 15px;
   font-weight: normal;
 }
 
@@ -149,39 +138,38 @@ nav ul li a:hover {
   display: inline-block;
   background-color: white;
   color: #333;
-  padding: 5px 10px; /* Reduced padding */
-  border-radius: 5px; /* Smaller radius */
-  margin-bottom: 10px; /* Reduced margin */
-  font-size: 0.9rem; /* Smaller description text */
+  padding: 5px 10px;
+  border-radius: 15px;
+  margin-bottom: 15px;
+  font-size: 0.9rem;
 }
 
 .section-link {
   display: block;
-  background-color: #ffc926;
-  height: 30px; /* Shorter height */
-  border-radius: 15px; /* Smaller radius */
+  background-color: #ffc107;
+  padding: 10px 0;
+  border-radius: 25px;
   margin: 0 auto;
-  width: 40%;
+  width: 60%; /* Reduced width from 80% to 60% */
   text-decoration: none;
-  color: #5f5143;
-  line-height: 30px; /* Match height */
-  font-size: 0.9rem; /* Smaller link text */
+  color: #333;
+  font-size: 0.9rem;
   font-weight: bold;
 }
 
 /* Responsive design for mobile */
-@media (max-width: 768px) { /* Changed breakpoint to 768px for better mobile experience */
+@media (max-width: 768px) {
   .burger-button {
     display: block;
-    font-size: 24px; /* Smaller burger menu */
+    font-size: 24px;
   }
   
   nav ul {
     position: fixed;
     width: 100%;
     height: 100vh;
-    background: #635c52;
-    top: 50px; /* Lower menu position */
+    background: #5f5143;
+    top: 50px;
     left: -100%;
     text-align: center;
     transition: all .5s;
@@ -191,8 +179,8 @@ nav ul li a:hover {
   
   nav ul li {
     display: block;
-    margin: 30px 0; /* Reduced margin */
-    line-height: 30px; /* Reduced line height */
+    margin: 30px 0;
+    line-height: 30px;
   }
   
   #check:checked ~ ul {
@@ -204,19 +192,24 @@ nav ul li a:hover {
   }
   
   .section {
-    margin-bottom: 20px; /* Reduced margin */
+    margin-bottom: 20px;
+    width: 100%;
   }
 
   .hero h1 {
-    font-size: 2.5rem; /* Even smaller on mobile */
+    font-size: 2.5rem;
   }
 
   .hero-text {
-    font-size: 0.85rem; /* Smaller on mobile */
+    font-size: 0.85rem;
     padding: 10px;
+    position: relative;
+    transform: none;
+    left: auto;
+    top: auto;
   }
 
   .section-link {
-    width: 60%;
+    width: 50%;
   }
 }
