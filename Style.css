@@ -1,10 +1,18 @@
+/* Font declarations */
+@font-face {
+  font-family: 'body font';
+  src: url(Montserrat-SemiBold);
+}
+
+@font-face {
+  font-family: 'heading font';
+  src: url(Grown.ttf);
+}
+
 body {
   margin: 0;
   padding: 0;
-  @font-face {
-    font-family: body font;
-    src: url(Montserrat-SemiBold);
-  }
+  font-family: 'body font', sans-serif;
   background-color: #EBE4D2;
   color: white;
   font-size: 14px;
@@ -20,10 +28,10 @@ nav {
 }
 
 .logo {
+  font-family: 'heading font', serif;
   color: #EBE4D2;
   font-weight: bold;
   font-size: 1.8rem;
-  
 }
 
 nav ul {
@@ -63,7 +71,7 @@ nav ul li a:hover {
 
 .burger-button {
   font-size: 24px;
-  color:#EBE4D2;
+  color: #EBE4D2;
   cursor: pointer;
   display: none;
 }
@@ -79,6 +87,7 @@ nav ul li a:hover {
 }
 
 .hero h1 {
+  font-family: 'heading font', serif;
   font-size: 3.5rem;
   color: #E1B808;
   margin-bottom: 15px;
@@ -107,10 +116,10 @@ nav ul li a:hover {
   color: #EBE4D2;
   position: absolute;
   left: 50%;
-  top: 65%; /* Moved down from 50% to 65% to position it more in the center of the image */
+  top: 65%;
   transform: translate(-50%, -50%);
   z-index: 1;
-  margin-top: 15px; /* Added extra spacing from the top */
+  margin-top: 15px;
 }
 
 /* Sections styling */
@@ -132,8 +141,9 @@ nav ul li a:hover {
 }
 
 .section h2 {
+  font-family: 'heading font', serif;
   font-size: 1.4rem;
-  color:#EBE4D2;
+  color: #EBE4D2;
   margin-bottom: 15px;
   font-weight: normal;
 }
@@ -154,9 +164,9 @@ nav ul li a:hover {
   padding: 10px 0;
   border-radius: 25px;
   margin: 0 auto;
-  width: 40%; /* Reduced width from 80% to 60% */
+  width: 40%;
   text-decoration: none;
-  color:#5F5143;
+  color: #5F5143;
   font-size: 0.9rem;
   font-weight: bold;
 }
