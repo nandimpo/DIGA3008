@@ -49,7 +49,7 @@ nav ul li {
 }
 
 nav ul li a {
-    font-family: 'heading font', serif; /* Changed to heading font */
+    font-family: 'heading font', serif; 
     text-decoration: none;
     color: #5F5143;
     font-weight: 500;
@@ -112,7 +112,7 @@ nav ul li a:hover {
       position: relative;
       z-index: 2;
       text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-      color: white;
+      color:#EBE4D2;
   }
   
   .header p {
@@ -154,7 +154,7 @@ nav ul li a:hover {
   .work-categories {
       display: flex;
       justify-content: center;
-      flex-direction: row; /* Ensuring linear arrangement */
+      flex-direction: row; 
       flex-wrap: nowrap;
       gap: 40px;
       position: relative;
@@ -186,7 +186,7 @@ nav ul li a:hover {
   
   .category:hover {
       transform: scale(1.05);
-      background-color: #cca300;
+      background-color: #E1B808;
   }
   
   /* Media Queries for Responsiveness */
