@@ -3,16 +3,103 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Nandi's website</title>
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="../CSS/Writing.css">
+    <script src="https://kit.fontawesome.com/89fd46d92d.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <a href="../index.html">Home</a>
-    <a href="../Blogs/BlogsHome.html">Blogs</a>
-    <a href="../Design/DesignHome.html">Design</a>
-    <a href="../Portfolio/Portfoliohome.html">Portfolio</a>
-    <a href="../Scripts/Scriptshome.html">Scripts</a>
-</body>
-<h2> Welcome to my Writings</h2>
+    <nav>
+        <input type="checkbox" id="check" />
+        <label for="check" class="burger-button">
+            <i class="fa-solid fa-bars"></i>
+        </label>
+        <label class="logo">NM</label>
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../Blogs/BlogsHome.html">Blogs</a></li>
+            <li><a href="../Design/DesignHome.html">Design</a></li>
+            <li><a href="../Scripts/Scriptshome.html">Scripts</a></li>
+            <li><a href="#" class="linkedin-icon"><i class="fa-brands fa-linkedin"></i></a></li>
+        </ul>
+    </nav>
 
-<p> You can find my </p><a href="Essays.Html">essays</a> here. 
+    <main>
+        <h1>Writing</h1>
+        
+        <ul class="categories">
+            <li><a href="Animation.html">Animation</a></li>
+            <li><a href="Design.html">Design</a></li>
+            <li><a href="Essays.Html">Essays</a></li>
+        </ul>
+        
+        <div class="image-grid">
+            <!-- First article -->
+            <div class="image-container">
+                <img src="../Images/Writing/Leonora Miano.jpg" alt="Leonora Miano">
+                <div class="article-title">French- Explication du texte</div>
+                <div class="article-content">
+                    <input type="checkbox" class="read-more-state" id="post-1" />
+                    <div class="read-more-wrap">
+                        <span class="content-preview">Cette explication du texte examinera comment Leonora Miano a utilisé 'Sacrifices' pour 
+                        créer la conscience diasporique. Miano utilise l'écriture, la survie et la résistance pour 
+                        construire une conscience diasporique...</span>
+                        <span class="read-more-target">
+                            Dans cette pièce de théâtre, elle utilise ces thèmes 
+                            pour renforcer l'idée d'une connectivité consciente entre les Africains - nous sommes une 
+                            seule communauté même si nous vivons dans des endroits différents (Mishra, 2020). 
+                            Sacrifices est une pièce de théâtre de l'écrivaine camerounaise Leonora Miano qui explore 
+                            certains aspects de l'histoire des Maroons jamaïcains. Elle explore l'histoire de la 
+                            communauté des marronnages. Le texte présente deux conceptions de l'héroïsme. Ceux qui 
+                            refusent de se retirer dans les montagnes et ceux qui restent dans les plaines. Dans le texte, 
+                            King Maroon (Dor) se voit proposer un accord de paix qui concernera les deux groupes. 
+                            Les personnages dans le texte sont Jahred, Dor, Maresha, Lois, Kaleb et Sir Charles. Le 
+                            thème central est celui des révoltes d'esclaves dans les Caraïbes (Miller, 2017). Ce texte 
+                            est une forme de conscience diasporique.
+                            
+                            <!-- Rest of the content goes here -->
+                        </span>
+                    </div>
+                    <label for="post-1" class="read-more-trigger"></label>
+                </div>
+            </div>
+            
+            <!-- Second article -->
+            <div class="image-container">
+                <img src="../Images/Writing/Rnb cover.jpg" alt="Rnb cover">
+                <div class="article-title">Article- Where Is the Love in South African Music?</div>
+                <div class="article-content">
+                    <input type="checkbox" class="read-more-state" id="post-2" />
+                    <div class="read-more-wrap">
+                        <span class="content-preview">Social media has transformed the relationship between artist and consumer. There was a time when artists dictated the cultural zeitgeist, deciding what we listened to and when...</span>
+                        <span class="read-more-target">
+                            Consumers, with limited avenues for direct engagement, were passive participants. That has changed forever. Now, fans can directly message artists, publish reviews, or create viral TikToks about their favorite (or least favorite) albums. This shift has given consumers unprecedented agency, forcing artists to respond to audience demand rather than setting the cultural agenda themselves. But what happens when demand shifts away from love?
+                            
+                            It might be nostalgia, or maybe it's the way we romanticize the past, but the early 2000s in South Africa felt rich with love, freedom, and joy. Today, the dominant themes in South African music revolve around struggle, financial success, and the physical aspects of relationships. So, where has love in music gone?
+                            
+                            <!-- Rest of the content goes here -->
+                        </span>
+                    </div>
+                    <label for="post-2" class="read-more-trigger"></label>
+                </div>
+            </div>
+            
+            <!-- Third article -->
+            <div class="image-container">
+                <img src="../Images/Writing/placeholder.jpg" alt="Writing 3">
+                <div class="article-title">Writing 3</div>
+                <div class="article-content">
+                    <input type="checkbox" class="read-more-state" id="post-3" />
+                    <div class="read-more-wrap">
+                        <span class="content-preview">Content preview for the third writing sample would go here...</span>
+                        <span class="read-more-target">
+                            Full content for the third writing sample would go here...
+                        </span>
+                    </div>
+                    <label for="post-3" class="read-more-trigger"></label>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
 </html>
