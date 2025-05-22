@@ -9,56 +9,59 @@
   src: url(Grown.ttf);
 }
 
-/* Base styles */
+/* Color variables */
 :root {
-  --background-color: #EBE4D2; 
-  --text-color: #333; 
-  --accent-color: #EBE4D2;
-  --button-color: #e1b808; 
-  --border-color: #EBE4D2;
-  --notebook-border: #D17609;
-  --main-content-bg: #5F5143; 
+  --background-color: #5F5143;
+  --header-bg: #EBE4D2;
+  --text-color: #5F5143;
+  --heading-color: #EBE4D2;
+  --accent-color: #E1B808;
+  --border-color: #D17609;
+  --card-bg: #EBE4D2;
+  --button-color: #E1B808;
 }
-  
+
+/* Reset and base */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-  
+
 body {
-  font-family: 'body font', Montserrat-SemiBold, sans-serif;
+  font-family: 'body font', sans-serif;
   background-color: var(--background-color);
-  color: var(--text-color);
-  line-height: 1.6;
+  color: var(--heading-color);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
-  
-/* Navigation */
+
+/* Navigation (matches animation page) */
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 15px 30px;
-  background-color: var(--background-color);
-  border-bottom: 1px solid var(--border-color);
+  background-color: var(--header-bg);
   font-family: 'heading font', serif;
 }
-  
+
 nav .logo {
   font-size: 24px;
   font-weight: bold;
-  font-family: 'heading font', serif;
+  color: var(--text-color);
 }
-  
+
 nav ul {
   display: flex;
   list-style: none;
 }
-  
+
 nav ul li {
   margin: 0 15px;
 }
-  
+
 nav ul li a {
   text-decoration: none;
   color: var(--text-color);
@@ -66,80 +69,66 @@ nav ul li a {
   transition: color 0.3s;
   font-family: 'heading font', serif;
 }
-  
+
 nav ul li a:hover {
   color: var(--accent-color);
 }
-  
-.linkedin-icon {
+
+.linkedin-icon i {
   color: #0077b5;
+  font-size: 20px;
 }
-  
+
 #check {
   display: none;
 }
-  
+
 .burger-button {
   display: none;
-  cursor: pointer;
   font-size: 24px;
+  cursor: pointer;
+  color: var(--text-color);
 }
-  
-/* Main Content */
-h2 {
-  text-align: center;
-  font-size: 2.5rem;
-  margin: 30px 0 10px;
-  font-family: 'heading font', serif;
-}
-  
-p {
-  text-align: center;
-  max-width: 800px;
-  margin: 0 auto 20px;
-  padding: 0 20px;
-}
-  
-/* Portfolio Container - Updated to fill margins */
+
+/* Main header styles */
 .portfolio-container {
-  width: 100%;
-  margin: 0 auto;
   padding: 40px 20px;
-  position: relative;
-  background-color: var(--main-content-bg); 
+  flex: 1;
 }
-  
+
 .portfolio-header {
   text-align: center;
-  margin-bottom: 25px;
+  margin-bottom: 30px;
 }
-  
+
 .portfolio-header h1 {
-  font-size: 4rem;
-  margin: 0;
-  color: #EBE4D2; 
   font-family: 'heading font', serif;
+  font-size: 60px;
+  color: var(--heading-color);
 }
-  
+
 .portfolio-header p {
-  color: #EBE4D2; 
-  margin-top: 10px;
+  color: var(--accent-color);
+  max-width: 800px;
+  margin: 20px auto 0;
+  font-size: 18px;
+  line-height: 1.6;
 }
-  
-/* Notebook Design */
+
+/* Notebook grid layout */
 .notebook {
-  background-color: var(--border-color);
-  border: 10px solid var(--notebook-border);
+  background-color: var(--card-bg);
+  border: 10px solid var(--border-color);
   border-radius: 10px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-  overflow: hidden;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  max-width: 1000px;
+  margin: 40px auto;
   position: relative;
-  margin: 20px auto;
-  max-width: 1000px; 
+  overflow: hidden;
 }
-  
+
 .notebook::before {
   content: '';
   position: absolute;
@@ -147,49 +136,50 @@ p {
   top: 0;
   bottom: 0;
   width: 2px;
-  background-color:#EBE4D2;
+  background-color: var(--border-color);
   transform: translateX(-50%);
+  z-index: 2;
 }
-  
+
 .notebook-page {
   padding: 30px;
-  background-color: var(--border-color);
+  background-color: var(--card-bg);
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
+  z-index: 3;
 }
-  
-/* Portfolio Buttons */
+
 .portfolio-button {
   display: block;
   background-color: var(--button-color);
-  color: #EBE4D2;
+  color: var(--text-color);
   text-decoration: none;
   padding: 12px 30px;
   margin: 15px 0;
   border-radius: 30px;
+  font-weight: bold;
   text-align: center;
-  transition: background-color 0.3s, transform 0.2s;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
   width: 80%;
   max-width: 250px;
-  font-weight: bold;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
-  
+
 .portfolio-button:hover {
-  background-color: #D17609; 
+  background-color: #D17609;
   transform: translateY(-3px);
 }
-  
+
 .category-description {
+  color: var(--text-color);
+  font-size: 0.95rem;
+  margin-bottom: 20px;
   text-align: center;
-  margin: 10px 0 25px;
-  color: #5F5143;
-  font-size: 0.9rem;
-  padding: 0 15px;
 }
-  
-/* Decorative Elements */
+
+/* Decorative leaves */
 .notebook-decoration {
   position: absolute;
   width: 100%;
@@ -197,80 +187,74 @@ p {
   pointer-events: none;
   z-index: 1;
 }
-  
-.leaf-left {
+
+.leaf-left,
+.leaf-right {
   position: absolute;
+  background-color: #187040;
+  clip-path: ellipse(30% 50% at 50% 50%);
+  opacity: 0.7;
+}
+
+.leaf-left {
   left: -20px;
   bottom: 20px;
   width: 100px;
   height: 120px;
-  background-color:#187040;
-  clip-path: ellipse(30% 50% at 50% 50%);
   transform: rotate(-30deg);
-  opacity: 0.7;
 }
-  
+
 .leaf-right {
-  position: absolute;
   right: -20px;
   bottom: 30px;
   width: 80px;
   height: 100px;
-  background-color:#187040;
-  clip-path: ellipse(30% 50% at 50% 50%);
   transform: rotate(30deg);
-  opacity: 0.7;
-}
-  
-/* Added arrows and explanation text styling to match image 1 */
-.explanation-arrow {
-  position: absolute;
-  color: #333;
-  font-weight: bold;
 }
 
-.explanation-text {
-  position: absolute;
-  color: #5F5143;
-  font-size: 0.9rem;
+/* Footer (matches animation page) */
+.footer-text {
+  background-color: var(--header-bg);
+  color: var(--text-color);
+  text-align: center;
+  padding: 25px 10px;
+  font-family: 'heading font', serif;
+  font-size: 1rem;
+  margin-top: auto;
 }
-  
+
 /* Responsive design */
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .notebook {
     grid-template-columns: 1fr;
   }
-    
+
   .notebook::before {
     display: none;
   }
-    
+
   .burger-button {
     display: block;
   }
-    
+
   nav ul {
     position: fixed;
     width: 100%;
     height: 100vh;
-    background-color: var(--background-color);
-    top: 60px;
+    background-color: var(--header-bg);
+    top: 80px;
     left: -100%;
     text-align: center;
     transition: all 0.5s;
     flex-direction: column;
     z-index: 100;
   }
-    
+
   nav ul li {
     margin: 20px 0;
   }
-    
+
   #check:checked ~ ul {
     left: 0;
-  }
-    
-  .portfolio-header h1 {
-    font-size: 3rem;
   }
 }
