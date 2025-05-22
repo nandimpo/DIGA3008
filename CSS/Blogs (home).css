@@ -1,71 +1,75 @@
-/* Font face */
 @font-face {
   font-family: 'body font';
-  src: url(Montserrat-SemiBold);
+  src: url('Montserrat-SemiBold');
 }
 
 @font-face {
   font-family: 'heading font';
-  src: url(Grown.ttf);
+  src: url('Grown.ttf');
 }
 
-/* Base styles */
 :root {
-  --background-color: #5f5143;
-  --text-color: #EBE4D2;  
-  --accent-color: #D17609;
-  --border-color: #ccc;
+  --background-color: #EBE4D2;
+  --text-color: #5F5143;
+  --main-bg: #5F5143;
+  --button-color: #D17609;
+  --button-hover: #E1B808;
+  --white: #ffffff;
+}
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-  font-family: 'body font', sans-serif; 
-  background-color: var(--background-color);
-  margin: 0;
-  padding: 0;
-  color: var(--text-color);
+  font-family: 'body font', sans-serif;
+  background-color: var(--main-bg);
+  color: var(--white);
 }
 
-/* Navigation */
+/* Navigation styled like Portfolio/Animation */
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 15px 30px;
-  position: relative;
+  background-color: var(--background-color);
+  font-family: 'heading font', serif;
 }
 
 nav .logo {
-  font-family: 'heading font', serif;
   font-size: 24px;
   font-weight: bold;
-  color: var(--text-color);
+  color: var(--main-bg);
 }
 
 nav ul {
   display: flex;
   list-style: none;
-  margin: 0;
-  padding: 0;
 }
 
 nav ul li {
-  margin: 0 10px;
+  margin: 0 15px;
 }
 
 nav ul li a {
-  font-family: 'heading font', serif;
   text-decoration: none;
-  color: var(--text-color);
+  color: var(--main-bg);
   font-size: 16px;
   transition: color 0.3s;
+  font-family: 'heading font', serif;
 }
 
 nav ul li a:hover {
-  color: var(--accent-color);
+  color: var(--button-color);
 }
 
 .linkedin-icon {
   color: #0077b5;
+  font-size: 20px;
 }
 
 #check {
@@ -76,74 +80,32 @@ nav ul li a:hover {
   display: none;
   cursor: pointer;
   font-size: 24px;
-  color: var(--text-color);
+  color: var(--main-bg);
 }
 
-/* Main Content */
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'heading font', serif;
-  color: var(--text-color);
-}
-
-h2 {
-  text-align: center;
-  font-size: 3rem;
-  margin: 30px 0 10px;
-}
-
-/* Blog grid styling */
-.blog-container {
-  max-width: 1200px;
-  margin: 20px auto;
-  padding: 20px;
-}
-
+/* Blog Header */
 .blog-header {
   text-align: center;
-  margin-bottom: 30px;
+  margin-top: 40px;
 }
 
 .blog-header h1 {
   font-size: 4rem;
-  margin: 0;
+  font-family: 'heading font', serif;
+  color: var(--background-color);
 }
 
 .blog-header p {
   font-size: 1.2rem;
-  margin-top: 10px;
-  color: var(--text-color);
+  margin: 10px 0 40px;
+  color: var(--background-color);
 }
 
-.navigation-tabs {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 20px;
-  border-bottom: 1px solid var(--border-color);
-}
-
-.navigation-tabs a {
-  font-family: 'heading font', serif;
-  padding: 10px 20px;
-  text-decoration: none;
-  color: var(--text-color);
-  position: relative;
-}
-
-.navigation-tabs a:after {
-  content: '';
-  position: absolute;
-  bottom: -1px;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background-color: var(--accent-color);
-  transform: scaleX(0);
-  transition: transform 0.3s;
-}
-
-.navigation-tabs a:hover:after,
-.navigation-tabs a.active:after {
-  transform: scaleX(1);
+/* Blog Layout */
+.blog-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
 }
 
 .blog-grid {
@@ -154,18 +116,16 @@ h2 {
 
 .blog-post {
   position: relative;
-  border-radius: 5px;
+  border-radius: 10px;
   overflow: hidden;
-  background-color: #fff;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
-  height: 200px;
-  cursor: pointer;
-  transition: transform 0.3s, box-shadow 0.3s;
+  background-color: var(--white);
+  box-shadow: 0 0 15px #187040;
+  height: 250px;
+  transition: transform 0.3s ease;
 }
 
 .blog-post:hover {
   transform: translateY(-5px);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 .blog-post img {
@@ -178,23 +138,32 @@ h2 {
   position: absolute;
   bottom: 10px;
   left: 10px;
-  background-color: var(--accent-color);
-  color: #EBE4D2;
+  background-color: var(--button-color);
+  color: var(--white);
   padding: 5px 15px;
   border-radius: 20px;
   font-size: 14px;
-  text-decoration: none;
-  cursor: pointer;
-  border: none;
+  font-family: 'body font', sans-serif;
   transition: background-color 0.3s, transform 0.2s;
 }
 
 .blog-post-button:hover {
-  background-color: #E1B808;
+  background-color: var(--button-hover);
   transform: scale(1.05);
 }
 
-/* Responsive design */
+/* Footer styled like Portfolio/Animation */
+.portfolio-footer {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  text-align: center;
+  padding: 25px 10px;
+  font-family: 'heading font', serif;
+  font-size: 1rem;
+  border-top: 1px solid #ccc;
+}
+
+/* Responsive */
 @media (max-width: 900px) {
   .blog-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -215,11 +184,12 @@ h2 {
     width: 100%;
     height: 100vh;
     background-color: var(--background-color);
-    top: 80px;
+    top: 60px;
     left: -100%;
     text-align: center;
     transition: all 0.5s;
     flex-direction: column;
+    z-index: 100;
   }
 
   nav ul li {
