@@ -6,16 +6,19 @@
   <title>Nandi's Website – Blogs</title>
   <link rel="stylesheet" href="normalize.css" />
   <link rel="stylesheet" href="../CSS/Blogs (home).css" />
+  <script src="../JavaScript/Cursor.js" defer></script>
   <script src="https://kit.fontawesome.com/89fd46d92d.js" crossorigin="anonymous"></script>
+  <script src="../JavaScript/Handwriting.js" defer></script>
+  <script src="../JavaScript/MouseGradient.js" defer></script>
 </head>
 
 <body>
-  <!-- Nav styled like Portfolio/Animation -->
+  <div id="cursorPulse" class="cursor-pulse"></div>
+
+  <!-- Navigation -->
   <nav>
     <input type="checkbox" id="check" />
-    <label for="check" class="burger-button">
-      <i class="fa-solid fa-bars"></i>
-    </label>
+    <label for="check" class="burger-button"><i class="fa-solid fa-bars"></i></label>
     <label class="logo">NM</label>
     <ul>
       <li><a href="../index.html">Home</a></li>
@@ -33,44 +36,31 @@
   <!-- Blogs Section -->
   <div class="blog-container">
     <div class="blog-header">
-      <h1>Blogs</h1>
-      <p>In this section you will find my blogs thus far.</p>
+      <svg id="handwrittenHeader" class="handwriting" viewBox="0 0 800 150" xmlns="http://www.w3.org/2000/svg">
+        <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle"
+              id="handwrittenPath" style="font-family: 'heading font';">
+          Blogs
+        </text>
+      </svg>
+      <svg id="subtitleHeader" class="subtitle-svg" viewBox="0 0 1200 100" xmlns="http://www.w3.org/2000/svg">
+        <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle"
+              id="subtitlePath" style="font-family: 'body font';">
+          In this section you will find my blogs thus far.
+        </text>
+      </svg>
     </div>
 
     <div class="blog-grid">
-      <div class="blog-post">
-        <img src="../Images/Blogshome/Blog 1.jpg" alt="Blog 1" />
-        <a href="Blog1.html" class="blog-post-button">Blog 1</a>
-      </div>
-
-      <div class="blog-post">
-        <img src="../Images/Blogshome/Blog 2.jpg" alt="Blog 2" />
-        <a href="Blog2.html" class="blog-post-button">Blog 2</a>
-      </div>
-
-      <div class="blog-post">
-        <img src="../Images/Blogshome/Blog 3.jpg" alt="Blog 3" />
-        <a href="Blog3.html" class="blog-post-button">Blog 3</a>
-      </div>
-
-      <div class="blog-post">
-        <img src="../Images/Blogshome/Blog 4.jpg" alt="Blog 4" />
-        <a href="Blog4.html" class="blog-post-button">Blog 4</a>
-      </div>
-
-      <div class="blog-post">
-        <img src="../Images/Blogshome/Blog 5.jpg" alt="Blog 5" />
-        <a href="Blog5.html" class="blog-post-button">Blog Post 5</a>
-      </div>
-
-      <div class="blog-post">
-        <img src="../Images/Blogshome/Blog 6.jpg" alt="Blog 6" />
-        <a href="Blog6.html" class="blog-post-button">Blog Post 6</a>
-      </div>
+      <div class="blog-post"><img src="../Images/Blogshome/Blog 1.jpg" alt="Blog 1" /><a href="Blog1.html" class="blog-post-button">Blog 1</a></div>
+      <div class="blog-post"><img src="../Images/Blogshome/Blog 2.jpg" alt="Blog 2" /><a href="Blog2.html" class="blog-post-button">Blog 2</a></div>
+      <div class="blog-post"><img src="../Images/Blogshome/Blog 3.jpg" alt="Blog 3" /><a href="Blog 3.html" class="blog-post-button">Blog 3</a></div>
+      <div class="blog-post"><img src="../Images/Blogshome/Blog 4.jpg" alt="Blog 4" /><a href="Blog 4.html" class="blog-post-button">Blog 4</a></div>
+      <div class="blog-post"><img src="../Images/Blogshome/Blog 5.jpg" alt="Blog 5" /><a href="Blog 5.html" class="blog-post-button">Blog 5</a></div>
+      <div class="blog-post"><img src="../Images/Blogshome/Blog 6.jpg" alt="Blog 6" /><a href="Blog 6.html" class="blog-post-button">Blog 6</a></div>
     </div>
   </div>
 
-  <!-- Footer styled like Portfolio/Animation -->
+  <!-- Footer -->
   <footer class="portfolio-footer">
     Brought to you by Nandi Mpofu.
   </footer>
