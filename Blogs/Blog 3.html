@@ -3,10 +3,39 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nandi's website</title>
+  <title>Nandi's Website - Blog 3</title>
   <link rel="stylesheet" href="normalize.css">
   <link rel="stylesheet" href="../CSS/Blogs.css">
   <script src="https://kit.fontawesome.com/89fd46d92d.js" crossorigin="anonymous"></script>
+  <script src="../JavaScript/Gradient.js" defer></script>
+  <script src="../JavaScript/Cursor.js" defer></script>
+  <style>
+    .blog-nav-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    .blog-nav-buttons button {
+      background-color: #5F5143;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .blog-nav-buttons button:hover {
+      background-color: #D17609;
+    }
+
+    .blog-nav-buttons a {
+      text-decoration: none;
+      color: inherit;
+    }
+  </style>
 </head>
 <body>
   <nav>
@@ -29,56 +58,56 @@
       <h2 class="p-name">Blog Post 3</h2>
       <time class="dt-published" datetime="2025-03-03">3 March 2025</time>
 
-      <h3 class="p-name">Topic: Working through the slides for Interaction Design for the web, define and discuss your user alignment, and map out your site's content, experience, and interface elements.</h3>
+      <h3 class="p-name">Topic: Working through the slides for Interaction Design for the Web, define and discuss your user alignment, and map out your site's content, experience, and interface elements.</h3>
 
       <h4 class="p-name">User Alignment:</h4>
-      <p class="p-summary">User alignment involves the user and the goal of a website... (content unchanged)</p>
+      <p class="p-summary">User alignment involves the user and the goal of a website. The user’s goals and my own must align to create a successful experience. In my case, I am trying to showcase my skills to potential employers or collaborators, while the user might be trying to find examples of my work, understand my design process, or learn more about me. Therefore, the site must be clean, well-organized, and reflect who I am. I want it to feel open and welcoming while also highlighting my creativity and attention to detail.</p>
 
       <h4>Site’s content:</h4>
       <p class="p-summary">Mapping</p>
       <img src="../Images/Blogs/Mapping-Sites Content.png" alt="Wireframe-Images" width="500" height="300">
-      <p>The content of my website showcases... (content unchanged)</p>
+      <p>The content of my website showcases the different skills I have and the areas I’ve explored throughout this course. The website is made up of five main content sections:</p>
       <ul>
         <li>Blog posts - showcases my understanding of the web and internet.</li>
-        <li>Design - showcases my design process clearly and effectively...</li>
-        <li>Scripts - showcases my ability to understand the functionality...</li>
+        <li>Design - showcases my design process clearly and effectively.</li>
+        <li>Scripts - showcases my ability to understand the functionality of the web.</li>
         <li>Image - showcases my aesthetic choices.</li>
-        <li>Portfolio - showcases my additional skills...</li>
+        <li>Portfolio - showcases my additional skills and extracurricular work.</li>
       </ul>
 
       <h4 class="p-name">Experience</h4>
       <p class="p-summary">Mapping</p>
       <img src="../Images/Blogs/Mapping- Experience.png" alt="Wireframe-Images" width="500" height="300">
-      <p>I would like the user experience to be practical and useful... (content unchanged)</p>
+      <p>I would like the user experience to be practical and useful. I have tried to make the content relevant to the user. I also want the experience to be calming and aesthetically pleasing by using warm tones that reflect my personality and the South African landscape, which is where I come from. Overall, I want the site to feel creative, thoughtful, and personal while still being easy to navigate and useful.</p>
 
       <h4 class="p-name">Interface Elements:</h4>
-      <p class="p-summary">I would like the website to be appealing... (content unchanged)</p>
+      <p class="p-summary">I would like the website to be appealing to look at and easy to use. These are some interface elements I plan to include:</p>
       <ul>
-        <li>Input controls: There will be headings on the homepage...</li>
+        <li>Input controls:
+          <p>- There will be headings on the homepage that allow users to go to each section.</p>
+        </li>
         <li>Navigation components:
-          <p>- On all the content pages there will be sliders...</p>
-          <p>- Each blog post will have a button...</p>
-          <p>- I would also like to incorporate a search field...</p>
+          <p>- On all the content pages, there will be sliders to access different posts or designs.</p>
+          <p>- Each blog post will have a button that navigates to the next or previous blog.</p>
+          <p>- I would also like to incorporate a search field to help users find specific content.</p>
           <p>- The portfolio page will have headings for animation, design, and writing pages.</p>
-          <p>- For the images they will be presented in a list...</p>
+          <p>- For the images, they will be presented in a list and possibly categorized for ease of access.</p>
           <p>- The scripts page will have icons for each script type.</p>
-          <p>- The design page will have different headings...</p>
+          <p>- The design page will have different headings such as "Design Process", "Wireframes", and "Inspiration".</p>
         </li>
       </ul>
 
       <h4 class="p-name">Information controls:</h4>
-      <p class="p-summary">I would like to incorporate message boxes... (content unchanged)</p>
+      <p class="p-summary">I would like to incorporate message boxes or hover effects that explain the function of a particular section or element. This makes the site more interactive and helps the user understand the content better.</p>
 
       <h4 class="p-name">Reflection</h4>
-      <p class="p-summary">The exercise above depended on my understanding... (content unchanged)</p>
+      <p class="p-summary">The exercise above depended on my understanding of interface and experience design. It allowed me to think deeply about how the user interacts with a site, how to make things clear and accessible, and how to ensure alignment between my goals and the user’s. I also thought about how to present content and structure my website to reflect who I am and what I’ve learned.</p>
     </div>
   </article>
 
-  <div class="center-button">
+  <!-- Centered Navigation Buttons -->
+  <div class="blog-nav-buttons">
     <button><a href="Blog2.html">Previous Blog</a></button>
-  </div>
-
-  <div class="center-button">
     <button><a href="Blog 4.html">Next Blog</a></button>
   </div>
 
