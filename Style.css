@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'body font';
-  src: url(Montserrat-SemiBold);
+  src: url('Fonts/Montserrat-SemiBold.ttf') format('truetype');
 }
 
 @font-face {
