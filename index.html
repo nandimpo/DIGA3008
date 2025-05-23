@@ -1,62 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nandi's website</title>
-    <link rel="stylesheet" href="normalize.css">
-    <link rel="stylesheet" href="Style.css">
-    <script src="https://kit.fontawesome.com/89fd46d92d.js" crossorigin="anonymous"></script>
-</head>  
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nandi's Website</title>
+  <link rel="stylesheet" href="normalize.css" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://kit.fontawesome.com/89fd46d92d.js" crossorigin="anonymous"></script>
+  <script src="JavaScript/Cursor.js" defer></script>
+  <script src="JavaScript/Handwriting.js" defer></script>
+</head>
 <body>
-   
-    <nav>
-        <label for="logo" class="logo">NM</label>
-        <input type="checkbox" id="check" />
-        <label for="check" class="burger-button">
-          <i class="fa-solid fa-bars"></i>
-        </label>
-        <ul>
-            <li><a href="https://www.linkedin.com/in/nandi-m-4aa89123b?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BqctwxnPOTGawuqEwz03UcA%3D%3D" class="linkedin-icon" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i></a></li>
-        </ul>
-    </nav>  
-    
-    <div class="hero">
-        <img src="Images/Miscallanous/Background (home).jpg" alt="">
-        <h1>Hi, I am Nandi.</h1>
-        <p class="hero-text">I am Nandi Mpofu. I love art by Black women, especially from Africa. I grew up surrounded by their books and music. I want to share this art with others so the world can appreciate Black women's creativity as much as I do.</p>
-    </div>
+  <!-- Glowing Cursor -->
+  <div id="cursorPulse"></div>
 
-    <div class="sections-container">
-        <div class="section-row">
-            <div class="section">
-                <h2>BLOGS</h2>
-                <div class="description">In Blogs you can find all the blogs I have written thus far.</div>
-                <a href="Blogs/BlogsHome.html" class="section-link">Show more</a>
-            </div>
-            <div class="section">
-                <h2>DESIGN</h2>
-                <div class="description">Documentation of my IxD process,Style process documentation, Style Guides and Wireframes.</div>
-                <a href="Design/DesignHome.html" class="section-link">Show more</a>
-            </div>
-        </div>
-        
-        <div class="section-row">
-            <div class="section">
-                <h2>PORTFOLIO</h2>
-                <div class="description">Animations, Designs- Games, Writing, and Essays.</div>
-                <a href="Portfolio/Portfoliohome.html" class="section-link">Show more</a>
-            </div>
-            <div class="section">
-                <h2>SCRIPTS</h2>
-                <div class="description">Here you can find my CSS, HTML and Java scritpts.</div>
-                <a href="Scripts/Scriptshome.html" class="section-link">Show more</a>
-            </div>
-        </div>
-    </div>
+  <!-- Navigation -->
+  <nav>
+    <label class="logo">NM</label>
+    <ul>
+      <li>
+        <a href="https://www.linkedin.com/in/nandi-m-4aa89123b" class="linkedin-icon" target="_blank" rel="noopener noreferrer">
+          <i class="fa-brands fa-linkedin"></i>
+        </a>
+      </li>
+    </ul>
+  </nav>
 
-    <footer class="footer-text">
-        Brought to you by Nandi Mpofu.
-    </footer>
+  <!-- Hero Section -->
+  <div class="hero">
+    <img src="Images/Miscallanous/Background (home).jpg" alt="Background image" />
+    <div class="hero-overlay">
+      <svg viewBox="0 0 800 200" class="handwriting-svg">
+        <text id="handwrittenPath" x="400" y="100" text-anchor="middle"
+              font-family="heading font" font-size="48" fill="none" stroke="#E1B808" stroke-width="2">
+          Hi, I am Nandi.
+        </text>
+        <text id="subtitlePath" x="400" y="150" text-anchor="middle"
+              font-family="body font" font-size="24" fill="none" stroke="#f5f1e6" stroke-width="1.5">
+          I love art by Black women, especially from Africa.
+        </text>
+      </svg>
+      <p class="hero-description">
+        I am Nandi Mpofu. I love art by Black women, especially from Africa. I grew up surrounded by their books and music.
+        I want to share this art with others so the world can appreciate Black women's creativity as much as I do.
+      </p>
+    </div>
+  </div>
+
+  <!-- Section Grid -->
+  <div class="sections-container">
+    <div class="section">
+      <h2>BLOGS</h2>
+      <div class="description">In Blogs you can find all the blogs I have written thus far.</div>
+      <a href="Blogs/BlogsHome.html" class="section-link">Show more</a>
+    </div>
+    <div class="section">
+      <h2>DESIGN</h2>
+      <div class="description">Documentation of my IxD process, Style Guides and Wireframes.</div>
+      <a href="Design/DesignHome.html" class="section-link">Show more</a>
+    </div>
+    <div class="section">
+      <h2>PORTFOLIO</h2>
+      <div class="description">Animations, Designs - Games, Writing, and Essays.</div>
+      <a href="Portfolio/Portfoliohome.html" class="section-link">Show more</a>
+    </div>
+    <div class="section">
+      <h2>SCRIPTS</h2>
+      <div class="description">Here you can find my CSS, HTML, and JavaScript files.</div>
+      <a href="Scripts/Scriptshome.html" class="section-link">Show more</a>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer-text">
+    Brought to you by Nandi Mpofu.
+  </footer>
 </body>
 </html>
