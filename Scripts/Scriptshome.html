@@ -1,52 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nandi's website</title>
-    <link rel="stylesheet" href="normalize.css">
-    <link rel="stylesheet" href="../CSS/Scripts(Home).css">
-    <script src="https://kit.fontawesome.com/89fd46d92d.js" crossorigin="anonymous"></script>
-    <script src="../JavaScript/Cursor.js" defer></script>
-    <script src="../JavaScript/Handwriting.js" defer></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nandi's Website</title>
+  <link rel="stylesheet" href="normalize.css" />
+  <link rel="stylesheet" href="../CSS/Scripts(Home).css" />
+  <script src="https://kit.fontawesome.com/89fd46d92d.js" crossorigin="anonymous"></script>
+  <script src="../JavaScript/Cursor.js" defer></script>
+  <script src="../JavaScript/Handwriting.js" defer></script>
 </head>
 <body>
-    <nav>
-        <input type="checkbox" id="check" />
-        <label for="check" class="burger-button">
-          <i class="fa-solid fa-bars"></i>
-        </label>
-        <label for="logo" class="logo">NM</label>
-        <ul>
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="../Blogs/BlogsHome.html">Blogs</a></li>
-            <li><a href="../Design/DesignHome.html">Design</a></li>
-            <li><a href="../Portfolio/Portfoliohome.html">Portfolio</a></li>
-            <li><a href="https://www.linkedin.com/in/nandi-m-4aa89123b?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BqctwxnPOTGawuqEwz03UcA%3D%3D" class="linkedin-icon" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i></a></li>
-        </ul>
-    </nav>
-  
-    <div class="header">
-        <img src="../Images/Miscallanous/scripts background home (2).jpg" alt="">
-        <h1>SCRIPTS</h1>
-        <p>Discover my collection of scripts where I showcase my coding skills and technical abilities</p>
-        
-    </div>
+  <!-- Glowing Cursor -->
+  <div id="cursorPulse" class="cursor-pulse"></div>
+
+  <!-- Navigation -->
+  <nav>
+    <input type="checkbox" id="check" />
+    <label for="check" class="burger-button">
+      <i class="fa-solid fa-bars"></i>
+    </label>
+    <label class="logo">NM</label>
+    <ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../Blogs/BlogsHome.html">Blogs</a></li>
+      <li><a href="../Design/DesignHome.html">Design</a></li>
+      <li><a href="../Portfolio/Portfoliohome.html">Portfolio</a></li>
+      <li>
+        <a href="https://www.linkedin.com/in/nandi-m-4aa89123b" class="linkedin-icon" target="_blank" rel="noopener noreferrer">
+          <i class="fa-brands fa-linkedin"></i>
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- Header Section -->
+  <div class="header">
+    <img src="../Images/Miscallanous/scripts background home (2).jpg" alt="" />
     
-    <div class="featured-work">
-        <h2>FEATURED WORK</h2>
-        
-        <div class="work-categories">
-            <a href="../Scripts/Script (CSS, JAVA, HTML).html" class="category">Java</a>
-            <a href="../Scripts/Script (CSS, JAVA, HTML).html" class="category">CSS</a>
-        </div>
-        
-        <div class="work-categories" style="margin-top: 20px;">
-            <a href="../Scripts/Script (CSS, JAVA, HTML).html" class="category">HTML</a>
-        </div>
+    <svg viewBox="0 0 1000 100" width="90%" height="100px">
+      <text id="handwrittenPath" x="50%" y="50%" dominant-baseline="middle" text-anchor="middle"
+            fill="none" stroke="#E1B808" stroke-width="2" font-family="'heading font'" font-size="48px"
+            visibility="hidden">
+        SCRIPTS
+      </text>
+    </svg>
+    
+    <svg viewBox="0 0 1000 50" width="80%" height="60px">
+      <text id="subtitlePath" x="50%" y="50%" dominant-baseline="middle" text-anchor="middle"
+            fill="none" stroke="#E1B808" stroke-width="1.5" font-family="'body font'" font-size="20px"
+            visibility="hidden">
+        Discover my collection of scripts
+      </text>
+    </svg>
+
+    <p>where I showcase my coding skills and technical abilities</p>
+  </div>
+
+  <!-- Featured Work Section -->
+  <div class="featured-work">
+    <h2>FEATURED WORK</h2>
+    <div class="work-categories">
+      <a href="../Scripts/Script (CSS, JAVA, HTML).html" class="category">Java</a>
+      <a href="../Scripts/Script (CSS, JAVA, HTML).html" class="category">CSS</a>
     </div>
-    <footer class="footer-text">
-        Brought to you by Nandi Mpofu.
-    </footer>
+    <div class="work-categories" style="margin-top: 20px;">
+      <a href="../Scripts/Script (CSS, JAVA, HTML).html" class="category">HTML</a>
+    </div>
+  </div>
+
+  <footer class="footer-text">
+    Brought to you by Nandi Mpofu.
+  </footer>
 </body>
 </html>
