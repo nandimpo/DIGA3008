@@ -7,13 +7,10 @@
 
   <!-- CSS -->
   <link rel="stylesheet" href="normalize.css" />
-  <link rel="stylesheet" href="../CSS/Animation.css" />
+  <link rel="stylesheet" href="../CSS/Writing.css" />
 
-  <!-- Font Awesome for icons -->
+  <!-- Font Awesome -->
   <script src="https://kit.fontawesome.com/89fd46d92d.js" crossorigin="anonymous"></script>
-
-  <!-- Google Font fallback -->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet" />
 </head>
 
 <body>
@@ -30,37 +27,67 @@
       <li><a href="../Design/DesignHome.html">Design</a></li>
       <li><a href="../Scripts/Scriptshome.html">Scripts</a></li>
       <li><a href="../Portfolio/Portfoliohome.html">Portfolio</a></li>
-      <li>
-        <a href="https://www.linkedin.com/in/nandi-m-4aa89123b" target="_blank" class="linkedin-icon" rel="noopener noreferrer">
-          <i class="fa-brands fa-linkedin"></i>
-        </a>
-      </li>
+      <li><a href="https://www.linkedin.com/in/nandi-m-4aa89123b" target="_blank" class="linkedin-icon" rel="noopener noreferrer">
+        <i class="fa-brands fa-linkedin"></i>
+      </a></li>
     </ul>
   </nav>
 
   <!-- Main Content -->
-  <main class="portfolio-container">
+  <main>
     <h1>Animations</h1>
-    <p class="highlight-text">
-      Here you can find my animations. Once you are done feel free to explore the rest of my <strong>portfolio</strong>.
-    </p>
+
+    <ul class="categories">
+      <li><a href="../Portfolio/Portfoliohome.html">Here you can find my animations. Once you are done feel free to explore the rest of my <b> portfolio.</b></a></li>
+    </ul>
 
     <div class="image-grid">
+      <!-- Animation 1 -->
       <div class="image-container">
         <img src="../Images/Portfolio/assisgnnent2-1-ezgif.com-crop.gif" alt="Animation 1">
+        <div class="article-title">Animation 1</div>
+        <div class="article-content">
+          <input type="checkbox" class="read-more-state" id="anim-1" />
+          <div class="read-more-wrap">
+            <span class="content-preview">A simple animated loop of a blinking character with clean lines and strong readability...</span>
+            <span class="read-more-target">This animation showcases basic timing, loop consistency, and expression focus.</span>
+          </div>
+          <label for="anim-1" class="read-more-trigger"></label>
+        </div>
       </div>
+
+      <!-- Animation 2 -->
       <div class="image-container">
-        <img src="" alt="Animation 2">
+        <img src="../Images/Portfolio/animation2.gif" alt="Animation 2">
+        <div class="article-title">Animation 2</div>
+        <div class="article-content">
+          <input type="checkbox" class="read-more-state" id="anim-2" />
+          <div class="read-more-wrap">
+            <span class="content-preview">Coming soon...</span>
+            <span class="read-more-target">This animation will explore movement in side profile with crossing leg poses.</span>
+          </div>
+          <label for="anim-2" class="read-more-trigger"></label>
+        </div>
       </div>
-      <div class="image-container">Animation 3</div>
-      <div class="image-container">Animation 4</div>
-      <div class="image-container">Animation 5</div>
-      <div class="image-container">Animation 6</div>
+
+      <!-- Animation 3 -->
+      <div class="image-container">
+        <img src="../Images/Portfolio/animation3.gif" alt="Animation 3">
+        <div class="article-title">Animation 3</div>
+        <div class="article-content">
+          <input type="checkbox" class="read-more-state" id="anim-3" />
+          <div class="read-more-wrap">
+            <span class="content-preview">A short eye-roll animation to convey attitude and clarity of emotion...</span>
+            <span class="read-more-target">Designed to focus on squash and stretch, arcs, and timing for expressive motion.</span>
+          </div>
+          <label for="anim-3" class="read-more-trigger"></label>
+        </div>
+      </div>
     </div>
   </main>
 
   <!-- Footer -->
-  <footer class="portfolio-footer">
+  <footer class="footer-text">
     Brought to you by Nandi Mpofu.
   </footer>
 </body>

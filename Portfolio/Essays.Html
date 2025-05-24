@@ -1,66 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nandi's website</title>
-    <link rel="stylesheet" href="normalize.css">
-    <link rel="stylesheet" href="../CSS/Essays.css">
-    <script src="https://kit.fontawesome.com/89fd46d92d.js" crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nandi's Website – Essays</title>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="normalize.css">
+  <link rel="stylesheet" href="../CSS/Writing.css">
+
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/89fd46d92d.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <nav>
-        <input type="checkbox" id="check" />
-        <label for="check" class="burger-button">
-            <i class="fa-solid fa-bars"></i>
-        </label>
-        <label class="logo">NM</label>
-        <ul>
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="../Blogs/BlogsHome.html">Blogs</a></li>
-            <li><a href="../Design/DesignHome.html">Design</a></li>
-            <li><a href="../Scripts/Scriptshome.html">Scripts</a></li>
-            <li><a href="../Portfolio/Portfoliohome.html">Portfolio</a></li>
-            <li><a href="https://www.linkedin.com/in/nandi-m-4aa89123b?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BqctwxnPOTGawuqEwz03UcA%3D%3D" class="linkedin-icon" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i></a></li>
-        </ul>
-    </nav>
-    
-    <div class="essays-container">
-        <h1 class="essays-title">Essays</h1>
-        
-        <ul class="categories">
-            <li><a href="Portfoliohome.html">Here you can find my essays. They are coming soon!</a></li>
-            
-        </ul>
-        
-        <div class="essay-section">
-            <div class="essay-items">
-                <div class="essay-item" id="essay1-item">
-                    <h2 class="essay-title">Essay 1</h2>
-                    <a href="#essay1" class="view-all">View all</a>
-                    <div class="arrow"></div>
-                </div>
-                
-                <div class="essay-item" id="essay2-item">
-                    <h2 class="essay-title">Essay 2</h2>
-                    <a href="#essay2" class="view-all">View all</a>
-                    <div class="arrow"></div>
-                </div>
-            </div>
-            
-            <div class="preview-container">
-                <div id="essay1" class="essay-preview">
-                    <p class="coming-soon">coming soon</p>
-                </div>
-                
-                <div id="essay2" class="essay-preview">
-                    <p class="coming-soon">coming soon</p>
-                </div>
-            </div>
+  <!-- Navigation -->
+  <nav>
+    <input type="checkbox" id="check" />
+    <label for="check" class="burger-button">
+      <i class="fa-solid fa-bars"></i>
+    </label>
+    <label class="logo">NM</label>
+    <ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../Blogs/BlogsHome.html">Blogs</a></li>
+      <li><a href="../Design/DesignHome.html">Design</a></li>
+      <li><a href="../Scripts/Scriptshome.html">Scripts</a></li>
+      <li><a href="../Portfolio/Portfoliohome.html">Portfolio</a></li>
+      <li>
+        <a href="https://www.linkedin.com/in/nandi-m-4aa89123b" class="linkedin-icon" target="_blank" rel="noopener noreferrer">
+          <i class="fa-brands fa-linkedin"></i>
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- Main Content -->
+  <main>
+    <h1>Essays</h1>
+
+    <ul class="categories">
+      <li><a href="../Portfolio/Portfoliohome.html">Here you can find my essays. Once you are done feel free to explore the rest of my <b> portfolio.</b></a></li>
+    </ul>
+
+    <div class="image-grid">
+      <!-- Essay 1 -->
+      <div class="image-container">
+        <img src="../Images/Writing/placeholder.jpg" alt="Essay 1">
+        <div class="article-title">Essay 1</div>
+        <div class="article-content">
+          <input type="checkbox" class="read-more-state" id="essay-1" />
+          <div class="read-more-wrap">
+            <span class="content-preview">An essay on contemporary South African literature in post-apartheid media...</span>
+            <span class="read-more-target">
+              This essay examines how narratives of identity and reconciliation have evolved through key writers and filmmakers since 1994. It reflects on the cultural shifts, including the integration of personal and national trauma in artistic expression.
+            </span>
+          </div>
+          <label for="essay-1" class="read-more-trigger"></label>
         </div>
+      </div>
+
+      <!-- Essay 2 -->
+      <div class="image-container">
+        <img src="../Images/Writing/placeholder.jpg" alt="Essay 2">
+        <div class="article-title">Essay 2</div>
+        <div class="article-content">
+          <input type="checkbox" class="read-more-state" id="essay-2" />
+          <div class="read-more-wrap">
+            <span class="content-preview">Coming soon: A deep dive into decolonial feminist theory and African storytelling...</span>
+            <span class="read-more-target">
+              This upcoming essay will explore the intersection of feminist resistance and oral history in African literature, including the works of Tsitsi Dangarembga and Chimamanda Ngozi Adichie.
+            </span>
+          </div>
+          <label for="essay-2" class="read-more-trigger"></label>
+        </div>
+      </div>
+
+      <!-- Essay 3 -->
+      <div class="image-container">
+        <img src="../Images/Writing/placeholder.jpg" alt="Essay 3">
+        <div class="article-title">Essay 3</div>
+        <div class="article-content">
+          <input type="checkbox" class="read-more-state" id="essay-3" />
+          <div class="read-more-wrap">
+            <span class="content-preview">Coming soon...</span>
+            <span class="read-more-target">Content for the third essay will be added soon.</span>
+          </div>
+          <label for="essay-3" class="read-more-trigger"></label>
+        </div>
+      </div>
     </div>
-    <footer class="footer-text">
-        Brought to you by Nandi Mpofu.
-    </footer>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer-text">
+    Brought to you by Nandi Mpofu.
+  </footer>
 </body>
 </html>
