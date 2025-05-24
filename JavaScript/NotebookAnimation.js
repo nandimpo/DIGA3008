@@ -1,11 +1,13 @@
+// NotebookPage.js
 document.addEventListener("DOMContentLoaded", () => {
   const pages = document.querySelectorAll(".notebook-page");
+  if (!pages.length) return;
 
   const revealOnScroll = (entries, observer) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add("reveal");
-        observer.unobserve(entry.target); // only trigger once
+        observer.unobserve(entry.target);
       }
     });
   };

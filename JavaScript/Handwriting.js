@@ -1,3 +1,4 @@
+// Handwriting.js
 document.addEventListener("DOMContentLoaded", () => {
   const title = document.getElementById("handwrittenPath");
   const subtitle = document.getElementById("subtitlePath");

@@ -4,16 +4,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Nandi's Website – Essays</title>
-
-  <!-- Styles -->
   <link rel="stylesheet" href="normalize.css">
   <link rel="stylesheet" href="../CSS/Writing.css">
-
-  <!-- Font Awesome -->
   <script src="https://kit.fontawesome.com/89fd46d92d.js" crossorigin="anonymous"></script>
+  <script src="../JavaScript/Cursor.js" defer></script>
+  <script src="../JavaScript/Handwriting.js" defer></script>
+  <script src="../JavaScript/NotebookAnimation.js" defer></script>
 </head>
 <body>
-  <!-- Navigation -->
+  <div id="cursorPulse"></div>
+
   <nav>
     <input type="checkbox" id="check" />
     <label for="check" class="burger-button">
@@ -26,24 +26,19 @@
       <li><a href="../Design/DesignHome.html">Design</a></li>
       <li><a href="../Scripts/Scriptshome.html">Scripts</a></li>
       <li><a href="../Portfolio/Portfoliohome.html">Portfolio</a></li>
-      <li>
-        <a href="https://www.linkedin.com/in/nandi-m-4aa89123b" class="linkedin-icon" target="_blank" rel="noopener noreferrer">
-          <i class="fa-brands fa-linkedin"></i>
-        </a>
-      </li>
+      <li><a href="https://www.linkedin.com/in/nandi-m-4aa89123b" class="linkedin-icon" target="_blank" rel="noopener noreferrer">
+        <i class="fa-brands fa-linkedin"></i>
+      </a></li>
     </ul>
   </nav>
 
-  <!-- Main Content -->
   <main>
-    <h1>Essays</h1>
-
+    <h1 class="notebook-page">Essays</h1>
     <ul class="categories">
       <li><a href="../Portfolio/Portfoliohome.html">Here you can find my essays. Once you are done feel free to explore the rest of my <b> portfolio.</b></a></li>
     </ul>
 
-    <div class="image-grid">
-      <!-- Essay 1 -->
+    <div class="image-grid notebook-page">
       <div class="image-container">
         <img src="../Images/Writing/placeholder.jpg" alt="Essay 1">
         <div class="article-title">Essay 1</div>
@@ -59,7 +54,6 @@
         </div>
       </div>
 
-      <!-- Essay 2 -->
       <div class="image-container">
         <img src="../Images/Writing/placeholder.jpg" alt="Essay 2">
         <div class="article-title">Essay 2</div>
@@ -74,24 +68,9 @@
           <label for="essay-2" class="read-more-trigger"></label>
         </div>
       </div>
-
-      <!-- Essay 3 -->
-      <div class="image-container">
-        <img src="../Images/Writing/placeholder.jpg" alt="Essay 3">
-        <div class="article-title">Essay 3</div>
-        <div class="article-content">
-          <input type="checkbox" class="read-more-state" id="essay-3" />
-          <div class="read-more-wrap">
-            <span class="content-preview">Coming soon...</span>
-            <span class="read-more-target">Content for the third essay will be added soon.</span>
-          </div>
-          <label for="essay-3" class="read-more-trigger"></label>
-        </div>
-      </div>
     </div>
   </main>
 
-  <!-- Footer -->
   <footer class="footer-text">
     Brought to you by Nandi Mpofu.
   </footer>

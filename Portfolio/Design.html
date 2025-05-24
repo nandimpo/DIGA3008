@@ -3,14 +3,18 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Nandi's website</title>
+  <title>Nandi's Website – Design Games</title>
   <link rel="stylesheet" href="normalize.css" />
   <link rel="stylesheet" href="../CSS/Writing.css" />
   <script src="https://kit.fontawesome.com/89fd46d92d.js" crossorigin="anonymous"></script>
+  <script src="../JavaScript/Cursor.js" defer></script>
+  <script src="../JavaScript/Handwriting.js" defer></script>
+  <script src="../JavaScript/NotebookAnimation.js" defer></script>
 </head>
 
 <body>
-  <!-- Header like Animation Home -->
+  <div id="cursorPulse"></div>
+
   <nav>
     <input type="checkbox" id="check" />
     <label for="check" class="burger-button">
@@ -32,13 +36,12 @@
   </nav>
 
   <main>
-    <h1>Design Games</h1>
+    <h1 class="notebook-page">Design Games</h1>
     <ul class="categories">
       <li><a href="Portfoliohome.html">Here you can find my Game Designs samples. Once you are done feel free to explore the rest of my <b>portfolio.</b></a></li>
     </ul>
 
-    <div class="image-grid">
-      <!-- First Article -->
+    <div class="image-grid notebook-page">
       <div class="image-container">
         <img src="../Images/Design(games)/sign language- memory.png" alt="sign language" />
         <div class="article-title">Sign Language Card Game.</div>
@@ -46,44 +49,33 @@
           <input type="checkbox" class="read-more-state" id="post-1" />
           <div class="read-more-wrap">
             <span class="content-preview">This is a Sign Language Memory Card Game.</span>
-            <span class="read-more-target">
-              -CLICK THE CARDS TO FLIP THEM.<br>
-              -MEMORISE THE SIGN.<br>
-              -CLICK ANOTHER CARD.<br>
-              -MATCH THE CARDS BEFORE THE TIME RUNS OUT!
-            </span>
+            <span class="read-more-target">CLICK THE CARDS TO FLIP THEM. MEMORISE THE SIGN. CLICK ANOTHER CARD. MATCH THE CARDS BEFORE THE TIME RUNS OUT!</span>
           </div>
           <label for="post-1" class="read-more-trigger"></label>
         </div>
       </div>
 
-      <!-- Second Article -->
       <div class="image-container">
         <img src="../Images/Design(games)/Horror Wedding Game 2025-01-05 21-40-14 (1).gif" alt="3D horror game" />
         <div class="article-title">First person 3D Horror game.</div>
         <div class="article-content">
           <input type="checkbox" class="read-more-state" id="post-2" />
           <div class="read-more-wrap">
-            <span class="content-preview">
-              In this first-person 3D horror game, players explore a chilling narrative about a toxic relationship...
-            </span>
-            <span class="read-more-target">
-              Set in a haunting environment, they encounter supernatural elements symbolizing emotional abuse. Players solve puzzles and confront fears, making choices that influence the outcome. With immersive sound and visuals, the game explores themes of control and escape, leading to multiple endings based on decisions made throughout.
-            </span>
+            <span class="content-preview">In this first-person 3D horror game, players explore a chilling narrative about a toxic relationship...</span>
+            <span class="read-more-target">Set in a haunting environment, they encounter supernatural elements symbolizing emotional abuse...</span>
           </div>
           <label for="post-2" class="read-more-trigger"></label>
         </div>
       </div>
 
-      <!-- Third Article -->
       <div class="image-container">
         <img src="../Images/Writing/placeholder.jpg" alt="Game 3" />
         <div class="article-title">Game 3</div>
         <div class="article-content">
           <input type="checkbox" class="read-more-state" id="post-3" />
           <div class="read-more-wrap">
-            <span class="content-preview">Content preview for the third writing sample would go here...</span>
-            <span class="read-more-target">Full content for the third writing sample would go here...</span>
+            <span class="content-preview">Content preview for the third game design would go here...</span>
+            <span class="read-more-target">Full content for the third game design would go here...</span>
           </div>
           <label for="post-3" class="read-more-trigger"></label>
         </div>
@@ -91,7 +83,6 @@
     </div>
   </main>
 
-  <!-- Footer like Animation -->
   <footer class="footer-text">
     Brought to you by Nandi Mpofu.
   </footer>

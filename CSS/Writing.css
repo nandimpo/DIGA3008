@@ -1,11 +1,11 @@
 @font-face {
   font-family: 'body font';
-  src: url(Montserrat-SemiBold);
+  src: url('../Fonts/Montserrat-SemiBold.ttf') format('truetype');
 }
 
 @font-face {
   font-family: 'heading font';
-  src: url(Grown.ttf);
+  src: url('../Fonts/Grown.ttf') format('truetype');
 }
 
 /* Global reset */
@@ -33,9 +33,22 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  position: relative;
 }
 
-/* Navigation (like animation home) */
+/* === CURSOR PULSE === */
+#cursorPulse {
+  position: fixed;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: rgba(24, 112, 64, 0.4);
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+}
+
+/* Navigation */
 nav {
   display: flex;
   justify-content: space-between;
@@ -87,7 +100,7 @@ nav ul li a:hover {
   color: var(--main-bg);
 }
 
-/* Footer like animation */
+/* Footer */
 .footer-text {
   background-color: var(--header-bg);
   color: var(--main-bg);
@@ -99,7 +112,7 @@ nav ul li a:hover {
   margin-top: auto;
 }
 
-/* Main header */
+/* Main content */
 main {
   flex: 1;
   padding: 40px;
@@ -146,7 +159,6 @@ main h1 {
   color: var(--text-dark);
 }
 
-/* Image styling */
 .image-container img {
   width: 100%;
   height: 200px;
@@ -160,7 +172,7 @@ main h1 {
   background-color: rgba(231, 207, 122, 0.3);
 }
 
-/* Read more button */
+/* Read More button */
 .read-more-state {
   display: none;
 }
@@ -215,6 +227,39 @@ main h1 {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+/* === SVG Handwriting Animations === */
+#handwrittenPath, #subtitlePath {
+  stroke: var(--accent-color);
+  stroke-width: 2px;
+  fill: none;
+  visibility: hidden;
+}
+
+/* Draw animations */
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes draw-sub {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* === Notebook Reveal Animation === */
+.notebook-page {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 1s ease;
+}
+
+.notebook-page.reveal {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* Responsive */
