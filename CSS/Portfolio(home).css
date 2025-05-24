@@ -1,15 +1,15 @@
-/* Font imports */
+/* === Custom Fonts === */ 
 @font-face {
   font-family: 'body font';
-  src: url(Montserrat-SemiBold);
+  src: url('../Fonts/Montserrat-SemiBold.ttf') format('truetype');
 }
 
 @font-face {
   font-family: 'heading font';
-  src: url(Grown.ttf);
+  src: url('../Fonts/Grown.ttf') format('truetype');
 }
 
-/* Color variables */
+/* === Root Variables === */
 :root {
   --background-color: #5F5143;
   --header-bg: #EBE4D2;
@@ -21,7 +21,7 @@
   --button-color: #E1B808;
 }
 
-/* Reset and base */
+/* === Reset and Base === */
 * {
   margin: 0;
   padding: 0;
@@ -37,20 +37,48 @@ body {
   flex-direction: column;
 }
 
-/* Navigation (matches animation page) */
+/* === Cursor Glow Effect === */
+#cursorPulse {
+  position: fixed;
+  width: 30px;
+  height: 30px;
+  background: rgba(24, 112, 64, 0.4);
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+}
+
+/* === Navigation Bar === */
 nav {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   padding: 15px 30px;
   background-color: var(--header-bg);
   font-family: 'heading font', serif;
+  position: relative;
 }
 
-nav .logo {
+#check {
+  position: absolute;
+  top: 15px;
+  left: 30px;
+  z-index: 0;
+  opacity: 0;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.logo {
+  position: relative;
+  z-index: 2;
   font-size: 24px;
   font-weight: bold;
   color: var(--text-color);
+  margin-right: auto;
+  cursor: pointer;
 }
 
 nav ul {
@@ -74,23 +102,11 @@ nav ul li a:hover {
   color: var(--accent-color);
 }
 
-.linkedin-icon i {
-  color: #0077b5;
-  font-size: 20px;
-}
-
-#check {
-  display: none;
-}
-
 .burger-button {
   display: none;
-  font-size: 24px;
-  cursor: pointer;
-  color: var(--text-color);
 }
 
-/* Main header styles */
+/* === Portfolio Section === */
 .portfolio-container {
   padding: 40px 20px;
   flex: 1;
@@ -101,59 +117,82 @@ nav ul li a:hover {
   margin-bottom: 30px;
 }
 
-.portfolio-header h1 {
-  font-family: 'heading font', serif;
-  font-size: 60px;
-  color: var(--heading-color);
-}
-
-.portfolio-header p {
-  color: var(--accent-color);
-  max-width: 800px;
-  margin: 20px auto 0;
+.portfolio-intro {
   font-size: 18px;
   line-height: 1.6;
+  color: var(--accent-color);
+  max-width: 900px;
+  margin: 30px auto 20px;
+  text-align: center;
+  padding: 0 20px;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
 }
 
-/* Notebook grid layout */
+/* === SVG Handwriting Animation === */
+#handwrittenPath,
+#subtitlePath {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  visibility: hidden;
+}
+
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes draw-sub {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* === Notebook Layout === */
 .notebook {
-  background-color: var(--card-bg);
-  border: 10px solid var(--border-color);
-  border-radius: 10px;
+  background: linear-gradient(to right, #fdf8ed, #f5ebd8);
+  border: 8px solid var(--border-color);
+  border-radius: 20px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  max-width: 1000px;
-  margin: 40px auto;
-  position: relative;
-  overflow: hidden;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  margin: 0 auto 60px;
+  max-width: 960px;
+  gap: 1px;
 }
 
-.notebook::before {
-  content: '';
-  position: absolute;
-  left: 50%;
-  top: 0;
-  bottom: 0;
-  width: 2px;
-  background-color: var(--border-color);
-  transform: translateX(-50%);
-  z-index: 2;
+/* === Scroll Reveal Animation === */
+@keyframes fadeInSlide {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .notebook-page {
-  padding: 30px;
+  padding: 40px 30px;
   background-color: var(--card-bg);
   display: flex;
   flex-direction: column;
   align-items: center;
-  position: relative;
-  z-index: 3;
+
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
+.notebook-page.reveal {
+  animation: fadeInSlide 0.8s ease forwards;
+}
+
+/* === Buttons === */
 .portfolio-button {
   display: block;
-  background-color: var(--button-color);
+  background: linear-gradient(to right, #e1b808, #d17609);
   color: var(--text-color);
   text-decoration: none;
   padding: 12px 30px;
@@ -161,7 +200,7 @@ nav ul li a:hover {
   border-radius: 30px;
   font-weight: bold;
   text-align: center;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
   transition: all 0.3s ease;
   width: 80%;
   max-width: 250px;
@@ -169,50 +208,20 @@ nav ul li a:hover {
 
 .portfolio-button:hover {
   background-color: #D17609;
-  transform: translateY(-3px);
+  transform: scale(1.05);
+  box-shadow: 0 0 10px var(--accent-color);
 }
 
 .category-description {
   color: var(--text-color);
-  font-size: 0.95rem;
-  margin-bottom: 20px;
+  font-size: 1rem;
+  line-height: 1.5;
+  max-width: 260px;
   text-align: center;
+  margin-bottom: 30px;
 }
 
-/* Decorative leaves */
-.notebook-decoration {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  z-index: 1;
-}
-
-.leaf-left,
-.leaf-right {
-  position: absolute;
-  background-color: #187040;
-  clip-path: ellipse(30% 50% at 50% 50%);
-  opacity: 0.7;
-}
-
-.leaf-left {
-  left: -20px;
-  bottom: 20px;
-  width: 100px;
-  height: 120px;
-  transform: rotate(-30deg);
-}
-
-.leaf-right {
-  right: -20px;
-  bottom: 30px;
-  width: 80px;
-  height: 100px;
-  transform: rotate(30deg);
-}
-
-/* Footer (matches animation page) */
+/* === Footer === */
 .footer-text {
   background-color: var(--header-bg);
   color: var(--text-color);
@@ -223,18 +232,24 @@ nav ul li a:hover {
   margin-top: auto;
 }
 
-/* Responsive design */
-@media (max-width: 900px) {
-  .notebook {
-    grid-template-columns: 1fr;
+/* === Responsive Design === */
+@media (max-width: 768px) {
+  .portfolio-button {
+    width: 90%;
   }
 
-  .notebook::before {
-    display: none;
+  .notebook {
+    grid-template-columns: 1fr;
+    padding: 20px;
   }
 
   .burger-button {
     display: block;
+  }
+
+  .burger-icon {
+    font-size: 24px;
+    color: var(--text-color);
   }
 
   nav ul {

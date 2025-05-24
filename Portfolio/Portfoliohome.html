@@ -3,18 +3,24 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Nandi's website</title>
+  <title>Nandi's Website – Portfolio</title>
   <link rel="stylesheet" href="normalize.css" />
   <link rel="stylesheet" href="../CSS/Portfolio(home).css" />
-  <script src="https://kit.fontawesome.com/89fd46d92d.js" crossorigin="anonymous"></script>
+
+  <!-- JavaScript used across multiple pages -->
+  <script src="../JavaScript/Cursor.js" defer></script>
+  <script src="../JavaScript/Handwriting.js" defer></script>
+  <script src="../JavaScript/NotebookAnimation.js" defer></script>
 </head>
 <body>
+  <!-- Glowing Cursor -->
+  <div id="cursorPulse"></div>
 
-  <!-- Fixed Navigation (matches animation page) -->
+  <!-- Navigation -->
   <nav>
     <input type="checkbox" id="check" />
     <label for="check" class="burger-button">
-      <i class="fa-solid fa-bars"></i>
+      <span class="burger-icon">☰</span>
     </label>
     <label class="logo">NM</label>
     <ul>
@@ -22,53 +28,50 @@
       <li><a href="../Blogs/BlogsHome.html">Blogs</a></li>
       <li><a href="../Design/DesignHome.html">Design</a></li>
       <li><a href="../Scripts/Scriptshome.html">Scripts</a></li>
-      <li>
-        <a href="https://www.linkedin.com/in/nandi-m-4aa89123b"
-           class="linkedin-icon" target="_blank" rel="noopener noreferrer">
-          <i class="fa-brands fa-linkedin"></i>
-        </a>
-      </li>
+      <li><a href="https://www.linkedin.com/in/nandi-m-4aa89123b" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
     </ul>
   </nav>
 
-  <!-- Portfolio Section -->
+  <!-- Portfolio Content -->
   <div class="portfolio-container">
     <div class="portfolio-header">
-      <h1>Portfolio</h1>
-      <p>
-        I love everything artistic from Animation, Design, and Writing. I love work that is African and Woman-centred and I love to reflect this in my work. If you want to know more about my work, look no further!
+      <svg class="handwriting-svg" viewBox="0 0 800 200" preserveAspectRatio="xMidYMid meet">
+        <text id="handwrittenPath" x="400" y="100" text-anchor="middle"
+              font-family="heading font" font-size="48" fill="none" stroke="#E1B808" stroke-width="2">
+          My Portfolio
+        </text>
+        <text id="subtitlePath" x="400" y="150" text-anchor="middle"
+              font-family="body font" font-size="24" fill="none" stroke="#f5f1e6" stroke-width="1.5">
+          A showcase of animation, design, writing, and interactivity.
+        </text>
+      </svg>
+
+      <p class="portfolio-intro">
+        I love everything artistic from Animation, Design, and Writing. I love work that is African and Woman-centred
+        and I love to reflect this in my work. If you want to know more about my work, look no further!
       </p>
     </div>
 
     <div class="notebook">
-      <div class="notebook-page left-page">
+      <div class="notebook-page">
         <a href="Animation.html" class="portfolio-button">Animation</a>
         <p class="category-description">Here you will find all my animations thus far.</p>
 
-        <a href="Writing.Html" class="portfolio-button">Writing</a>
+        <a href="Writing.html" class="portfolio-button">Writing</a>
         <p class="category-description">This section includes writing in English and French.</p>
       </div>
-
-      <div class="notebook-page right-page">
+      <div class="notebook-page">
         <a href="Design.html" class="portfolio-button">Design</a>
         <p class="category-description">Here you will find my Designs – specifically Game Design.</p>
 
-        <a href="Essays.Html" class="portfolio-button">Essays</a>
+        <a href="Essays.html" class="portfolio-button">Essays</a>
         <p class="category-description">This section includes all my essays.</p>
-      </div>
-
-      <!-- Decorative Leaves -->
-      <div class="notebook-decoration">
-        <div class="leaf-left"></div>
-        <div class="leaf-right"></div>
       </div>
     </div>
   </div>
 
-  <!-- Fixed Footer (matches animation page) -->
   <footer class="footer-text">
     Brought to you by Nandi Mpofu.
   </footer>
-
 </body>
 </html>
