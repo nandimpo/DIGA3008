@@ -1,81 +1,95 @@
-.design-box h3 {
-  color: var(--card-heading-color);
-  font-weight: bold;
-}/* Font Imports */
-@font-face {
-  font-family: 'heading font';
-  src: url(Grown.ttf);
-}
-
+/* === Font Imports === */
 @font-face {
   font-family: 'body font';
-  src: url(Montserrat-SemiBold);
+  src: url('../Fonts/Montserrat-SemiBold.ttf') format('truetype');
 }
 
-/* Base styles */
+@font-face {
+  font-family: 'heading font';
+  src: url('../Fonts/Grown.ttf') format('truetype');
+}
+
+/* === Root Variables === */
 :root {
-  --background-color: #5F5143;
-  --text-color:#5F5143;
-  --heading-color: #EBE4D2;
+  --background-color: #EBE4D2;
+  --text-color: #5F5143;
+  --main-bg: #5F5143;
+  --button-color: #D17609;
+  --button-hover: #E1B808;
   --card-heading-color: #D17609;
-  --accent-color:#E1B808;
-  --border-color: #D17609;
-  --section-background:#EBE4D2;
+  --accent-color: #E1B808;
+  --section-background: #EBE4D2;
+  --white: #ffffff;
 }
 
-body {
-  font-family: 'body font', Montserrat , sans-serif;
-  background-color: var(--background-color);
+/* === Reset and Base === */
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  overflow-x: hidden;
+  font-family: 'body font', sans-serif;
   color: var(--text-color);
+  background-color: var(--main-bg);
+  position: relative;
 }
 
-/* Heading styles */
-h1, h2, h3, .logo {
-  font-family: 'heading font',Grown, sans-serif;
-  color: var(--heading-color);
+/* === Cursor Pulse === */
+.cursor-pulse {
+  position: fixed;
+  width: 30px;
+  height: 30px;
+  background-color: rgba(24, 112, 64, 0.4);
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
 }
 
-/* Navigation */
+/* === Navigation (matches Blogs) === */
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 15px 30px;
-  position: relative;
+  background-color: var(--background-color);
+  font-family: 'heading font', serif;
 }
 
 nav .logo {
   font-size: 24px;
   font-weight: bold;
+  color: var(--main-bg);
 }
 
 nav ul {
   display: flex;
   list-style: none;
-  margin: 0;
-  padding: 0;
 }
 
 nav ul li {
-  margin: 0 10px;
+  margin: 0 15px;
 }
 
 nav ul li a {
   text-decoration: none;
-  color: var(--heading-color);
+  color: var(--main-bg);
   font-size: 16px;
   transition: color 0.3s;
-  font-family: 'heading font', Arial, sans-serif;
+  font-family: 'heading font', serif;
 }
 
 nav ul li a:hover {
-  color: var(--accent-color);
+  color: var(--button-color);
 }
 
 .linkedin-icon {
   color: #0077b5;
+  font-size: 20px;
 }
 
 #check {
@@ -86,65 +100,42 @@ nav ul li a:hover {
   display: none;
   cursor: pointer;
   font-size: 24px;
+  color: var(--main-bg);
 }
 
-/* Main header */
-h2 {
-  text-align: center;
-  margin: 30px 0 20px;
-  font-size: 1.8rem;
-}
-
-p {
-  text-align: center;
-  max-width: 800px;
-  margin: 0 auto 20px;
-  line-height: 1.6;
-  padding: 0 20px;
-}
-
-/* Main navigation buttons */
-.main-nav {
-  display: flex;
-  justify-content: center;
-  margin: 30px auto;
-  max-width: 800px;
-}
-
-.main-nav a {
-  background-color: var(--accent-color);
-  color: #333;
-  text-decoration: none;
-  padding: 12px 20px;
-  margin: 0 5px;
-  border-radius: 30px;
-  font-weight: bold;
-  text-align: center;
-  transition: background-color 0.3s;
-}
-
-.main-nav a.wide {
-  flex-grow: 2;
-}
-
-.main-nav a:hover {
-  background-color: #E1B808;
-}
-
-/* Design header */
+/* === Design Page Header === */
 .design-header {
   text-align: center;
-  margin: 50px 0 30px;
+  margin: 60px 0 30px;
+  padding: 0 20px;
 }
 
 .design-header h1 {
   font-size: 3.5rem;
-  margin: 0;
+  color: var(--background-color);
   letter-spacing: 2px;
   text-transform: uppercase;
+  font-family: 'heading font', serif;
 }
 
-/* Design grid layout */
+.design-header h2 {
+  font-size: 1.8rem;
+  margin-top: 20px;
+  color: var(--background-color);
+  font-family: 'heading font', serif;
+}
+
+.design-header p {
+  margin-top: 15px;
+  font-size: 1rem;
+  color: var(--background-color);
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+
+/* === Design Layout Grid === */
 .design-container {
   display: grid;
   grid-template-columns: 2fr 1fr;
@@ -154,6 +145,7 @@ p {
   padding: 0 20px;
 }
 
+/* === Design Box Grid === */
 .design-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -162,7 +154,7 @@ p {
 }
 
 .design-box {
-  border: 2px solid var(--border-color);
+  border: 2px solid var(--button-color);
   border-radius: 10px;
   height: 150px;
   display: flex;
@@ -172,6 +164,14 @@ p {
   text-decoration: none;
   color: var(--text-color);
   transition: transform 0.3s, box-shadow 0.3s;
+  font-family: 'body font', sans-serif;
+  text-align: center;
+  padding: 10px;
+}
+
+.design-box h3 {
+  color: var(--card-heading-color);
+  font-weight: bold;
 }
 
 .design-box:hover {
@@ -179,6 +179,7 @@ p {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
+/* === Featured Work Section === */
 .featured-work {
   background-color: var(--section-background);
   padding: 20px;
@@ -194,108 +195,69 @@ p {
   color: var(--card-heading-color);
 }
 
-.work-line {
-  height: 2px;
-  background-color: var(--text-color);
-  margin: 20px 0;
-  width: 70%;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* Links styling */
-a {
-  color: var(--text-color);
-  text-decoration: underline;
-  transition: color 0.3s;
-}
-
-a:hover {
-  color: var(--border-color);
-}
-
-/* Revised link list for design sections */
-.design-links {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-  gap: 15px;
-  max-width: 800px;
-  margin: 30px auto;
-}
-
-.design-links a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  height: 150px;
-  border: 2px solid var(--border-color);
-  border-radius: 10px;
-  text-decoration: none;
-  color: var(--text-color);
-  background-color: var(--section-background);
-  transition: transform 0.3s, box-shadow 0.3s;
-  padding: 15px;
-}
-
-.design-links a:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  color: var(--border-color);
-}
-
-/* Fix for featured work list */
 .featured-work li {
   text-align: left;
   margin-bottom: 10px;
+  font-size: 0.95rem;
+  line-height: 1.5;
 }
 
-/* Responsive styles */
+/* === Footer (matches Blogs) === */
+.portfolio-footer {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  text-align: center;
+  padding: 25px 10px;
+  font-family: 'heading font', serif;
+  font-size: 1rem;
+  border-top: 1px solid #ccc;
+}
+
+/* === Responsive Styles === */
 @media (max-width: 900px) {
   .design-container {
     grid-template-columns: 1fr;
   }
-  
+
   .featured-work {
     margin-top: 20px;
   }
-  
+
   .main-nav {
     flex-direction: column;
   }
-  
+
   .main-nav a {
     margin: 5px 0;
   }
 }
 
 @media (max-width: 600px) {
-  .design-grid, .design-links {
+  .design-grid {
     grid-template-columns: 1fr;
   }
-  
+
   .burger-button {
     display: block;
   }
-  
+
   nav ul {
     position: fixed;
     width: 100%;
     height: 100vh;
     background-color: var(--background-color);
-    top: 80px;
+    top: 60px;
     left: -100%;
     text-align: center;
     transition: all 0.5s;
     flex-direction: column;
     z-index: 100;
   }
-  
+
   nav ul li {
     margin: 20px 0;
   }
-  
+
   #check:checked ~ ul {
     left: 0;
   }

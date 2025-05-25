@@ -1,67 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nandi's website</title>
-    <link rel="stylesheet" href="normalize.css">
-    <link rel="stylesheet" href="../CSS/Design process.css">
-    <script src="https://kit.fontawesome.com/89fd46d92d.js" crossorigin="anonymous"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nandi's Website – Design Inspiration</title>
+  <link rel="stylesheet" href="normalize.css" />
+  <link rel="stylesheet" href="../CSS/Design process.css" />
+  <script src="../JavaScript/Cursor.js" defer></script>
+  <script src="../JavaScript/MouseGradient.js" defer></script>
+  <script src="https://kit.fontawesome.com/89fd46d92d.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
+  <!-- Cursor Pulse -->
+  <div id="cursorPulse" class="cursor-pulse"></div>
 
-    <nav>
-        <input type="checkbox" id="check" />
-        <label for="check" class="burger-button">
-            <i class="fa-solid fa-bars"></i>
-        </label>
-        <label for="logo" class="logo">NM</label>
-        <ul>
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="../Blogs/BlogsHome.html">Blogs</a></li>
-            <li><a href="../Portfolio/Portfoliohome.html">Portfolio</a></li>
-            <li><a href="../Scripts/Scriptshome.html">Scripts</a></li>
-            <li><a href="../Design/DesignHome.html" class="active">Design</a></li>
-        </ul>
-    </nav>
+  <!-- Navigation -->
+  <nav>
+    <input type="checkbox" id="check" />
+    <label for="check" class="burger-button"><i class="fa-solid fa-bars"></i></label>
+    <label class="logo">NM</label>
+    <ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../Portfolio/Portfoliohome.html">Portfolio</a></li>
+      <li><a href="../Scripts/Scriptshome.html">Scripts</a></li>
+      <li><a href="../Blogs/BlogsHome.html">Blogs</a></li>
+      <li><a href="../Design/DesignHome.html" class="active">Design</a></li>
+    </ul>
+  </nav>
 
-    <h2> Design Inspiration!</h2>
-    <p class="p-summary">Kristen Bateman</p>
-    <img src="../Images/DesignProcess/Design Inspo 1.png" alt="Wireframe-Images" width="500" height="300" aria-label=" This is design inspiration">
-    <p>I like the large headings. </p>
+  <!-- Header -->
+  <header class="design-header">
+    <div class="header-text-group">
+      <h1>Design Inspiration</h1>
+      <p>A collection of styles, layouts and visual approaches that inspired this project.</p>
+    </div>
+  </header>
 
-    <p class="p-summary">Hannah Jacobs</p>
-    <img src="../Images/DesignProcess/Design Inspo 2.png" alt="Wireframe-Images" width="500" height="300" aria-label=" This is design inspiration">
-    <p>I like the spacing and alignment of the animartions. </p>
+  <!-- Main Content -->
+  <div class="design-content">
+    <div class="inspiration-block">
+      <p class="p-summary">Kristen Bateman</p>
+      <img src="../Images/DesignProcess/Design Inspo 1.png" alt="Inspiration 1" />
+      <p>I like the large headings.</p>
+    </div>
 
-    <p class="p-summary">Jennifer Fernandez</p>
-    <img src="../Images/DesignProcess/Design Inspo 3.png" alt="Wireframe-Images" width="500" height="300" aria-label=" This is design inspiration">
-    <p>I like the way the blogs are organised.</p>
+    <div class="inspiration-block">
+      <p class="p-summary">Hannah Jacobs</p>
+      <img src="../Images/DesignProcess/Design Inspo 2.png" alt="Inspiration 2" />
+      <p>I like the spacing and alignment of the animations.</p>
+    </div>
 
-    <p class="p-summary">Zachary Jordan</p>
-    <img src="../Images/DesignProcess/Design Inspo 4.png" alt="Wireframe-Images" width="500" height="300" aria-label=" This is design inspiration">
-    <p>I like the use of colour and blocking.</p>
+    <div class="inspiration-block">
+      <p class="p-summary">Jennifer Fernandez</p>
+      <img src="../Images/DesignProcess/Design Inspo 3.png" alt="Inspiration 3" />
+      <p>I like the way the blogs are organised.</p>
+    </div>
 
-    <p class="p-summary">Alex Smith</p>
-    <img src="../Images/DesignProcess/Design Inspo 5.png" alt="Wireframe-Images" width="500" height="300" aria-label=" This is design inspiration">
-    <p>I like the use of colour.</p>
+    <div class="inspiration-block">
+      <p class="p-summary">Zachary Jordan</p>
+      <img src="../Images/DesignProcess/Design Inspo 4.png" alt="Inspiration 4" />
+      <p>I like the use of colour and blocking.</p>
+    </div>
 
+    <div class="inspiration-block">
+      <p class="p-summary">Alex Smith</p>
+      <img src="../Images/DesignProcess/Design Inspo 5.png" alt="Inspiration 5" />
+      <p>I like the use of colour.</p>
+    </div>
 
-    <button>
-        <a href="Designresearch.html">Design Research</a>
-      </button>
+    <div class="button-container">
+      <a href="Designresearch.html" class="nav-button">View Design Research →</a>
+    </div>
+  </div>
 
-
-</body>
-
-<nav class="menu">
+  
+  
+  <!-- Footer -->
+  <footer class="portfolio-footer">
     
-    <a href="../index.html">Home</a>
-    <a href="../Blogs/BlogsHome.html">Blogs</a>
-    <a href="../Design/DesignHome.html">Design</a>
-    <a href="../Portfolio/Portfoliohome.html">Portfolio</a></li>
-    <a href="../Scripts/Scriptshome.html">Scripts</a></li>
-</nav>
-
+    <nav>
+    <ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../Portfolio/Portfoliohome.html">Portfolio</a></li>
+      <li><a href="../Scripts/Scriptshome.html">Scripts</a></li>
+      <li><a href="../Blogs/BlogsHome.html">Blogs</a></li>
+      <li><a href="../Design/DesignHome.html" class="active">Design</a></li>
+    </ul>
+  </nav>
+    Brought to you by Nandi Mpofu.
+  </footer>
+</body>
 </html>

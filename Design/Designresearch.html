@@ -1,128 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nandi's website</title>
-    <link rel="stylesheet" href="normalize.css">
-    <link rel="stylesheet" href="../CSS/Design process.css">
-    <script src="https://kit.fontawesome.com/89fd46d92d.js" crossorigin="anonymous"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nandi's Website – Design Process</title>
+  <link rel="stylesheet" href="normalize.css" />
+  <link rel="stylesheet" href="../CSS/Design process.css" />
+  <script src="../JavaScript/Cursor.js" defer></script>
+  <script src="../JavaScript/MouseGradient.js" defer></script>
+  <script src="https://kit.fontawesome.com/89fd46d92d.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
+  <!-- Cursor Pulse -->
+  <div id="cursorPulse" class="cursor-pulse"></div>
 
+  <!-- Navigation -->
+  <nav>
+    <input type="checkbox" id="check" />
+    <label for="check" class="burger-button"><i class="fa-solid fa-bars"></i></label>
+    <label class="logo">NM</label>
+    <ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../Portfolio/Portfoliohome.html">Portfolio</a></li>
+      <li><a href="../Scripts/Scriptshome.html">Scripts</a></li>
+      <li><a href="../Blogs/BlogsHome.html">Blogs</a></li>
+      <li><a href="../Design/DesignHome.html" class="active">Design</a></li>
+      <li><a href="https://www.linkedin.com/in/nandi-m-4aa89123b" class="linkedin-icon" target="_blank" rel="noopener noreferrer">
+        <i class="fa-brands fa-linkedin"></i></a></li>
+    </ul>
+  </nav>
+
+  <!-- Page Header -->
+  <header class="design-header">
+    <div class="header-text-group">
+      <h1>My Web Design Process</h1>
+      <p>Explore the thinking, planning, and aesthetics behind my interaction design and site development.</p>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="design-content">
+    <section class="inspiration-block">
+      <h2>Documentation of Your IxD Process</h2>
+      <p class="p-summary">The goal of my website is for users to understand who I am as a designer. It should be clear, understandable, accessible, and warm.</p>
+    </section>
+
+    <section class="inspiration-block">
+      <h3>Content Mapping</h3>
+      <img src="../Images/DesignProcess/Content Map 2.png" alt="Experience mapping of a website">
+    </section>
+
+    <section class="inspiration-block">
+      <h3>User Flow – Screens, Behaviour, and Decisions</h3>
+      <img src="../Images/DesignProcess/Userflow.jpeg" alt="Diagram of user flow">
+    </section>
+
+    <section class="inspiration-block">
+      <h3>Style Process Documentation</h3>
+      <p class="p-summary">This is my initial design. I like the warm colors but haven’t fully implemented the palettes yet. I want it to feel even warmer.</p>
+      <div class="wireframe-gallery">
+        <img src="../Images/DesignProcess/Design Sketch 1.jpg" alt="Design Sketch 1">
+        <img src="../Images/DesignProcess/Design Sketch 2.jpg" alt="Design Sketch 2">
+        <img src="../Images/DesignProcess/Design Sketch  3.jpg" alt="Design Sketch 3">
+        <img src="../Images/DesignProcess/Design Sketch 4.jpg" alt="Design Sketch 4">
+        <img src="../Images/DesignProcess/Design Sketch 5.jpg" alt="Design Sketch 5">
+      </div>
+    </section>
+
+    <section class="inspiration-block">
+      <h3>Fonts</h3>
+      <p>I chose ‘Grown’ for headings for its personality and legibility, and ‘Montserrat Classic’ for body text because it's clean and readable.</p>
+      <img src="../Images/DesignProcess/Fonts.png" alt="Possible fonts">
+    </section>
+
+    <section class="inspiration-block">
+      <h3>Colours – Theory and Relationships</h3>
+      <p class="p-summary">Overall Colour Palette</p>
+      <img src="../Images/DesignProcess/Colour palette.png" alt="Overall colour palette">
+
+      <h4>Primary Colour Palette</h4>
+      <img src="../Images/DesignProcess/Colour palette 1.png" alt="Primary colour palette">
+      <p class="p-summary">I chose warm colours (yellow, orange) because they are inviting and harmonious (analogous).</p>
+
+      <h4>Secondary Colour Palette</h4>
+      <img src="../Images/DesignProcess/Colour palette 2.png" alt="Secondary colour palette">
+      <p class="p-summary">The secondary palette provides contrast. Orange and blue are complementary and make elements stand out visually.</p>
+    </section>
+
+    <section class="inspiration-block">
+      <h3>Composition – Hierarchy, Balance, Harmony</h3>
+      <p class="p-summary">The layout is center-aligned and symmetrical for harmony. Repeated circular elements reflect my design goals.</p>
+    </section>
+
+    <section class="inspiration-block">
+      <h4>Interface Elements – Shape, Colour, Position</h4>
+      <p class="p-summary">I use circular, rounded shapes to maintain a warm and welcoming vibe.</p>
+      <div class="wireframe-gallery">
+        <img src="../Images/DesignProcess/Button 1.png" alt="Button 1">
+        <img src="../Images/DesignProcess/Button 2.png" alt="Button 2">
+        <img src="../Images/DesignProcess/Button 3.png" alt="Button 3">
+        <img src="../Images/DesignProcess/Button 4.png" alt="Button 4">
+      </div>
+    </section>
+
+    <section class="inspiration-block">
+      <h3>Reference Material</h3>
+      <p class="p-summary">I appreciate circular designs that promote comfort and calmness:</p>
+      <ul>
+        <li><a href="https://dribbble.com/shots/12108232--l-gante-home-hero-slider" target="_blank" class="p-name u-url">Inspiration – Dribbble</a></li>
+        <li><a href="https://pixcap.com/blog/warm-color-palette" target="_blank" class="p-name u-url">Inspiration – Pixcap</a></li>
+      </ul>
+      <p class="p-summary">Pixcap helped guide my colour choices:</p>
+      <ul>
+        <li>Warm colours (red, orange, yellow) evoke excitement and joy.</li>
+        <li>They highlight key elements like buttons and CTAs.</li>
+        <li>They make users feel welcome and linger longer.</li>
+        <li>They support a friendly, energetic brand identity.</li>
+      </ul>
+    </section>
+
+    <!-- Back to Wireframes Button -->
+    <div class="button-container">
+      <a href="Wireframes.html" class="nav-button">← View Wireframes</a>
+    </div>
+  </main>
+
+  <!-- Footer -->
+   <footer class="portfolio-footer">
+    
     <nav>
-        <input type="checkbox" id="check" />
-        <label for="check" class="burger-button">
-            <i class="fa-solid fa-bars"></i>
-        </label>
-        <label for="logo" class="logo">NM</label>
-        <ul>
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="../Blogs/BlogsHome.html">Blogs</a></li>
-            <li><a href="../Portfolio/Portfoliohome.html">Portfolio</a></li>
-            <li><a href="../Scripts/Scriptshome.html">Scripts</a></li>
-            <li><a href="../Design/DesignHome.html" class="active">Design</a></li>
-            <li><a href="#" class="linkedin-icon"><i class="fa-brands fa-linkedin"></i></a></li>
-        </ul>
-    </nav>
-   
-    <article class="h-entry">
-        <div class="e-content">
-
-    <h2 class= "p-name"> My Web Design Process!</h2>
-
-    <h3 class= "p-name"> Documentation of your IxD process</h3>
-    
-    <p class="p-summary"> Goal Alignment: The goal of my website is for users to understand who I am as a designer. I would also like my website to be user friendly. There it will be clear, understandable and accessible.I would like my website to be warm , welcoming and inviting</p>
-    
-    <h3 class= "p-name"> Content Mapping</h3>
-
-    <img src="../Images/DesignProcess/Content Map 2.png" alt="Wireframe-Images" width="500" height="300" aria-label=" This is an image of a experience mapping of a website">
-     
-    <h3 class= "p-name"> User Flow - Screens, Behaviour, and Decisions </h3>
-
-    <img src="../Images/DesignProcess/Userflow.jpeg" alt="UserflowDiagram" width="500" height="300" aria aria-label="Diagram of user flow">
-
-    <h3 class= "p-name"> Style process documentation</h3>
-     <p class="p-summary"> Possible designs: This is my initial design. I like the warm colors; however, I have not yet implemented both the primary and secondary color palettes. The design is not as warm as I would like. In the future, I want the website to feel warmer.
-    </p>
-
-    <img src="../Images/DesignProcess/Design Sketch 1.jpg " alt="Design Sketch 1"  width="500" height="300" aria aria-label="Sketch of possible web design">
-    <img src="../Images/DesignProcess/Design Sketch 2.jpg " alt="Design Sketch 2"  width="500" height="300" aria aria-label="Sketch of possible web design">
-    <img src="../Images/DesignProcess/Design Sketch  3.jpg " alt="Design Sketch 3"  width="500" height="300" aria aria-label="Sketch of possible web design">
-    <img src="../Images/DesignProcess/Design Sketch 4.jpg " alt="Design Sketch 4"  width="500" height="300" aria aria-label="Sketch of possible web design">
-    <img src="../Images/DesignProcess/Design Sketch 5.jpg" alt="Design Sketch 5"  width="500" height="300" aria aria-label="Sketch of possible web design">
- 
-    <h3 class= "p-name">Fonts</h3>
-    <p>I choose the ‘Grown’ font for the header because it is interesting yet legible.I chose ‘Montserrat Classic’ as the body text because it is more legible and readable. </p>
-   
-    <img src="../Images/DesignProcess/Fonts.png " alt="Fonts" width="500" height="300" aria aria-label="Possible fonts">
- <h3 class= "p-name"> Colours - Colour theory and relationships</h3>
-
- <p class="p-summary"> Colour Palette</p>
- <img src="../Images/DesignProcess/Colour palette.png" alt="Colour Palette" width="500" height="300" aria-label=" Colour palette for web design">
-
- <h4 class= "p-name"> Primary colour palette:</h4>
-
- <img src="../Images/DesignProcess/Colour palette 1.png" alt="Primary colour palette" width="500" height="300" aria-label=" primary colour palette for website">
-<p class="p-summary" > I chose warm colours because they are inviting. Also yellow and orange are analogous colours. Also these colours create a sense of harmony and unity that's pleasing to the eye.
-</p>
-<h4 class= "p-name"> Secondary colour palette: </h4>
-<img src="../Images/DesignProcess/Colour palette 2.png" alt="colour palette 2" width="500" height="300" aria-label=" secondary colour palette">
-<p class="p-summary">I chose colours in the secondary colour palette to contrast the primary colour palette to create a sense of balance. Orange and blue are complementary colours as well. If these colours are used together they enhance visual appeal and make elements stand out. 
-</p>
-
-<h3 class= "p-name"> Composition - Hierarchy, Balance, Harmony</h3>
-<p class="p-summary"> My composition is symmetrical and centre aligned to create a sense of balance and harmony. Additionally I have repeated the circular elements and I have used rotation and reflection especially on the blog and portfolio screen.
-</p>
-
-
-<h4 class= "p-name"> Interface elements - visual representations (Shape, colour, position) </h4>
-<p class="p-summary">I want circular and rounded shapes so they align with my design goal of creating a welcoming and warm website.</p>
-
-<img src="../Images/DesignProcess/Button 1.png " alt="Button 1" width="200" height="200" aria-label=" Image of a web button" >
-<img src="../Images/DesignProcess/Button 2.png " alt="Button 2" width="200" height="200" aria-label=" Image of a web button" >
-<img src="../Images/DesignProcess/Button 3.png" alt="Button 3" width="200" height="200" aria-label=" Image of a web button" >
-<img src="../Images/DesignProcess/Button 4.png " alt="Button 4" width="200" height="200" aria-label=" Image of a web button" >
-
-<h3 class= "p-name"> Reference Material </h3>
-
-<p class="p-summary"> I like the use of circular shapes and design that create a welcoming and soothing environment. 
-</p>
-<a class="p-name u-url" href="https://dribbble.com/shots/12108232--l-gante-home-hero-slider " target="_blank">Inspiration</a>
-
-<a class="p-name u-url" href="https://pixcap.com/blog/warm-color-palette" target="_blank">Inspiration</a>
-<p class="p-summary">This website helped me to choose a warm colour palette because as the website says:</p>
-
-    <li>Emotional Impact: Red, orange, and yellow evoke happiness and excitement, strengthening user-content connections and building brand loyalty.
-    </li>
-    <li>Attention-Grabbing: These vibrant hues highlight important elements like CTAs, improving conversions and user engagement.
-    </li>
-    <li>Welcoming Environment: Warm tones create inviting atmospheres that encourage longer visits and build trust.
-    </li>
-    <li>Brand Identity: These colors convey energy and friendliness, establishing cohesive visual identities that resonate with target audiences.</li>
-   
-
-
-
- <div>
-
-
-
-    </article>
-
-
-    <button>
-        <a href="Wireframes.html">Wireframes</a>
-      </button>
+    <ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../Portfolio/Portfoliohome.html">Portfolio</a></li>
+      <li><a href="../Scripts/Scriptshome.html">Scripts</a></li>
+      <li><a href="../Blogs/BlogsHome.html">Blogs</a></li>
+      <li><a href="../Design/DesignHome.html" class="active">Design</a></li>
+    </ul>
+  </nav>
+    Brought to you by Nandi Mpofu.
+  </footer>
 </body>
-
-<nav class="menu">
-    
-    <a href="../index.html">Home</a>
-    <a href="../Blogs/BlogsHome.html">Blogs</a>
-    <a href="../Design/DesignHome.html">Design</a>
-    <a href="../Portfolio/Portfoliohome.html">Portfolio</a></li>
-    <a href="../Scripts/Scriptshome.html">Scripts</a></li>
-</nav>
 </html>

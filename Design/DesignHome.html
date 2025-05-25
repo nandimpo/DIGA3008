@@ -1,75 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nandi's website</title>
-    <link rel="stylesheet" href="normalize.css">
-    <link rel="stylesheet" href="../CSS/Design(home).css">
-    <script src="https://kit.fontawesome.com/89fd46d92d.js" crossorigin="anonymous"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nandi's Website – Design</title>
+  <link rel="stylesheet" href="normalize.css" />
+  <link rel="stylesheet" href="../CSS/Design(home).css" />
+  <script src="../JavaScript/Cursor.js" defer></script>
+  <script src="../JavaScript/MouseGradient.js" defer></script>
+  <script src="https://kit.fontawesome.com/89fd46d92d.js" crossorigin="anonymous"></script>
 </head>
-<body>
-    <nav>
-        <input type="checkbox" id="check" />
-        <label for="check" class="burger-button">
-            <i class="fa-solid fa-bars"></i>
-        </label>
-        <label for="logo" class="logo">NM</label>
-        <ul>
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="../Blogs/BlogsHome.html">Blogs</a></li>
-            <li><a href="../Portfolio/Portfoliohome.html">Portfolio</a></li>
-            <li><a href="../Scripts/Scriptshome.html">Scripts</a></li>
-            <li><a href="https://www.linkedin.com/in/nandi-m-4aa89123b?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BqctwxnPOTGawuqEwz03UcA%3D%3D" class="linkedin-icon" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i></a></li>
-        </ul>
-    </nav>
 
-    <div class="design-header">
-        <h1>Design</h1>
-        <h2>Get some insight into my website design process</h2>
-        <p>The goal of my website is for users to understand who I am as a designer. I would also like my website to be user friendly. There it will be clear, understandable and accessible. I would like my website to be warm, welcoming and inviting.</p>
+<body>
+  <!-- Cursor Pulse Effect -->
+  <div id="cursorPulse" class="cursor-pulse"></div>
+
+  <!-- Navigation (matching Blogs style) -->
+  <nav>
+    <input type="checkbox" id="check" />
+    <label for="check" class="burger-button"><i class="fa-solid fa-bars"></i></label>
+    <label class="logo">NM</label>
+    <ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../Portfolio/Portfoliohome.html">Portfolio</a></li>
+      <li><a href="../Scripts/Scriptshome.html">Scripts</a></li>
+      <li><a href="../Blogs/BlogsHome.html">Blogs</a></li>
+      <li>
+        <a href="https://www.linkedin.com/in/nandi-m-4aa89123b" class="linkedin-icon" target="_blank" rel="noopener noreferrer">
+          <i class="fa-brands fa-linkedin"></i>
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- Page Header -->
+  <div class="design-header">
+    <h1>Design</h1>
+    <h2>Get some insight into my website design process</h2>
+    <p>
+      The goal of my website is for users to understand who I am as a designer. I would also like my website to be user friendly. Therefore, it will be clear, understandable and accessible. I would like my website to be warm, welcoming and inviting.
+    </p>
+  </div>
+
+  <!-- Main Design Content -->
+  <div class="design-container">
+    <!-- Grid of Sections -->
+    <div class="design-grid">
+      <a href="Wireframes.html" class="design-box">
+        <h3>Wireframes</h3>
+      </a>
+      <a href="Designresearch.html" class="design-box">
+        <h3>Design Research</h3>
+      </a>
+      <a href="DesignInspiration.html" class="design-box">
+        <h3>Design Inspiration</h3>
+      </a>
+      <a href="Style Guides.html" class="design-box">
+        <h3>Style Guides</h3>
+      </a>
+      <a href="Style process documentation.html" class="design-box">
+        <h3>Style Process Documentation</h3>
+      </a>
+      <a href="Documentation of your IxD process.html" class="design-box">
+        <h3>Documentation of my IxD Process</h3>
+      </a>
     </div>
 
-
-
-    <div class="design-container">
-        <div class="design-grid">
-            <a href="Wireframes.html" class="design-box">
-                <h3>Wireframes</h3>
-            </a>
-            <a href="Designresearch.html" class="design-box">
-                <h3>Design Research</h3>
-            </a>
-            <a href="DesignInspiration.html" class="design-box">
-                <h3>Design Inspiration</h3>
-            </a>
-            <a href="Style Guides.html" class="design-box">
-                <h3>Style Guides</h3>
-            </a>
-            <a href="Style process documentation.html" class="design-box">
-                <h3> Style Process Documentation</h3>
-            </a>
-            <a href="Documentation of your IxD process.html" class="design-box">
-                <h3>Documentation of my IxD process.</h3>
-            </a>
-        </div>
-
-        <div class="featured-work">
-            <h3>Featured Work</h3>
-            <p> This section showcases my comprehensive design journey. Follow the evolution of my website from concept to completion through the following elements:
-        
+    <!-- Featured Work Section -->
+    <div class="featured-work">
+      <h3>Featured Work</h3>
+      <p>This section showcases my comprehensive design journey. Follow the evolution of my website from concept to completion through the following elements:</p>
+      <ul>
         <li>Wireframes: Initial sketches and structural layouts</li>
         <li>Design Research: Market analysis and user insights</li>
         <li>Design Inspiration: Sources that influenced my creative direction</li>
         <li>Style Guides: Color palettes, typography, and visual elements</li>
         <li>Process Documentation: Step-by-step development methodology</li>
         <li>IxD Documentation: Detailed interaction design decisions and implementation</li>
-        
-            </div>
+      </ul>
     </div>
+  </div>
 
-    <footer class="footer-text">
-        Brought to you by Nandi Mpofu.
-    </footer>
+  <!-- Footer (matching Blogs) -->
+  <footer class="portfolio-footer">
+    Brought to you by Nandi Mpofu.
+  </footer>
 </body>
 </html>

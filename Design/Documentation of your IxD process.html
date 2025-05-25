@@ -1,99 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nandi's website</title>
-    <link rel="stylesheet" href="normalize.css">
-    <link rel="stylesheet" href="../CSS/Design process.css">
-    <script src="https://kit.fontawesome.com/89fd46d92d.js" crossorigin="anonymous"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nandi's Website – IxD Process</title>
+  <link rel="stylesheet" href="normalize.css" />
+  <link rel="stylesheet" href="../CSS/Design process.css" />
+  <script src="https://kit.fontawesome.com/89fd46d92d.js" crossorigin="anonymous"></script>
+  <script src="../JavaScript/Cursor.js" defer></script>
+  <script src="../JavaScript/MouseGradient.js" defer></script>
 </head>
+
 <body>
+  <!-- Cursor -->
+  <div id="cursorPulse" class="cursor-pulse"></div>
 
+  <!-- Navigation -->
+  <nav>
+    <input type="checkbox" id="check" />
+    <label for="check" class="burger-button"><i class="fa-solid fa-bars"></i></label>
+    <label class="logo">NM</label>
+    <ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../Portfolio/Portfoliohome.html">Portfolio</a></li>
+      <li><a href="../Scripts/Scriptshome.html">Scripts</a></li>
+      <li><a href="../Blogs/BlogsHome.html">Blogs</a></li>
+      <li><a href="../Design/DesignHome.html" class="active">Design</a></li>
+      <li><a href="https://www.linkedin.com/in/nandi-m-4aa89123b" class="linkedin-icon" target="_blank"><i class="fa-brands fa-linkedin"></i></a></li>
+    </ul>
+  </nav>
+
+  <!-- Header -->
+  <header class="design-header">
+    <div class="header-text-group">
+      <h1>Documentation of my IxD Process</h1>
+      <p>This page outlines the thinking and design principles I applied to create my website.</p>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="design-content">
+    <section class="inspiration-block">
+      <h2>Style Guides</h2>
+      <img src="../Images/Blogs/style guide (correct).png" alt="Style Guide" />
+    </section>
+
+    <section class="inspiration-block">
+      <h3>Goal</h3>
+      <p class="p-summary">My goal is to have a user-friendly, accessible, and clear website that reflects who I am as a designer.</p>
+    </section>
+
+    <section class="inspiration-block">
+      <h3>Visual Design Elements</h3>
+      <p class="p-summary">
+        I aim to create strong typographic hierarchy using the ‘Grown’ font for headings to convey a soft, feminine tone, and ‘Montserrat Classic’ for body text for clarity. I also maintain a limited color palette with brown (to embrace identity), orange and yellow (for warmth), and cool accents (for contrast).
+      </p>
+    </section>
+
+    <section class="inspiration-block">
+      <h3>Fonts – Readability and Legibility</h3>
+      <img src="../Images/Blogs/Fonts.png" alt="Fonts used on website" />
+    </section>
+
+    <section class="inspiration-block">
+      <h3>Colour Swatches</h3>
+      <img src="../Images/Blogs/Colour palette (chosen 3).png" alt="Full colour palette" />
+      <h4>Primary Colour Palette</h4>
+      <img src="../Images/Blogs/Colour palette (chosen 1).png" alt="Primary palette" width="200" />
+      <h4>Secondary Colour Palette</h4>
+      <img src="../Images/Blogs/Colour palette (chosen 2).png" alt="Secondary palette" width="200" />
+    </section>
+
+    <section class="inspiration-block">
+      <h3>Final Design Sketches</h3>
+      <div class="wireframe-gallery">
+        <img src="../Images/DesignProcess/Documentation of my IXD process 1.png" alt="Design sketch 1" />
+        <img src="../Images/DesignProcess/Documentation of my IXD process 2.png" alt="Design sketch 2" />
+        <img src="../Images/DesignProcess/Documentation of my IXD process 3.png" alt="Design sketch 3" />
+        <img src="../Images/DesignProcess/Documentation of my IXD process 4.png" alt="Design sketch 4" />
+        <img src="../Images/DesignProcess/Documentation of my IXD process 5.png" alt="Design sketch 5" />
+        <img src="../Images/DesignProcess/Documentation of my IXD process 6.png" alt="Design sketch 6" />
+        <img src="../Images/DesignProcess/Documentation of my IXD process 7.png" alt="Design sketch 7" />
+      </div>
+    </section>
+
+    <section class="inspiration-block">
+      <h3>Wireframes – Content Mapping</h3>
+      <img src="../Images/Blogs/Mapping-Sites Content.png" alt="Content mapping" />
+      <img src="../Images/Blogs/Mapping- Experience.png" alt="Experience mapping" />
+    </section>
+
+    <section class="inspiration-block">
+      <h3>Implementation Notes</h3>
+      <ul>
+        <li>I created a hierarchy where screen titles appear first, center-aligned for balance.</li>
+        <li>Bright yellow buttons are used to draw attention to interaction points.</li>
+        <li>Cards on the blog page highlight on hover for interactivity.</li>
+        <li>Scrolling allows easy navigation through longer content.</li>
+      </ul>
+    </section>
+
+    <!-- Button Navigation -->
+    <div class="button-container">
+      <a href="Style process documentation.html" class="nav-button">← Style Process Documentation</a>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="portfolio-footer">
+    
     <nav>
-        <input type="checkbox" id="check" />
-        <label for="check" class="burger-button">
-            <i class="fa-solid fa-bars"></i>
-        </label>
-        <label for="logo" class="logo">NM</label>
-        <ul>
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="../Blogs/BlogsHome.html">Blogs</a></li>
-            <li><a href="../Portfolio/Portfoliohome.html">Portfolio</a></li>
-            <li><a href="../Scripts/Scriptshome.html">Scripts</a></li>
-            <li><a href="../Design/DesignHome.html" class="active">Design</a></li>
-            <li><a href="#" class="linkedin-icon"><i class="fa-brands fa-linkedin"></i></a></li>
-        </ul>
-    </nav>
-  
-    <article class="h-entry">
-        <div class="e-content">
-        <h2 class="p-name">Documentation of my IXD process </h2>
-</h3>
-
-<h4 class= "p-name">Style Guides:</h4>
-<img src="../Images/Blogs/style guide (correct).png" alt="Wireframe-Images" width="500" height="300" aria-label=" This is a style guide">
-    
-      <h4>Goal: My goal is to have a user friendly, accessible and clear website that showcases who I am as a designer.</h4>
-    
-
-      <h4 class= "p-name">Visual design elements:  </h4>
-    <li>
-        I want my website to have a strong typographic hierarchy. I will use headings to organize the information and draw the user's eye to what is important. Headings will also make the information more readable. I chose the font 'Grown' for my headings because it is readable and has curved elements that resonate with the feminine feel of my website. Additionally, I selected 'Montserrat Classic' for body text because of its high readability and modern appearance.
-    </li>
-
-
-    
-    <h4 class= "p-name">Fonts - Readability and Legibility</h4>
-    <img src="../Images/Blogs/Fonts.png" alt="Wireframe-Images" width="500" height="300" aria-label=" This is a font style">
-    <li>
-        I want my website to have a limited color palette with strong accent colors. This approach will make the website feel polished and clear. I chose colors that represent who I am. I selected brown because, as a Black African woman, I wanted to embrace a color that is sometimes unfairly considered unattractive. To create warmth, I chose yellow and orange to complement the brown. For accent colors, I selected cooler tones to highlight important elements and create visual contrast.
-    </li>
-    
-
-    <h4 class= "p-name">Colour swatches:</h4>
-    <img src="../Images/Blogs/Colour palette (chosen 3).png" alt="Wireframe-Images" width="500" height="300" aria-label=" This is a color palette">
-    <h4 class= "p-name">Primary colour palette: </h4>
-    <img src="../Images/Blogs/Colour palette (chosen 1).png" alt="Wireframe-Images" width="200" height="200" aria-label=" This is a color palette">
-    
-    <h4 class= "p-name">Secondary colour palette: </h4>
-    <img src="../Images/Blogs/Colour palette (chosen 2).png" alt="Wireframe-Images" width="200" height="200" aria-label=" This is a color palette">
-    
-    <h4 class= "p-name">Final design sketches:  </h4>
-    <img src="../Images/DesignProcess/Documentation of my IXD process 1.png" alt="Wireframe-Images" width="500" height="500" aria-label=" Design sketch">   
-    <img src="../Images/DesignProcess/Documentation of my IXD process 2.png" alt="Wireframe-Images" width="500" height="500" aria-label=" Design sketch">   
-    <img src="../Images/DesignProcess/Documentation of my IXD process 3.png" alt="Wireframe-Images" width="500" height="500" aria-label=" Design sketch">   
-    <img src="../Images/DesignProcess/Documentation of my IXD process 4.png" alt="Wireframe-Images" width="900" height="900" aria-label=" Design sketch">   
-    <img src="../Images/DesignProcess/Documentation of my IXD process 5.png" alt="Wireframe-Images" width="900" height="900" aria-label=" Design sketch">   
-    <img src="../Images/DesignProcess/Documentation of my IXD process 6.png" alt="Wireframe-Images" width="500" height="500" aria-label=" Design sketch">   
-    <img src="../Images/DesignProcess/Documentation of my IXD process 7.png" alt="Wireframe-Images" width="900" height="900" aria-label=" Design sketch">   
-
-    <h4 class= "p-name">Wireframes - Content mapping </h4>
-    <img src="../Images/Blogs/Mapping-Sites Content.png" alt="Wireframe-Images" width="500" height="300" aria-label=" Content mapping">
-    <h4 class= "p-name">Wireframes - Content mapping </h4>
-    <img src="../Images/Blogs/Mapping- Experience.png" alt="Wireframe-Images" width="500" height="300" aria-label=" Experience mapping ">
-
-
-    <li>Visual Design Elements: I have implemented a hierarchy of information. The first thing the user will see on each wireframe is the name of the screen. Also, the information is centre-aligned to draw the viewer to the center of the page where the most important information is located. The buttons on the page are bright yellow to draw the user's focus to them. </li>
-    <li> Interaction Points: I have implemented buttons on almost all the pages to guide the user. On the blogs page, there are cards that highlight when the user hovers over them. Also, I have implemented a scroll bar so the user can scroll through the blog posts.</li>
-  
- 
-    <div>
-
-    
-
-
-        <button>
-            <a href="Style process documentation.html">Style process documentation</a>
-          </button>
-    </body>
-    
-    <nav class="menu">
-        
-        <a href="../index.html">Home</a>
-        <a href="../Blogs/BlogsHome.html">Blogs</a>
-        <a href="../Design/DesignHome.html">Design</a>
-        <a href="../Portfolio/Portfoliohome.html">Portfolio</a></li>
-        <a href="../Scripts/Scriptshome.html">Scripts</a></li>
-    </nav>
-    </html>
+    <ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../Portfolio/Portfoliohome.html">Portfolio</a></li>
+      <li><a href="../Scripts/Scriptshome.html">Scripts</a></li>
+      <li><a href="../Blogs/BlogsHome.html">Blogs</a></li>
+      <li><a href="../Design/DesignHome.html" class="active">Design</a></li>
+    </ul>
+  </nav>
+    Brought to you by Nandi Mpofu.
+  </footer>
+</body>
+</html>

@@ -1,76 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nandi's website</title>
-    <link rel="stylesheet" href="normalize.css">
-    <link rel="stylesheet" href="../CSS/Design process.css">
-    <script src="https://kit.fontawesome.com/89fd46d92d.js" crossorigin="anonymous"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nandi's Website – Wireframes</title>
+  <link rel="stylesheet" href="normalize.css" />
+  <link rel="stylesheet" href="../CSS/Design process.css" />
+  <script src="https://kit.fontawesome.com/89fd46d92d.js" crossorigin="anonymous"></script>
+  <script src="../JavaScript/Cursor.js" defer></script>
+  <script src="../JavaScript/MouseGradient.js" defer></script>
 </head>
 
 <body>
+  <!-- Cursor -->
+  <div id="cursorPulse" class="cursor-pulse"></div>
 
-    <nav>
-        <input type="checkbox" id="check" />
-        <label for="check" class="burger-button">
-            <i class="fa-solid fa-bars"></i>
-        </label>
-        <label for="logo" class="logo">NM</label>
-        <ul>
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="../Blogs/BlogsHome.html">Blogs</a></li>
-            <li><a href="../Portfolio/Portfoliohome.html">Portfolio</a></li>
-            <li><a href="../Scripts/Scriptshome.html">Scripts</a></li>
-            <li><a href="../Design/DesignHome.html" class="active">Design</a></li>
-        </ul>
-    </nav>
+  <!-- Navigation -->
+  <nav>
+    <input type="checkbox" id="check" />
+    <label for="check" class="burger-button"><i class="fa-solid fa-bars"></i></label>
+    <label class="logo">NM</label>
+    <ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../Portfolio/Portfoliohome.html">Portfolio</a></li>
+      <li><a href="../Scripts/Scriptshome.html">Scripts</a></li>
+      <li><a href="../Blogs/BlogsHome.html">Blogs</a></li>
+      <li><a href="../Design/DesignHome.html" class="active">Design</a></li>
+    </ul>
+  </nav>
 
-    <h2> Here are my Wireframes!</h2>
-    <p>Wireframes are simplified, skeletal outlines or blueprints of a webpage or app interface, focusing on structure, layout, and functionality, without detailed design elements like colors or images. </p>
+  <!-- Page Header -->
+  <header class="design-header">
+    <div class="header-text-group">
+      <h1>Wireframes</h1>
+      <p>Wireframes are simplified blueprints of a website’s structure and layout, showing functionality without full visuals.</p>
+    </div>
+  </header>
 
-    <h3> Intial Wireframes</h3>
+  <!-- Main Content -->
+  <main class="design-content">
+    <section class="inspiration-block">
+      <h2>Initial Wireframes</h2>
+      <p class="p-summary">These wireframes are rough sketches meant to explore layout and basic content placement.</p>
 
-    <p> There wireframes are more of a sketch and rough.</p>
-    <h4> Homepage</h4>
-    <img src="../Images/First Wireframes/Firsy Wireframes- Home.png" alt="WireframeHomepage" width="500" height="300">
-    <h4> Blog</h4>
-    <img src="../Images/First Wireframes/First Wireframe- Blog.png" alt="Wireframe-Blog" width="500" height="300">
-    <h4>Design</h4>
-    <img src="../Images/First Wireframes/First Wireframes -Design.png" alt="Wireframe-Design" width="500" height="300">
-    <h4>Portfolio </h4>
-    <img src="../Images/First Wireframes/First Wireframes- Portfolio.png" alt="Wireframe-Images" width="500" height="300">
-    <h4> Scripts</h4>
-    <img src="../Images/First Wireframes/First Wireframe- Scripts.png" alt="Scripts" width="500" height="300">
+      <h4>Homepage</h4>
+      <img src="../Images/First Wireframes/Firsy Wireframes- Home.png" alt="Homepage Wireframe Sketch" />
 
-    <h3>Annotated Wireframes</h3>
+      <h4>Blog</h4>
+      <img src="../Images/First Wireframes/First Wireframe- Blog.png" alt="Blog Wireframe Sketch" />
 
-    <p> These wireframes are more detailed and include annotations. </p>
-    <h4> Homepage</h4>
-    <img src="../Images/Wireframe- Homepage.png" alt="WireframeHomepage" width="500" height="300">
-    <h4> Blog</h4>
-    <img src="../Images/Wireframe-Blog Posts.png" alt="Wireframe-Blog" width="500" height="300">
-    <h4>Design</h4>
-    <img src="../Images/Wireframe-Design.png" alt="Wireframe-Design" width="500" height="300">
-    <h4>Portfolio </h4>
-    <img src="../Images/Wireframe-Portfolio.png" alt="Wireframe-Images" width="500" height="300">
-    <h4> Scripts</h4>
-    <img src="../Images/Wireframes- Scripts.png" alt="Scripts" width="500" height="300">
+      <h4>Design</h4>
+      <img src="../Images/First Wireframes/First Wireframes -Design.png" alt="Design Wireframe Sketch" />
 
+      <h4>Portfolio</h4>
+      <img src="../Images/First Wireframes/First Wireframes- Portfolio.png" alt="Portfolio Wireframe Sketch" />
 
-    <button>
-        <a href="Designresearch.html">Design Research</a>
-      </button>
+      <h4>Scripts</h4>
+      <img src="../Images/First Wireframes/First Wireframe- Scripts.png" alt="Scripts Wireframe Sketch" />
+    </section>
 
-</body>
+    <section class="inspiration-block">
+      <h2>Annotated Wireframes</h2>
+      <p class="p-summary">These wireframes are more refined and include detailed annotations for layout logic and interface elements.</p>
 
-<nav class="menu">
+      <h4>Homepage</h4>
+      <img src="../Images/Wireframe- Homepage.png" alt="Homepage Annotated Wireframe" />
+
+      <h4>Blog</h4>
+      <img src="../Images/Wireframe-Blog Posts.png" alt="Blog Annotated Wireframe" />
+
+      <h4>Design</h4>
+      <img src="../Images/Wireframe-Design.png" alt="Design Annotated Wireframe" />
+
+      <h4>Portfolio</h4>
+      <img src="../Images/Wireframe-Portfolio.png" alt="Portfolio Annotated Wireframe" />
+
+      <h4>Scripts</h4>
+      <img src="../Images/Wireframes- Scripts.png" alt="Scripts Annotated Wireframe" />
+    </section>
+
+    <!-- Button Navigation -->
+    <div class="button-container">
+      <a href="Designresearch.html" class="nav-button">→ Design Research</a>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="portfolio-footer">
     
-    <a href="../index.html">Home</a>
-    <a href="../Blogs/BlogsHome.html">Blogs</a>
-    <a href="../Design/DesignHome.html">Design</a>
-    <a href="../Portfolio/Portfoliohome.html">Portfolio</a></li>
-    <a href="../Scripts/Scriptshome.html">Scripts</a></li>
-</nav>
-
+    <nav>
+    <ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../Portfolio/Portfoliohome.html">Portfolio</a></li>
+      <li><a href="../Scripts/Scriptshome.html">Scripts</a></li>
+      <li><a href="../Blogs/BlogsHome.html">Blogs</a></li>
+      <li><a href="../Design/DesignHome.html" class="active">Design</a></li>
+    </ul>
+  </nav>
+    Brought to you by Nandi Mpofu.
+  </footer>
+</body>
 </html>

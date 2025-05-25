@@ -1,58 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nandi's website</title>
-    <link rel="stylesheet" href="normalize.css">
-    <link rel="stylesheet" href="../CSS/Design process.css">
-    <script src="https://kit.fontawesome.com/89fd46d92d.js" crossorigin="anonymous"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nandi's Website – Style Guides</title>
+  <link rel="stylesheet" href="normalize.css" />
+  <link rel="stylesheet" href="../CSS/Design process.css" />
+  <script src="https://kit.fontawesome.com/89fd46d92d.js" crossorigin="anonymous"></script>
+  <script src="../JavaScript/Cursor.js" defer></script>
+  <script src="../JavaScript/MouseGradient.js" defer></script>
 </head>
 
 <body>
+  <!-- Cursor -->
+  <div id="cursorPulse" class="cursor-pulse"></div>
 
+  <!-- Navigation -->
+  <nav>
+    <input type="checkbox" id="check" />
+    <label for="check" class="burger-button"><i class="fa-solid fa-bars"></i></label>
+    <label class="logo">NM</label>
+    <ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../Portfolio/Portfoliohome.html">Portfolio</a></li>
+      <li><a href="../Scripts/Scriptshome.html">Scripts</a></li>
+      <li><a href="../Blogs/BlogsHome.html">Blogs</a></li>
+      <li><a href="../Design/DesignHome.html" class="active">Design</a></li>
+    </ul>
+  </nav>
+
+  <!-- Header -->
+  <header class="design-header">
+    <div class="header-text-group">
+      <h1>Style Guides</h1>
+      <p>A style guide is a set of standards that ensures consistency in layout, color, and typography across a website.</p>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="design-content">
+    <section class="inspiration-block">
+      <h3>Initial Style Guide</h3>
+      <img src="../Images/Style Guide.jpg" alt="Initial style guide with blue and grey" />
+      <p class="p-summary">I felt that the blue was too bright and the grey too dark, leading to imbalance in tone.</p>
+    </section>
+
+    <section class="inspiration-block">
+      <h3>Final Style Guide</h3>
+      <img src="../Images/Blogs/style guide (correct).png" alt="Final style guide with balanced colors" />
+      <p class="p-summary">I added white to create balance and green to complement the orange, resulting in a more harmonious palette.</p>
+    </section>
+
+    <!-- Button Navigation -->
+    <div class="button-container">
+      <a href="DesignInspiration.html" class="nav-button">← Design Inspiration</a>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="portfolio-footer">
+    
     <nav>
-        <input type="checkbox" id="check" />
-        <label for="check" class="burger-button">
-            <i class="fa-solid fa-bars"></i>
-        </label>
-        <label for="logo" class="logo">NM</label>
-        <ul>
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="../Blogs/BlogsHome.html">Blogs</a></li>
-            <li><a href="../Portfolio/Portfoliohome.html">Portfolio</a></li>
-            <li><a href="../Scripts/Scriptshome.html">Scripts</a></li>
-            <li><a href="../Design/DesignHome.html" class="active">Design</a></li>
-            
-        </ul>
-    </nav>
-
-    <h2> Here are my Style Guides</h2>
-    <p>A style guide is a set of standards that dictates how a document should be written, formatted, and designed to ensure consistency and clarity.</p>
-
-    
-    <h3> Intial Style Guide </h3>
-    <img src="../Images/Style Guide.jpg" alt="Wireframe-Images" width="500" height="300" aria-label=" This is design inspiration">
-    <p>I felt that the blue was too bright in this style guide. I also felt that the grey was too dark. </p>
-
-    <h3> Final Style Guide </h3>
-    <img src="../Images/Blogs/style guide (correct).png" alt="Wireframe-Images" width="500" height="300" aria-label=" This is design inspiration">
-    <p>I added a white colour to provide a sense of balance. I added a green aswell because it complemented the orange well.</p>
-
-
-    <button>
-        <a href="DesignInspiration.html">Design Inspiration</a>
-      </button>
-
+    <ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../Portfolio/Portfoliohome.html">Portfolio</a></li>
+      <li><a href="../Scripts/Scriptshome.html">Scripts</a></li>
+      <li><a href="../Blogs/BlogsHome.html">Blogs</a></li>
+      <li><a href="../Design/DesignHome.html" class="active">Design</a></li>
+    </ul>
+  </nav>
+    Brought to you by Nandi Mpofu.
+  </footer>
 </body>
-
-<nav class="menu">
-    
-    <a href="../index.html">Home</a>
-    <a href="../Blogs/BlogsHome.html">Blogs</a>
-    <a href="../Design/DesignHome.html">Design</a>
-    <a href="../Portfolio/Portfoliohome.html">Portfolio</a></li>
-    <a href="../Scripts/Scriptshome.html">Scripts</a></li>
-</nav>
-
 </html>
