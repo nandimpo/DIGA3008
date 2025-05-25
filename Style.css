@@ -105,11 +105,20 @@ nav ul li a {
   text-align: center;
 }
 
+/* Muted Yellow Heading */
+.hero-overlay h1 {
+  font-family: 'heading font', serif;
+  color: #C9A635; /* duller gold */
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+  font-size: 3.5rem;
+  z-index: 6;
+}
+
 .handwriting-svg {
   width: 100%;
   max-width: 800px;
   display: block;
-  margin: 0 auto; /* centers the SVG */
+  margin: 0 auto;
   position: relative;
   z-index: 5;
 }
@@ -153,7 +162,7 @@ nav ul li a {
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 30px;
   position: absolute;
-  top: 82%; /* moved closer to paragraph */
+  top: 82%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 90%;
