@@ -19,7 +19,6 @@
   --button-hover: #E1B808;
 }
 
-/* Reset and Base */
 * {
   margin: 0;
   padding: 0;
@@ -36,6 +35,8 @@ body, html {
 /* Cursor Pulse */
 .cursor-pulse {
   position: fixed;
+  left: 0;
+  top: 0;
   width: 30px;
   height: 30px;
   background-color: rgba(24, 112, 64, 0.4);
@@ -128,8 +129,18 @@ nav ul li a:hover {
   padding: 40px 20px;
 }
 
+/* Card Fade-In Animation Initial State */
 .inspiration-block {
   margin-bottom: 50px;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* Image Zoom on Hover */
+.inspiration-block:hover img {
+  transform: scale(1.02);
+  transition: transform 0.3s ease;
 }
 
 .inspiration-block img {
