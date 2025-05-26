@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", () => { 
+ document.addEventListener("DOMContentLoaded", () => { 
   const title = document.getElementById("handwrittenPath");
   const subtitle = document.getElementById("subtitlePath");
 
@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
       title.style.strokeDasharray = titleLength;
       title.style.strokeDashoffset = titleLength;
       title.style.animation = "draw 4s ease forwards";
-      title.style.opacity = "1";
+      title.style.visibility = "visible";
     }
 
     if (subtitle) {
@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
       subtitle.style.strokeDashoffset = subLength;
       subtitle.style.animation = "draw-sub 3s ease forwards";
       subtitle.style.animationDelay = "2.5s";
-      subtitle.style.opacity = "1";
+      subtitle.style.visibility = "visible";
     }
   });
 });
