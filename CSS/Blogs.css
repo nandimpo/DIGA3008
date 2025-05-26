@@ -1,4 +1,4 @@
-/* Font imports */ 
+
 @font-face {
   font-family: 'body font';
   src: url(Montserrat-SemiBold);
@@ -9,7 +9,7 @@
   src: url(Grown.ttf);
 }
 
-/* Color variables */
+
 :root {
   --background-color: #5F5143;
   --header-bg: #EBE4D2;
@@ -21,7 +21,7 @@
   --button-color: #E1B808;
 }
 
-/* Reset and base */
+
 * {
   margin: 0;
   padding: 0;
