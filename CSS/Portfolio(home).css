@@ -52,6 +52,8 @@ nav {
   padding: 15px 30px;
   background-color: var(--header-bg);
   font-family: 'heading font', serif;
+  position: relative;
+  z-index: 101;
 }
 
 #check {
@@ -89,6 +91,12 @@ nav ul li a:hover {
 
 .burger-button {
   display: none;
+  position: absolute;
+  right: 30px;
+  top: 18px;
+  font-size: 24px;
+  color: var(--text-color);
+  z-index: 102;
 }
 
 .portfolio-container {
@@ -246,7 +254,7 @@ nav ul li a:hover {
     width: 100%;
     height: 100vh;
     background-color: var(--header-bg);
-    top: 80px;
+    top: 60px;
     left: -100%;
     text-align: center;
     transition: all 0.5s;

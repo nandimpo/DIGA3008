@@ -51,6 +51,8 @@ nav {
   padding: 0 30px;
   background-color: var(--section-background);
   font-family: 'heading font', serif;
+  position: relative;
+  z-index: 101;
 }
 
 nav .logo {
@@ -78,13 +80,10 @@ nav ul li a {
   transition: color 0.3s;
 }
 
-nav ul li a:hover {
-  color: var(--accent-color);
-}
-
+nav ul li a:hover,
 nav ul li a.active {
-  font-weight: bold;
   color: var(--accent-color);
+  font-weight: bold;
 }
 
 .linkedin-icon {
@@ -101,21 +100,25 @@ nav ul li a.active {
   cursor: pointer;
   font-size: 24px;
   color: var(--text-color);
+  position: absolute;
+  right: 30px;
+  top: 18px;
 }
 
-/* === Header Section === */
+
 .design-header {
   text-align: center;
   margin: 40px 0 60px 0;
   position: relative;
   z-index: 1;
+  padding: 0 20px;
 }
 
 .design-header svg text {
   font-family: 'heading font';
   font-size: 80px;
-  fill: var(--heading-color);               /* Text fill */
-  stroke: var(--soft-yellow);              /* Outline stroke */
+  fill: var(--heading-color);
+  stroke: var(--soft-yellow);
   stroke-width: 1.2;
   stroke-dasharray: 1000;
   stroke-dashoffset: 1000;
@@ -141,7 +144,7 @@ nav ul li a.active {
   z-index: 1;
 }
 
-/* === Main Grid === */
+
 .design-container {
   display: grid;
   grid-template-columns: 2fr 1fr;
@@ -181,7 +184,7 @@ nav ul li a.active {
   color: var(--card-heading-color);
 }
 
-/* === Featured Work === */
+
 .featured-work {
   background-color: var(--section-background);
   padding: 20px;
@@ -205,7 +208,7 @@ nav ul li a.active {
   margin-bottom: 10px;
 }
 
-/* === Footer === */
+
 .portfolio-footer {
   background-color: var(--section-background);
   color: var(--text-color);
@@ -216,7 +219,7 @@ nav ul li a.active {
   border-top: 1px solid #ccc;
 }
 
-/* === Responsive === */
+
 @media (max-width: 900px) {
   .design-container {
     grid-template-columns: 1fr;
@@ -228,6 +231,10 @@ nav ul li a.active {
 
   .featured-work {
     margin-top: 20px;
+  }
+
+  .design-header svg text {
+    font-size: 50px;
   }
 }
 
@@ -255,5 +262,21 @@ nav ul li a.active {
 
   #check:checked ~ ul {
     left: 0;
+  }
+
+  .design-header svg text {
+    font-size: 36px;
+  }
+
+  .design-header p {
+    font-size: 0.95rem;
+  }
+
+  .design-box {
+    height: 130px;
+  }
+
+  .featured-work h3 {
+    font-size: 1.3rem;
   }
 }

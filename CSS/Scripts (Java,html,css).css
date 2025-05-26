@@ -15,7 +15,6 @@
   --heading-bg: #5F5143;
 }
 
-/* Reset & Base Styles */
 * {
   margin: 0;
   padding: 0;
@@ -28,9 +27,10 @@ body {
   color: var(--text-color);
   min-height: 100vh;
   line-height: 1.6;
+  display: flex;
+  flex-direction: column;
 }
 
-/* Cursor */
 #cursorPulse {
   position: fixed;
   width: 30px;
@@ -42,7 +42,6 @@ body {
   z-index: 9999;
 }
 
-/* Navigation */
 nav {
   position: fixed;
   top: 0;
@@ -87,11 +86,78 @@ nav ul li a:hover {
   border-radius: 5px;
 }
 
-#check, .burger-button {
+#check,
+.burger-button {
   display: none;
 }
 
-/* Responsive Nav */
+.script-sections {
+  padding: 120px 20px 20px;
+}
+
+.card {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.6s ease-out;
+  margin-bottom: 30px;
+  border: 3px solid var(--background-color);
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.card h2 {
+  background-color: var(--heading-bg);
+  color: var(--background-color);
+  font-family: 'heading font';
+  font-size: 28px;
+  padding: 20px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.card .description {
+  padding: 20px;
+  background-color: var(--heading-bg);
+  color: var(--background-color);
+}
+
+.read-more-btn {
+  margin: 15px 20px;
+  padding: 8px 30px;
+  background-color: var(--accent-color);
+  color: var(--text-color);
+  font-weight: bold;
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+  font-family: 'body font';
+}
+
+.dropdown-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease, padding 0.3s ease;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  margin: 0 20px 20px;
+  padding: 0 20px;
+  border-radius: 8px;
+}
+
+.dropdown-content.open {
+  max-height: 150px;
+  padding: 15px 20px;
+}
+
+footer.footer-text {
+  text-align: center;
+  padding: 25px 10px;
+  font-family: 'heading font';
+  font-size: 1rem;
+  background-color: var(--background-color);
+  margin-top: auto;
+}
+
 @media (max-width: 768px) {
   .burger-button {
     display: block;
@@ -119,78 +185,4 @@ nav ul li a:hover {
   #check:checked ~ ul {
     left: 0;
   }
-}
-
-/* Card Container */
-.script-sections {
-  padding: 120px 20px 20px;
-}
-
-/* Cards */
-.card {
-  opacity: 0;
-  transform: translateY(50px);
-  transition: all 0.6s ease-out;
-  margin-bottom: 30px;
-  border: 3px solid var(--background-color);
-  border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
-
-/* Headings */
-.card h2 {
-  background-color: var(--heading-bg);
-  color: var(--background-color);
-  font-family: 'heading font';
-  font-size: 28px;
-  padding: 20px;
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
-}
-
-/* Descriptions */
-.card .description {
-  padding: 20px;
-  background-color: var(--heading-bg);
-  color: var(--background-color);
-}
-
-/* Button */
-.read-more-btn {
-  margin: 15px 20px;
-  padding: 8px 30px;
-  background-color: var(--accent-color);
-  color: var(--text-color);
-  font-weight: bold;
-  border-radius: 25px;
-  border: none;
-  cursor: pointer;
-  font-family: 'body font';
-}
-
-/* Dropdown Animation */
-.dropdown-content {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.5s ease, padding 0.3s ease;
-  background-color: var(--background-color);
-  color: var(--text-color);
-  margin: 0 20px 20px;
-  padding: 0 20px;
-  border-radius: 8px;
-}
-
-.dropdown-content.open {
-  max-height: 150px;
-  padding: 15px 20px;
-}
-
-/* Footer */
-footer.footer-text {
-  text-align: center;
-  padding: 25px 10px;
-  font-family: 'heading font';
-  font-size: 1rem;
-  background-color: var(--background-color);
-  margin-top: auto;
 }

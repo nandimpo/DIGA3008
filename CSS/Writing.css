@@ -8,7 +8,6 @@
   src: url('../Fonts/Grown.ttf') format('truetype');
 }
 
-
 * {
   margin: 0;
   padding: 0;
@@ -35,7 +34,6 @@ body {
   position: relative;
 }
 
-
 #cursorPulse {
   position: fixed;
   width: 30px;
@@ -46,7 +44,6 @@ body {
   z-index: 9999;
   transform: translate(-50%, -50%);
 }
-
 
 nav {
   display: flex;
@@ -99,7 +96,6 @@ nav ul li a:hover {
   color: var(--main-bg);
 }
 
-
 .footer-text {
   background-color: var(--header-bg);
   color: var(--main-bg);
@@ -110,7 +106,6 @@ nav ul li a:hover {
   border-top: 1px solid #ccc;
   margin-top: auto;
 }
-
 
 main {
   flex: 1;
@@ -126,7 +121,6 @@ main h1 {
   color: var(--text-light);
 }
 
-
 .categories {
   display: flex;
   justify-content: center;
@@ -137,7 +131,6 @@ main h1 {
   color: var(--accent-color);
   font-size: 20px;
 }
-
 
 .image-grid {
   display: grid;
@@ -169,7 +162,6 @@ main h1 {
   padding: 10px;
   background-color: rgba(231, 207, 122, 0.3);
 }
-
 
 .read-more-state {
   display: none;
@@ -227,14 +219,13 @@ main h1 {
   align-items: center;
 }
 
-
-#handwrittenPath, #subtitlePath {
+#handwrittenPath,
+#subtitlePath {
   stroke: var(--accent-color);
   stroke-width: 2px;
   fill: none;
   visibility: hidden;
 }
-
 
 @keyframes draw {
   to {
@@ -248,7 +239,6 @@ main h1 {
   }
 }
 
-
 .notebook-page {
   opacity: 0;
   transform: translateY(40px);
@@ -259,7 +249,6 @@ main h1 {
   opacity: 1;
   transform: translateY(0);
 }
-
 
 @media (max-width: 900px) {
   .image-grid {
