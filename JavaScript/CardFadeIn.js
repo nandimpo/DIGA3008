@@ -9,6 +9,6 @@ document.addEventListener("DOMContentLoaded", () => {
     setTimeout(() => {
       block.style.opacity = 1;
       block.style.transform = "translateY(0)";
-    }, index * 200); // staggered appearance
+    }, index * 200); 
   });
 });

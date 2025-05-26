@@ -17,7 +17,6 @@ body {
   overflow-x: hidden;
 }
 
-/* Cursor Pulse */
 #cursorPulse {
   position: fixed;
   width: 30px;
@@ -29,7 +28,6 @@ body {
   z-index: 9999;
 }
 
-/* Navigation */
 nav {
   background-color: #EBE4D2;
   padding: 10px 20px;
@@ -68,7 +66,6 @@ nav ul li a {
   color: white !important;
 }
 
-/* Hero Section */
 .hero {
   position: relative;
   text-align: center;
@@ -105,10 +102,9 @@ nav ul li a {
   text-align: center;
 }
 
-/* Muted Yellow Heading */
 .hero-overlay h1 {
   font-family: 'heading font', serif;
-  color: #C9A635; /* duller gold */
+  color: #C9A635;
   text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
   font-size: 3.5rem;
   z-index: 6;
@@ -156,7 +152,6 @@ nav ul li a {
   }
 }
 
-/* Sections */
 .sections-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -206,7 +201,6 @@ nav ul li a {
   transform: scale(1.05);
 }
 
-/* Footer */
 .footer-text {
   text-align: center;
   background: #EBE4D2;
@@ -218,14 +212,9 @@ nav ul li a {
   position: relative;
 }
 
-/* Responsive */
 @media (max-width: 768px) {
   .hero-overlay h1 {
     font-size: 2.8rem;
-  }
-
-  .hero-subtitle {
-    font-size: 1.2rem;
   }
 
   .hero-description {
@@ -233,11 +222,29 @@ nav ul li a {
     padding: 0 10px;
   }
 
-  .section {
-    padding: 15px;
-  }
-
   .sections-container {
     top: 88%;
+  }
+
+  nav ul {
+    flex-direction: column;
+    background: #EBE4D2;
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    display: none;
+  }
+
+  nav input[type="checkbox"]:checked ~ ul {
+    display: flex;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+
+  nav ul li a {
+    margin-left: 0;
   }
 }

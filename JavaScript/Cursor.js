@@ -1,4 +1,3 @@
-// Cursor.js
 document.addEventListener("DOMContentLoaded", () => {
   const cursor = document.getElementById('cursorPulse');
   if (!cursor) return;

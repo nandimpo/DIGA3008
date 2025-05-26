@@ -7,6 +7,6 @@ document.addEventListener("DOMContentLoaded", () => {
       card.style.transition = "all 0.6s ease-out";
       card.style.opacity = 1;
       card.style.transform = "translateY(0)";
-    }, index * 200); // stagger effect
+    }, index * 200); 
   });
 });

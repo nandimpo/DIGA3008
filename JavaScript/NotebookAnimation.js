@@ -1,4 +1,3 @@
-// NotebookPage.js
 document.addEventListener("DOMContentLoaded", () => {
   const pages = document.querySelectorAll(".notebook-page");
   if (!pages.length) return;

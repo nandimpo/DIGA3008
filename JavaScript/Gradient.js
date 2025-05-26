@@ -3,13 +3,13 @@ const colors = [
   ["#7a5c4b", "#e88b10"],
   ["#8b684c", "#f99e14"],
   ["#6e4b3a", "#c16706"],
-  ["#5f5143", "#d17609"] // loop back to start
+  ["#5f5143", "#d17609"] 
 ];
 
 let colorIndex = 0;
 let angle = 120;
 let step = 0;
-let shift = 0; // for background movement
+let shift = 0; 
 
 const transitionSteps = 100;
 const intervalTime = 50;
@@ -41,7 +41,7 @@ function updateBackground() {
   const lerpedStart = lerpColor(start1, start2, t);
   const lerpedEnd = lerpColor(end1, end2, t);
 
-  angle = 120 + Math.sin(Date.now() / 2000) * 20; // smoothly oscillating angle
+  angle = 120 + Math.sin(Date.now() / 2000) * 20;
   shift += 0.5;
 
   document.body.style.background = `linear-gradient(${angle}deg, ${lerpedStart}, ${lerpedEnd})`;
