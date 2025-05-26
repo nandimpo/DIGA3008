@@ -1,11 +1,11 @@
 @font-face {
   font-family: 'heading font';
-  src: url('../Fonts/Grown Personal Use Only.ttf');
+  src: url('../Fonts/Grown Personal Use Only.ttf') format('truetype');
 }
 
 @font-face {
   font-family: 'body font';
-  src: url('../Fonts/Montserrat-SemiBold.ttf');
+  src: url('../Fonts/Montserrat-SemiBold.ttf') format('truetype');
 }
 
 :root {
@@ -103,6 +103,7 @@ nav ul li a.active {
   color: var(--text-color);
 }
 
+/* === Header Section === */
 .design-header {
   text-align: center;
   margin: 40px 0 60px 0;
@@ -111,20 +112,21 @@ nav ul li a.active {
 }
 
 .design-header svg text {
-  font-family: 'Grown';
+  font-family: 'heading font';
   font-size: 80px;
-  fill: none;
-  stroke: var(--soft-yellow);
+  fill: var(--heading-color);               /* Text fill */
+  stroke: var(--soft-yellow);              /* Outline stroke */
   stroke-width: 1.2;
   stroke-dasharray: 1000;
   stroke-dashoffset: 1000;
-  animation: draw 4s ease forwards;
-  visibility: hidden;
+  animation: none;
+  opacity: 0;
 }
 
 @keyframes draw {
   to {
     stroke-dashoffset: 0;
+    opacity: 1;
   }
 }
 
@@ -139,6 +141,7 @@ nav ul li a.active {
   z-index: 1;
 }
 
+/* === Main Grid === */
 .design-container {
   display: grid;
   grid-template-columns: 2fr 1fr;
@@ -178,6 +181,7 @@ nav ul li a.active {
   color: var(--card-heading-color);
 }
 
+/* === Featured Work === */
 .featured-work {
   background-color: var(--section-background);
   padding: 20px;
@@ -201,6 +205,7 @@ nav ul li a.active {
   margin-bottom: 10px;
 }
 
+/* === Footer === */
 .portfolio-footer {
   background-color: var(--section-background);
   color: var(--text-color);
@@ -211,6 +216,7 @@ nav ul li a.active {
   border-top: 1px solid #ccc;
 }
 
+/* === Responsive === */
 @media (max-width: 900px) {
   .design-container {
     grid-template-columns: 1fr;
