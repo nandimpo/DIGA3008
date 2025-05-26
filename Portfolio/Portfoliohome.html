@@ -7,21 +7,17 @@
   <link rel="stylesheet" href="normalize.css" />
   <link rel="stylesheet" href="../CSS/Portfolio(home).css" />
 
-  <!-- JavaScript used across multiple pages -->
   <script src="../JavaScript/Cursor.js" defer></script>
   <script src="../JavaScript/Handwriting.js" defer></script>
   <script src="../JavaScript/NotebookAnimation.js" defer></script>
 </head>
 <body>
-  <!-- Glowing Cursor -->
+  
   <div id="cursorPulse"></div>
 
-  <!-- Navigation -->
   <nav>
     <input type="checkbox" id="check" />
-    <label for="check" class="burger-button">
-      <span class="burger-icon">☰</span>
-    </label>
+    <label for="check" class="burger-button"><span class="burger-icon">☰</span></label>
     <label class="logo">NM</label>
     <ul>
       <li><a href="../index.html">Home</a></li>
@@ -32,26 +28,28 @@
     </ul>
   </nav>
 
-  <!-- Portfolio Content -->
+ 
   <div class="portfolio-container">
     <div class="portfolio-header">
-      <svg class="handwriting-svg" viewBox="0 0 800 200" preserveAspectRatio="xMidYMid meet">
+      <svg class="handwriting-svg" viewBox="0 0 800 300" preserveAspectRatio="xMidYMid meet">
         <text id="handwrittenPath" x="400" y="100" text-anchor="middle"
-              font-family="heading font" font-size="48" fill="none" stroke="#E1B808" stroke-width="2">
+              font-family="heading font" font-size="48" fill="#E1B808" stroke="#E1B808" stroke-width="2"
+              dominant-baseline="middle">
           My Portfolio
         </text>
-        <text id="subtitlePath" x="400" y="150" text-anchor="middle"
-              font-family="body font" font-size="24" fill="none" stroke="#f5f1e6" stroke-width="1.5">
-          A showcase of animation, design, writing, and interactivity.
+        <text id="subtitlePath" x="400" y="180" text-anchor="middle"
+              font-family="body font" font-size="24" fill="#f5f1e6" stroke="#f5f1e6" stroke-width="1.5"
+              dominant-baseline="middle">
+          A showcase of animation, design, and writing!
         </text>
       </svg>
 
       <p class="portfolio-intro">
-        I love everything artistic from Animation, Design, and Writing. I love work that is African and Woman-centred
-        and I love to reflect this in my work. If you want to know more about my work, look no further!
+        I am Nandi Mpofu and I am from Johannesburg. I am an animator, designer, and writer. I am currently proficient in English and French writing. The software I'm most comfortable with includes Unity, Blender, and the Photoshop suite. I'm particularly interested in design—specifically editorial design and production design. My biggest strength is communication design. I love being in spaces where I can use my design skills to communicate ideas effectively.I have been developing my skills over the past four years and I have worked at events and magazines. 
       </p>
     </div>
 
+    
     <div class="notebook">
       <div class="notebook-page">
         <a href="Animation.html" class="portfolio-button">Animation</a>
@@ -64,12 +62,13 @@
         <a href="Design.html" class="portfolio-button">Design</a>
         <p class="category-description">Here you will find my Designs – specifically Game Design.</p>
 
-        <a href="Essays.Html" class="portfolio-button">Essays</a>
+        <a href="Essays.html" class="portfolio-button">Essays</a>
         <p class="category-description">This section includes all my essays.</p>
       </div>
     </div>
   </div>
 
+  
   <footer class="footer-text">
     Brought to you by Nandi Mpofu.
   </footer>

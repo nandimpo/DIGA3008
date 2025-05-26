@@ -8,7 +8,7 @@
   src: url('../Fonts/Grown.ttf') format('truetype');
 }
 
-/* Global reset */
+
 * {
   margin: 0;
   padding: 0;
@@ -25,7 +25,6 @@
   --text-light: #EBE4D2;
 }
 
-/* Body layout */
 body {
   font-family: 'body font', sans-serif;
   background-color: var(--main-bg);
@@ -36,7 +35,7 @@ body {
   position: relative;
 }
 
-/* === CURSOR PULSE === */
+
 #cursorPulse {
   position: fixed;
   width: 30px;
@@ -48,7 +47,7 @@ body {
   transform: translate(-50%, -50%);
 }
 
-/* Navigation */
+
 nav {
   display: flex;
   justify-content: space-between;
@@ -100,7 +99,7 @@ nav ul li a:hover {
   color: var(--main-bg);
 }
 
-/* Footer */
+
 .footer-text {
   background-color: var(--header-bg);
   color: var(--main-bg);
@@ -112,7 +111,7 @@ nav ul li a:hover {
   margin-top: auto;
 }
 
-/* Main content */
+
 main {
   flex: 1;
   padding: 40px;
@@ -127,7 +126,7 @@ main h1 {
   color: var(--text-light);
 }
 
-/* Categories */
+
 .categories {
   display: flex;
   justify-content: center;
@@ -139,7 +138,7 @@ main h1 {
   font-size: 20px;
 }
 
-/* Grid layout */
+
 .image-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -148,7 +147,6 @@ main h1 {
   margin: 0 auto;
 }
 
-/* Card container */
 .image-container {
   background-color: var(--header-bg);
   border-radius: 30px;
@@ -172,7 +170,7 @@ main h1 {
   background-color: rgba(231, 207, 122, 0.3);
 }
 
-/* Read More button */
+
 .read-more-state {
   display: none;
 }
@@ -229,7 +227,7 @@ main h1 {
   align-items: center;
 }
 
-/* === SVG Handwriting Animations === */
+
 #handwrittenPath, #subtitlePath {
   stroke: var(--accent-color);
   stroke-width: 2px;
@@ -237,7 +235,7 @@ main h1 {
   visibility: hidden;
 }
 
-/* Draw animations */
+
 @keyframes draw {
   to {
     stroke-dashoffset: 0;
@@ -250,7 +248,7 @@ main h1 {
   }
 }
 
-/* === Notebook Reveal Animation === */
+
 .notebook-page {
   opacity: 0;
   transform: translateY(40px);
@@ -262,7 +260,7 @@ main h1 {
   transform: translateY(0);
 }
 
-/* Responsive */
+
 @media (max-width: 900px) {
   .image-grid {
     grid-template-columns: repeat(2, 1fr);
