@@ -1,119 +1,7 @@
-@font-face {
-  font-family: 'heading font';
-  src: url('../Fonts/Grown Personal Use Only.ttf') format('truetype');
-}
+/* ===== DESIGN PAGE SPECIFIC STYLES ===== */
+/* Only include styles here that are unique to the design page */
 
-@font-face {
-  font-family: 'body font';
-  src: url('../Fonts/Montserrat-SemiBold.ttf') format('truetype');
-}
-
-:root {
-  --background-color: #5F5143;
-  --text-color: #5F5143;
-  --heading-color: #EBE4D2;
-  --card-heading-color: #D17609;
-  --accent-color: #E1B808;
-  --section-background: #EBE4D2;
-  --border-color: #D17609;
-  --soft-yellow: rgba(255, 215, 0, 0.7);
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html, body {
-  font-family: 'body font', sans-serif;
-  background-color: var(--background-color);
-  color: var(--heading-color);
-  overflow-x: hidden;
-}
-
-.cursor-pulse {
-  position: fixed;
-  width: 30px;
-  height: 30px;
-  background-color: rgba(24, 112, 64, 0.4);
-  border-radius: 50%;
-  pointer-events: none;
-  transform: translate(-50%, -50%);
-  z-index: 9999;
-}
-
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 60px;
-  padding: 0 30px;
-  background-color: var(--section-background);
-  font-family: 'heading font', serif;
-  position: relative;
-  z-index: 101;
-}
-
-nav .logo {
-  font-size: 26px;
-  font-weight: bold;
-  color: var(--text-color);
-  margin-left: 10px;
-  margin-right: auto;
-  line-height: 60px;
-}
-
-nav ul {
-  display: flex;
-  list-style: none;
-}
-
-nav ul li {
-  margin-left: 25px;
-}
-
-nav ul li a {
-  text-decoration: none;
-  color: var(--text-color);
-  font-size: 15px;
-  transition: color 0.3s;
-}
-
-nav ul li a:hover,
-nav ul li a.active {
-  color: var(--accent-color);
-  font-weight: bold;
-}
-
-.linkedin-icon {
-  font-size: 18px;
-  color: #0077b5;
-}
-
-#check {
-  display: none;
-}
-
-.burger-button {
-  display: none;
-  cursor: pointer;
-  font-size: 24px;
-  color: var(--text-color);
-  position: absolute;
-  right: 30px;
-  top: 18px;
-}
-
-
-.design-header {
-  text-align: center;
-  margin: 40px 0 60px 0;
-  position: relative;
-  z-index: 1;
-  padding: 0 20px;
-}
-
+/* SVG Text Animation - Unique to design page */
 .design-header svg text {
   font-family: 'heading font';
   font-size: 80px;
@@ -133,18 +21,7 @@ nav ul li a.active {
   }
 }
 
-.design-header p {
-  font-size: 1rem;
-  color: var(--heading-color);
-  max-width: 800px;
-  margin: 30px auto 0;
-  padding: 0 20px;
-  line-height: 1.6;
-  position: relative;
-  z-index: 1;
-}
-
-
+/* Design Container Layout - Unique grid layout for design page */
 .design-container {
   display: grid;
   grid-template-columns: 2fr 1fr;
@@ -154,42 +31,29 @@ nav ul li a.active {
   padding: 0 20px;
 }
 
+/* Design Grid - Specific to design page layout */
 .design-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
 }
 
+/* Design Box Specific Sizing - Different from standard cards */
 .design-box {
-  background-color: var(--section-background);
-  border: 2px solid var(--border-color);
-  border-radius: 10px;
   height: 150px;
   display: flex;
   align-items: center;
   justify-content: center;
   text-decoration: none;
-  color: var(--text-color);
-  transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.design-box:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-}
-
-.design-box h3 {
-  font-family: 'heading font';
-  font-weight: bold;
-  color: var(--card-heading-color);
-}
-
-
+/* Featured Work Sidebar - Unique to design page */
 .featured-work {
   background-color: var(--section-background);
   padding: 20px;
   border-radius: 10px;
   height: 100%;
+  border: 2px solid var(--border-color);
 }
 
 .featured-work h3 {
@@ -208,18 +72,7 @@ nav ul li a.active {
   margin-bottom: 10px;
 }
 
-
-.portfolio-footer {
-  background-color: var(--section-background);
-  color: var(--text-color);
-  text-align: center;
-  padding: 20px 10px;
-  font-family: 'heading font';
-  font-size: 1rem;
-  border-top: 1px solid #ccc;
-}
-
-
+/* Design Page Responsive Styles */
 @media (max-width: 900px) {
   .design-container {
     grid-template-columns: 1fr;
@@ -239,37 +92,8 @@ nav ul li a.active {
 }
 
 @media (max-width: 600px) {
-  .burger-button {
-    display: block;
-  }
-
-  nav ul {
-    position: fixed;
-    width: 100%;
-    height: 100vh;
-    background-color: var(--section-background);
-    top: 60px;
-    left: -100%;
-    text-align: center;
-    transition: all 0.5s;
-    flex-direction: column;
-    z-index: 100;
-  }
-
-  nav ul li {
-    margin: 20px 0;
-  }
-
-  #check:checked ~ ul {
-    left: 0;
-  }
-
   .design-header svg text {
     font-size: 36px;
-  }
-
-  .design-header p {
-    font-size: 0.95rem;
   }
 
   .design-box {

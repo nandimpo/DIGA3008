@@ -1,0 +1,384 @@
+/* ===== FONT IMPORTS ===== */
+@font-face {
+  font-family: 'heading font';
+  src: url('../Fonts/Grown Personal Use Only.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'body font';
+  src: url('../Fonts/Montserrat-SemiBold.ttf') format('truetype');
+}
+
+/* ===== CSS VARIABLES ===== */
+:root {
+  --background-color: #5F5143;
+  --text-color: #5F5143;
+  --heading-color: #EBE4D2;
+  --card-heading-color: #D17609;
+  --accent-color: #E1B808;
+  --section-background: #EBE4D2;
+  --border-color: #D17609;
+  --soft-yellow: rgba(255, 215, 0, 0.7);
+  
+  /* Typography Variables */
+  --heading-font: 'heading font', serif;
+  --body-font: 'body font', sans-serif;
+  --heading-size: 2rem;
+  --body-size: 1rem;
+  --nav-size: 15px;
+  --footer-size: 1rem;
+}
+
+/* ===== RESET & BASE STYLES ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  font-family: var(--body-font);
+  font-size: var(--body-size);
+  background-color: var(--background-color);
+  color: var(--heading-color);
+  overflow-x: hidden;
+  line-height: 1.6;
+}
+
+/* ===== TYPOGRAPHY STANDARDS ===== */
+
+/* All Headings - Consistent styling */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--heading-font);
+  font-size: var(--heading-size);
+  font-weight: bold;
+  color: var(--heading-color);
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+/* Large Display Headings - With stroke effect like in your second image */
+.page-header h1,
+.design-header h1,
+.hero-heading {
+  font-size: 4rem;
+  color: var(--heading-color);
+  text-shadow: 
+    -1px -1px 0 var(--soft-yellow),
+    1px -1px 0 var(--soft-yellow),
+    -1px 1px 0 var(--soft-yellow),
+    1px 1px 0 var(--soft-yellow),
+    0 0 3px var(--soft-yellow);
+  margin-bottom: 2rem;
+}
+
+/* Card/Section Headings - Special color for content cards */
+.card-heading,
+.section-heading,
+.design-box h3,
+.featured-work h3 {
+  color: var(--card-heading-color) !important;
+}
+
+/* Body Text - Consistent across all content */
+p, li, span, div:not(.heading):not(.nav):not(.footer) {
+  font-family: var(--body-font);
+  font-size: var(--body-size);
+  line-height: 1.6;
+  color: var(--text-color);
+}
+
+/* Light text for dark backgrounds */
+.light-text, 
+.design-header p,
+body > p {
+  color: var(--heading-color) !important;
+}
+
+/* Links */
+a {
+  color: var(--accent-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--card-heading-color);
+}
+
+/* Lists */
+ul, ol {
+  padding-left: 20px;
+}
+
+li {
+  margin-bottom: 0.5rem;
+}
+
+/* ===== NAVIGATION - STANDARDIZED ===== */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  padding: 0 30px;
+  background-color: var(--section-background);
+  font-family: var(--heading-font);
+  position: relative;
+  z-index: 101;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+nav .logo {
+  font-size: 26px;
+  font-weight: bold;
+  color: var(--text-color);
+  margin-left: 10px;
+  margin-right: auto;
+  line-height: 60px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  margin-left: 25px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-size: var(--nav-size);
+  font-family: var(--heading-font);
+  transition: color 0.3s ease, font-weight 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+  color: var(--accent-color);
+  font-weight: bold;
+}
+
+.linkedin-icon {
+  font-size: 18px;
+  color: #0077b5;
+  transition: transform 0.3s ease;
+}
+
+.linkedin-icon:hover {
+  transform: scale(1.1);
+}
+
+/* Mobile Navigation */
+#check {
+  display: none;
+}
+
+.burger-button {
+  display: none;
+  cursor: pointer;
+  font-size: 24px;
+  color: var(--text-color);
+  position: absolute;
+  right: 30px;
+  top: 18px;
+}
+
+/* ===== FOOTER - STANDARDIZED ===== */
+.footer,
+.portfolio-footer,
+footer {
+  background-color: var(--section-background);
+  color: var(--text-color);
+  text-align: center;
+  padding: 20px;
+  font-family: var(--heading-font);
+  font-size: var(--footer-size);
+  border-top: 2px solid var(--border-color);
+  margin-top: auto;
+}
+
+.footer p,
+.portfolio-footer p,
+footer p {
+  font-family: var(--heading-font);
+  font-size: var(--footer-size);
+  color: var(--text-color);
+  margin: 0;
+}
+
+/* ===== CONTENT SECTIONS ===== */
+.section {
+  background-color: var(--section-background);
+  padding: 30px;
+  margin: 20px auto;
+  border-radius: 10px;
+  max-width: 1200px;
+  border: 2px solid var(--border-color);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ===== CARDS & BOXES ===== */
+.card,
+.design-box {
+  background-color: var(--section-background);
+  border: 2px solid var(--border-color);
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px 0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover,
+.design-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* ===== BUTTONS ===== */
+.btn {
+  font-family: var(--body-font);
+  font-size: var(--body-size);
+  padding: 12px 24px;
+  border: 2px solid var(--border-color);
+  background-color: var(--accent-color);
+  color: var(--text-color);
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn:hover {
+  background-color: var(--card-heading-color);
+  color: var(--heading-color);
+  transform: translateY(-2px);
+}
+
+/* ===== SPECIAL ELEMENTS ===== */
+.cursor-pulse {
+  position: fixed;
+  width: 30px;
+  height: 30px;
+  background-color: rgba(24, 112, 64, 0.4);
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+}
+
+/* Page Headers */
+.page-header {
+  text-align: center;
+  margin: 40px 0 60px 0;
+  position: relative;
+  z-index: 1;
+  padding: 0 20px;
+}
+
+.page-header p {
+  max-width: 800px;
+  margin: 0 auto;
+  color: var(--heading-color);
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 900px) {
+  :root {
+    --heading-size: 1.75rem;
+    --body-size: 0.95rem;
+  }
+  
+  .page-header h1,
+  .design-header h1,
+  .hero-heading {
+    font-size: 3rem;
+  }
+  
+  nav {
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  :root {
+    --heading-size: 1.5rem;
+    --body-size: 0.9rem;
+    --nav-size: 14px;
+    --footer-size: 0.9rem;
+  }
+  
+  .burger-button {
+    display: block;
+  }
+
+  nav ul {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--section-background);
+    top: 60px;
+    left: -100%;
+    text-align: center;
+    transition: all 0.5s ease;
+    flex-direction: column;
+    z-index: 100;
+    justify-content: flex-start;
+    padding-top: 50px;
+  }
+
+  nav ul li {
+    margin: 20px 0;
+  }
+
+  #check:checked ~ ul {
+    left: 0;
+  }
+  
+  .page-header h1,
+  .design-header h1,
+  .hero-heading {
+    font-size: 2.5rem;
+  }
+  
+  .section {
+    padding: 20px;
+    margin: 15px;
+  }
+  
+  .card,
+  .design-box {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 400px) {
+  :root {
+    --heading-size: 1.3rem;
+    --body-size: 0.85rem;
+  }
+  
+  nav {
+    padding: 0 15px;
+  }
+  
+  nav .logo {
+    font-size: 22px;
+  }
+  
+  .page-header h1,
+  .design-header h1,
+  .hero-heading {
+    font-size: 2rem;
+  }
+}
