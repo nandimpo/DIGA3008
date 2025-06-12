@@ -1,4 +1,3 @@
-
 /* ===== FONT IMPORTS ===== */
 @font-face {
   font-family: 'heading font';
@@ -96,63 +95,6 @@ li {
   margin-bottom: 0.5rem;
 }
 
-/* ===== SVG HANDWRITING STYLES ===== */
-.handwriting, .subtitle-svg {
-  width: 100%;
-  margin: 20px 0;
-}
-
-.handwriting {
-  height: 150px;
-}
-
-.subtitle-svg {
-  height: 100px;
-  margin: 10px 0 30px 0;
-}
-
-svg text, .handwriting text, .subtitle-svg text {
-  font-family: var(--heading-font) !important;
-  fill: var(--heading-color) !important;
-  font-weight: normal !important;
-  text-anchor: middle !important;
-  dominant-baseline: middle !important;
-}
-
-.handwriting text {
-  font-size: 5rem !important;
-}
-
-.subtitle-svg text {
-  font-size: 1.2rem !important;
-  font-family: var(--body-font) !important;
-}
-
-#handwrittenPath,
-#subtitlePath {
-  visibility: hidden;
-}
-
-#handwrittenPath, #subtitlePath {
-  fill: none !important;
-  stroke: var(--heading-color) !important;
-  stroke-width: 2px !important;
-  stroke-linecap: round !important;
-  stroke-linejoin: round !important;
-}
-
-@keyframes draw {
-  0% { stroke-dashoffset: 100%; fill: transparent; }
-  70% { fill: transparent; }
-  100% { stroke-dashoffset: 0; fill: var(--heading-color); }
-}
-
-@keyframes draw-sub {
-  0% { stroke-dashoffset: 100%; fill: transparent; }
-  70% { fill: transparent; }
-  100% { stroke-dashoffset: 0; fill: var(--heading-color); }
-}
-
 /* ===== NAVIGATION ===== */
 nav {
   display: flex;
@@ -205,17 +147,7 @@ nav ul li a.active {
   top: 1rem;
 }
 
-/* ===== FOOTER ===== */
-footer {
-  background-color: var(--background-color);
-  color: var(--text-color);
-  text-align: center;
-  padding: 1.5rem 1rem;
-  font-family: var(--heading-font);
-  font-size: var(--footer-size);
-}
-
-/* ===== SECTIONS, CARDS, BUTTONS ===== */
+/* ===== SECTION & CARD STYLES ===== */
 .section {
   background-color: var(--section-background);
   padding: 2rem;
@@ -245,6 +177,7 @@ footer {
   box-shadow: 0 0.3125rem 0.9375rem rgba(0, 0, 0, 0.2);
 }
 
+/* ===== BUTTON ===== */
 .btn {
   font-family: var(--body-font);
   font-size: var(--body-size);
@@ -284,4 +217,104 @@ footer {
 
 .linkedin-icon:hover {
   transform: scale(1.1);
+}
+
+/* ===== FOOTER ===== */
+.footer {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  padding: var(--spacing-xxl) var(--spacing-md);
+  text-align: center;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+  max-width: 75rem;
+  margin: 0 auto var(--spacing-md);
+}
+
+.footer-column {
+  flex: 1 1 300px;
+  text-align: left;
+}
+
+.footer-column h2 {
+  font-family: var(--heading-font);
+  color: var(--main-bg);
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.footer-column hr {
+  border: none;
+  border-top: 2px solid var(--border-color);
+  width: 4rem;
+  margin-bottom: 1rem;
+}
+
+.footer-column p,
+.footer-column a {
+  font-size: var(--body-size);
+  color: var(--text-color);
+  display: block;
+  margin-top: 0.25rem;
+}
+
+.footer-column a:hover {
+  color: var(--button-color);
+}
+
+.social-icons a {
+  font-size: 1.5rem;
+  margin-right: 1rem;
+  color: var(--text-color);
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: var(--accent-color);
+}
+
+.footer-bottom {
+  font-size: 0.875rem;
+  color: var(--text-color);
+  margin-top: 2rem;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-column {
+    text-align: center;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
+
+  nav ul {
+    flex-direction: column;
+    background-color: var(--background-color);
+    width: 100%;
+    position: absolute;
+    top: 3.5rem;
+    left: 0;
+    display: none;
+  }
+
+  #check:checked ~ ul {
+    display: flex;
+  }
+
+  .burger-button {
+    display: block;
+  }
 }
