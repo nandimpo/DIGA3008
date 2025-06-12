@@ -1,3 +1,4 @@
+
 .blog-article-wrapper {
   max-width: 50rem;
   background-color: var(--white);
@@ -65,7 +66,7 @@
 
 .next-blog-btn {
   background-color: var(--button-color);
-  color: var(--heading-color);
+  color: var(--heading-color); /* light color for default */
   font-family: var(--body-font);
   font-size: 1rem;
   font-weight: 600;
@@ -75,10 +76,11 @@
   text-decoration: none;
   display: inline-block;
   transition: all 0.3s ease;
+  margin: 0 0.5rem;
 }
 
 .next-blog-btn:hover {
-  background-color: var(--button-hover);
-  color: var(--text-color);
+  background-color: var(--button-hover); /* #187040 */
+  color: #ffffff; /* ensures high contrast */
   transform: scale(1.05);
 }
