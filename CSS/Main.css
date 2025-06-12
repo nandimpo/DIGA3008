@@ -24,13 +24,27 @@
   --button-hover: #E1B808;
   --white: #ffffff;
   
-  /* Typography Variables */
+  /* Typography Variables - Using rem for scalability */
   --heading-font: 'heading font', serif;
   --body-font: 'body font', sans-serif;
   --heading-size: 2rem;
   --body-size: 1rem;
-  --nav-size: 16px;
+  --nav-size: 1rem;
   --footer-size: 1rem;
+  
+  /* Spacing Variables */
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+  --spacing-xxl: 3rem;
+  
+  /* Border and Radius */
+  --border-width: 0.125rem;
+  --border-radius: 0.625rem;
+  --border-radius-sm: 0.3125rem;
+  --border-radius-lg: 0.9375rem;
 }
 
 /* ===== RESET & BASE STYLES ===== */
@@ -38,6 +52,10 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+html {
+  font-size: 16px; /* Base font size for rem calculations */
 }
 
 html, body {
@@ -53,13 +71,13 @@ html, body {
 
 /* ===== TYPOGRAPHY STANDARDS ===== */
 
-/* All Headings - Consistent styling like blogs page */
+/* All Headings - Consistent styling */
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--heading-font);
   font-size: var(--heading-size);
   font-weight: bold;
   color: var(--heading-color);
-  margin-bottom: 1rem;
+  margin-bottom: var(--spacing-md);
   line-height: 1.2;
 }
 
@@ -70,12 +88,12 @@ h1, h2, h3, h4, h5, h6 {
 .hero-heading,
 .main-title {
   font-family: var(--heading-font);
-  font-size: 5rem;
+  font-size: clamp(3rem, 8vw, 5rem); /* Responsive font size */
   color: var(--heading-color);
   text-align: center;
-  margin: 40px 0 20px 0;
+  margin: 2.5rem 0 1.25rem 0;
   font-weight: normal;
-  letter-spacing: 2px;
+  letter-spacing: 0.125rem;
 }
 
 /* Subtitle text under main headings */
@@ -84,11 +102,11 @@ h1, h2, h3, h4, h5, h6 {
 .design-header p,
 .subtitle {
   font-family: var(--body-font);
-  font-size: 1.2rem;
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
   color: var(--heading-color);
   text-align: center;
-  max-width: 800px;
-  margin: 0 auto 40px auto;
+  max-width: 50rem;
+  margin: 0 auto 2.5rem auto;
   line-height: 1.6;
 }
 
@@ -129,11 +147,11 @@ a:hover {
 
 /* Lists */
 ul, ol {
-  padding-left: 20px;
+  padding-left: 1.25rem;
 }
 
 li {
-  margin-bottom: 0.5rem;
+  margin-bottom: var(--spacing-sm);
 }
 
 /* ===== NAVIGATION - STANDARDIZED ===== */
@@ -141,7 +159,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 30px;
+  padding: var(--spacing-md) var(--spacing-xl);
   background-color: var(--background-color);
   font-family: var(--heading-font);
   position: relative;
@@ -149,7 +167,7 @@ nav {
 }
 
 nav .logo {
-  font-size: 24px;
+  font-size: 1.5rem;
   font-weight: bold;
   color: var(--main-bg);
 }
@@ -162,7 +180,7 @@ nav ul {
 }
 
 nav ul li {
-  margin: 0 15px;
+  margin: 0 var(--spacing-md);
 }
 
 nav ul li a {
@@ -186,7 +204,7 @@ nav ul li a.current-page {
 
 .linkedin-icon {
   color: #0077b5;
-  font-size: 20px;
+  font-size: 1.25rem;
   transition: transform 0.3s ease;
 }
 
@@ -202,11 +220,11 @@ nav ul li a.current-page {
 .burger-button {
   display: none;
   cursor: pointer;
-  font-size: 24px;
+  font-size: 1.5rem;
   color: var(--main-bg);
   position: absolute;
-  right: 30px;
-  top: 18px;
+  right: var(--spacing-xl);
+  top: 1.125rem;
 }
 
 /* ===== FOOTER - STANDARDIZED ===== */
@@ -216,11 +234,11 @@ footer {
   background-color: var(--background-color);
   color: var(--text-color);
   text-align: center;
-  padding: 25px 10px;
+  padding: 1.5625rem 0.625rem;
   font-family: var(--heading-font);
   font-size: var(--footer-size);
   border-top: 1px solid #ccc;
-  margin-top: 40px;
+  margin-top: 2.5rem;
 }
 
 .footer p,
@@ -232,57 +250,58 @@ footer p {
   margin: 0;
 }
 
+/* ===== PAGE HEADERS - CONSISTENT ACROSS ALL PAGES ===== */
+.page-header,
+.blog-header,
+.design-header {
+  text-align: center;
+  margin-top: 0;
+  padding-top: 0.625rem;
+  margin-bottom: var(--spacing-xl);
+}
+
 /* ===== CONTENT SECTIONS ===== */
 .section {
   background-color: var(--section-background);
-  padding: 30px;
-  margin: 20px auto;
-  border-radius: 10px;
-  max-width: 1200px;
-  border: 2px solid var(--border-color);
+  padding: var(--spacing-xl);
+  margin: 1.25rem auto;
+  border-radius: var(--border-radius);
+  max-width: 75rem;
+  border: var(--border-width) solid var(--border-color);
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 75rem;
   margin: 0 auto;
-  padding: 10px 20px;
-}
-
-/* Page Headers */
-.page-header,
-.blog-header {
-  text-align: center;
-  margin-top: 0px;
-  padding-top: 10px;
-  margin-bottom: 30px;
+  padding: 0.625rem 1.25rem;
 }
 
 /* ===== CARDS & BOXES ===== */
 .card,
 .design-box {
   background-color: var(--section-background);
-  border: 2px solid var(--border-color);
-  border-radius: 10px;
-  padding: 20px;
-  margin: 20px 0;
+  border: var(--border-width) solid var(--border-color);
+  border-radius: var(--border-radius);
+  padding: 1.25rem;
+  margin: 1.25rem 0;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card:hover,
 .design-box:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  transform: translateY(-0.3125rem);
+  box-shadow: 0 0.3125rem 0.9375rem rgba(0, 0, 0, 0.2);
 }
 
-/* ===== BUTTONS ===== */
+/* ===== BUTTONS - STANDARDIZED ===== */
 .btn {
   font-family: var(--body-font);
   font-size: var(--body-size);
-  padding: 12px 24px;
-  border: 2px solid var(--border-color);
+  padding: 0.75rem 1.5rem;
+  border: var(--border-width) solid var(--border-color);
   background-color: var(--accent-color);
   color: var(--text-color);
-  border-radius: 5px;
+  border-radius: var(--border-radius-sm);
   cursor: pointer;
   transition: all 0.3s ease;
   text-decoration: none;
@@ -292,23 +311,23 @@ footer p {
 .btn:hover {
   background-color: var(--card-heading-color);
   color: var(--heading-color);
-  transform: translateY(-2px);
+  transform: translateY(-0.125rem);
 }
 
-/* Blog Post Buttons */
+/* Blog Post Buttons - Standardized */
 .blog-post-button {
-  position: absolute;
-  bottom: 10px;
-  left: 10px;
   background-color: var(--button-color);
   color: var(--white);
-  padding: 5px 15px;
-  border-radius: 20px;
-  font-size: 14px;
+  padding: 0.5rem 0.875rem;
+  border-radius: 0.9375rem;
+  font-size: 0.75rem;
   font-family: var(--body-font);
   transition: background-color 0.3s, transform 0.2s;
   border: none;
   cursor: pointer;
+  text-decoration: none;
+  align-self: flex-start;
+  flex-shrink: 0;
 }
 
 .blog-post-button:hover {
@@ -319,8 +338,8 @@ footer p {
 /* ===== SPECIAL ELEMENTS ===== */
 .cursor-pulse {
   position: fixed;
-  width: 30px;
-  height: 30px;
+  width: 1.875rem;
+  height: 1.875rem;
   background-color: rgba(24, 112, 64, 0.4);
   border-radius: 50%;
   pointer-events: none;
@@ -328,31 +347,60 @@ footer p {
   z-index: 9999;
 }
 
+/* ===== SVG BASE STYLES - ANIMATIONS HANDLED BY JAVASCRIPT ===== */
+.handwriting {
+  width: 100%;
+  height: 9.375rem;
+}
+
+.handwriting text {
+  font-family: var(--heading-font);
+  font-size: 6.25rem;
+  fill: var(--background-color);
+  stroke: #ffffff;
+  stroke-width: 0.0375rem;
+  visibility: hidden;
+}
+
+.subtitle-svg {
+  width: 100%;
+  height: 6.25rem;
+}
+
+.subtitle-svg text {
+  font-family: var(--body-font);
+  font-size: 1.75rem;
+  fill: var(--background-color);
+  stroke: #ffffff;
+  stroke-width: 0.025rem;
+  visibility: hidden;
+}
+
 /* ===== RESPONSIVE DESIGN ===== */
-@media (max-width: 900px) {
+@media (max-width: 56.25rem) { /* 900px */
   :root {
     --heading-size: 1.75rem;
     --body-size: 0.95rem;
   }
   
-  .page-header h1,
-  .blog-header h1,
-  .design-header h1,
-  .hero-heading,
-  .main-title {
-    font-size: 4rem;
-  }
-  
   nav {
-    padding: 10px 20px;
+    padding: 0.625rem 1.25rem;
+  }
+
+  .handwriting text {
+    font-size: 3.75rem; 
+  }
+
+  .subtitle-svg text {
+    font-size: 1.125rem;
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 37.5rem) { /* 600px */
   :root {
     --heading-size: 1.5rem;
     --body-size: 0.9rem;
-    --nav-size: 14px;
+    --nav-size: 0.875rem;
     --footer-size: 0.9rem;
   }
   
@@ -361,7 +409,7 @@ footer p {
   }
 
   .logo {
-    font-size: 20px;
+    font-size: 1.25rem;
   }
   
   .burger-button {
@@ -373,52 +421,37 @@ footer p {
     width: 100%;
     height: 100vh;
     background-color: var(--background-color);
-    top: 60px;
+    top: 3.75rem;
     left: -100%;
     text-align: center;
     transition: all 0.5s ease;
     flex-direction: column;
     z-index: 100;
     justify-content: flex-start;
-    padding-top: 50px;
+    padding-top: 3.125rem;
   }
 
   nav ul li {
-    margin: 20px 0;
+    margin: 1.25rem 0;
   }
 
   #check:checked ~ ul {
     left: 0;
   }
   
-  .page-header h1,
-  .blog-header h1,
-  .design-header h1,
-  .hero-heading,
-  .main-title {
-    font-size: 3rem;
-  }
-  
-  .page-header p,
-  .blog-header p,
-  .design-header p,
-  .subtitle {
-    font-size: 1rem;
-  }
-  
   .section {
-    padding: 20px;
-    margin: 15px;
+    padding: 1.25rem;
+    margin: 0.9375rem;
   }
   
   .card,
   .design-box {
-    padding: 15px;
+    padding: 0.9375rem;
   }
 
   .blog-post-button {
-    font-size: 12px;
-    padding: 4px 12px;
+    font-size: 0.6875rem;
+    padding: 0.375rem 0.75rem;
   }
 
   .portfolio-footer {
@@ -426,25 +459,17 @@ footer p {
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 25rem) { /* 400px */
   :root {
     --heading-size: 1.3rem;
     --body-size: 0.85rem;
   }
   
   nav {
-    padding: 10px 15px;
+    padding: 0.625rem 0.9375rem;
   }
   
   nav .logo {
-    font-size: 18px;
-  }
-  
-  .page-header h1,
-  .blog-header h1,
-  .design-header h1,
-  .hero-heading,
-  .main-title {
-    font-size: 2.5rem;
+    font-size: 1.125rem;
   }
 }
