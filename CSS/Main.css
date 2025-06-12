@@ -1,3 +1,4 @@
+
 /* ===== FONT IMPORTS ===== */
 @font-face {
   font-family: 'heading font';
@@ -23,22 +24,23 @@
   --button-color: #D17609;
   --button-hover: #E1B808;
   --white: #ffffff;
-  
+
   --heading-font: 'heading font', serif;
   --body-font: 'body font', sans-serif;
+
   --heading-size: 2rem;
   --body-size: 1rem;
-  --nav-size: 16px;
+  --nav-size: 1rem;
   --footer-size: 1rem;
-  
+
   --spacing-xs: 0.25rem;
   --spacing-sm: 0.5rem;
   --spacing-md: 1rem;
   --spacing-lg: 1.5rem;
   --spacing-xl: 2rem;
   --spacing-xxl: 3rem;
-  
-  --border-radius: 10px;
+
+  --border-radius: 0.625rem;
 }
 
 /* ===== RESET & BASE STYLES ===== */
@@ -69,52 +71,11 @@ h1:not(svg text), h2:not(svg text), h3:not(svg text), h4:not(svg text), h5:not(s
   line-height: 1.2;
 }
 
-.page-header h1,
-.blog-header h1,
-.design-header h1,
-.hero-heading,
-.main-title {
-  font-family: var(--heading-font);
-  font-size: 5rem;
-  color: var(--heading-color);
-  text-align: center;
-  margin: 40px 0 20px 0;
-  font-weight: normal;
-  letter-spacing: 2px;
-}
-
-.page-header p,
-.blog-header p,
-.design-header p,
-.subtitle {
-  font-family: var(--body-font);
-  font-size: 1.2rem;
-  color: var(--heading-color);
-  text-align: center;
-  max-width: 800px;
-  margin: 0 auto 40px auto;
-  line-height: 1.6;
-}
-
-.card-heading,
-.section-heading,
-.design-box h3,
-.featured-work h3 {
-  color: var(--card-heading-color) !important;
-}
-
 p, li, span, div:not(.heading):not(.nav):not(.footer) {
   font-family: var(--body-font);
   font-size: var(--body-size);
   line-height: 1.6;
   color: var(--text-color);
-}
-
-.light-text, 
-.design-header p,
-.blog-header p,
-body > p {
-  color: var(--heading-color) !important;
 }
 
 a {
@@ -167,15 +128,12 @@ svg text, .handwriting text, .subtitle-svg text {
   font-family: var(--body-font) !important;
 }
 
-/* ===== HANDWRITING ANIMATION STYLES ===== */
-/* Initial state - hide text until animation starts */
 #handwrittenPath,
 #subtitlePath {
   visibility: hidden;
 }
 
-/* Handwriting animation styles */
-#handwrittenPath {
+#handwrittenPath, #subtitlePath {
   fill: none !important;
   stroke: var(--heading-color) !important;
   stroke-width: 2px !important;
@@ -183,41 +141,16 @@ svg text, .handwriting text, .subtitle-svg text {
   stroke-linejoin: round !important;
 }
 
-#subtitlePath {
-  fill: none !important;
-  stroke: var(--heading-color) !important;
-  stroke-width: 1.5px !important;
-  stroke-linecap: round !important;
-  stroke-linejoin: round !important;
-}
-
-/* Animation keyframes */
 @keyframes draw {
-  0% { 
-    stroke-dashoffset: 100%;
-    fill: transparent;
-  }
-  70% {
-    fill: transparent;
-  }
-  100% { 
-    stroke-dashoffset: 0;
-    fill: var(--heading-color);
-  }
+  0% { stroke-dashoffset: 100%; fill: transparent; }
+  70% { fill: transparent; }
+  100% { stroke-dashoffset: 0; fill: var(--heading-color); }
 }
 
 @keyframes draw-sub {
-  0% { 
-    stroke-dashoffset: 100%;
-    fill: transparent;
-  }
-  70% {
-    fill: transparent;
-  }
-  100% { 
-    stroke-dashoffset: 0;
-    fill: var(--heading-color);
-  }
+  0% { stroke-dashoffset: 100%; fill: transparent; }
+  70% { fill: transparent; }
+  100% { stroke-dashoffset: 0; fill: var(--heading-color); }
 }
 
 /* ===== NAVIGATION ===== */
@@ -225,7 +158,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 30px;
+  padding: 1rem 2rem;
   background-color: var(--background-color);
   font-family: var(--heading-font);
   position: relative;
@@ -233,7 +166,7 @@ nav {
 }
 
 nav .logo {
-  font-size: 24px;
+  font-size: 1.5rem;
   font-weight: bold;
   color: var(--main-bg);
 }
@@ -241,20 +174,16 @@ nav .logo {
 nav ul {
   display: flex;
   list-style: none;
-  margin: 0;
-  padding: 0;
 }
 
 nav ul li {
-  margin: 0 15px;
+  margin: 0 1rem;
 }
 
 nav ul li a {
-  text-decoration: none;
+  font-family: var(--heading-font);
   color: var(--main-bg);
   font-size: var(--nav-size);
-  transition: color 0.3s ease;
-  font-family: var(--heading-font);
 }
 
 nav ul li a:hover,
@@ -263,141 +192,82 @@ nav ul li a.active {
   font-weight: bold;
 }
 
-.linkedin-icon {
-  color: #0077b5;
-  font-size: 20px;
-  transition: transform 0.3s ease;
-}
-
-.linkedin-icon:hover {
-  transform: scale(1.1);
-}
-
 #check {
   display: none;
 }
 
 .burger-button {
   display: none;
-  cursor: pointer;
-  font-size: 24px;
+  font-size: 1.5rem;
   color: var(--main-bg);
   position: absolute;
-  right: 30px;
-  top: 18px;
+  right: 2rem;
+  top: 1rem;
 }
 
 /* ===== FOOTER ===== */
-.footer,
-.portfolio-footer,
 footer {
   background-color: var(--background-color);
   color: var(--text-color);
   text-align: center;
-  padding: 25px 10px;
+  padding: 1.5rem 1rem;
   font-family: var(--heading-font);
   font-size: var(--footer-size);
-  border-top: 1px solid #ccc;
-  margin-top: 40px;
 }
 
-.footer p,
-.portfolio-footer p,
-footer p {
-  font-family: var(--heading-font);
-  font-size: var(--footer-size);
-  color: var(--text-color);
-  margin: 0;
-}
-
-/* ===== CONTENT SECTIONS ===== */
+/* ===== SECTIONS, CARDS, BUTTONS ===== */
 .section {
   background-color: var(--section-background);
-  padding: 30px;
-  margin: 20px auto;
+  padding: 2rem;
+  margin: 1.5rem auto;
   border-radius: var(--border-radius);
-  max-width: 1200px;
+  max-width: 75rem;
   border: 2px solid var(--border-color);
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 75rem;
   margin: 0 auto;
-  padding: 10px 20px;
+  padding: 1rem;
 }
 
-.page-header,
-.blog-header {
-  text-align: center;
-  margin-top: 0px;
-  padding-top: 10px;
-  margin-bottom: 30px;
-}
-
-/* ===== CARDS & BOXES ===== */
-.card,
-.design-box {
+.card {
   background-color: var(--section-background);
   border: 2px solid var(--border-color);
   border-radius: var(--border-radius);
-  padding: 20px;
-  margin: 20px 0;
+  padding: 1.25rem;
+  margin: 1.25rem 0;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.card:hover,
-.design-box:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+.card:hover {
+  transform: translateY(-0.3125rem);
+  box-shadow: 0 0.3125rem 0.9375rem rgba(0, 0, 0, 0.2);
 }
 
-/* ===== BUTTONS ===== */
 .btn {
   font-family: var(--body-font);
   font-size: var(--body-size);
-  padding: 12px 24px;
+  padding: 0.75rem 1.5rem;
   border: 2px solid var(--border-color);
   background-color: var(--accent-color);
   color: var(--text-color);
-  border-radius: 5px;
+  border-radius: 0.3125rem;
   cursor: pointer;
-  transition: all 0.3s ease;
   text-decoration: none;
-  display: inline-block;
 }
 
 .btn:hover {
   background-color: var(--card-heading-color);
   color: var(--heading-color);
-  transform: translateY(-2px);
+  transform: translateY(-0.125rem);
 }
 
-.blog-post-button {
-  position: absolute;
-  bottom: 10px;
-  left: 10px;
-  background-color: var(--button-color);
-  color: var(--white);
-  padding: 5px 15px;
-  border-radius: 20px;
-  font-size: 14px;
-  font-family: var(--body-font);
-  transition: background-color 0.3s, transform 0.2s;
-  border: none;
-  cursor: pointer;
-  text-decoration: none;
-}
-
-.blog-post-button:hover {
-  background-color: var(--button-hover);
-  transform: scale(1.05);
-}
-
-/* ===== SPECIAL ELEMENTS ===== */
+/* ===== CURSOR PULSE ===== */
 .cursor-pulse {
   position: fixed;
-  width: 30px;
-  height: 30px;
+  width: 1.875rem;
+  height: 1.875rem;
   background-color: rgba(24, 112, 64, 0.4);
   border-radius: 50%;
   pointer-events: none;
@@ -405,147 +275,13 @@ footer p {
   z-index: 9999;
 }
 
-/* ===== RESPONSIVE DESIGN ===== */
-@media (max-width: 900px) {
-  :root {
-    --heading-size: 1.75rem;
-    --body-size: 0.95rem;
-  }
-  
-  .page-header h1,
-  .blog-header h1,
-  .design-header h1,
-  .hero-heading,
-  .main-title {
-    font-size: 4rem;
-  }
-  
-  .handwriting text {
-    font-size: 4.5rem !important;
-  }
-  
-  .subtitle-svg text {
-    font-size: 1.1rem !important;
-  }
-  
-  nav {
-    padding: 10px 20px;
-  }
+/* ===== LINKEDIN ICON ===== */
+.linkedin-icon {
+  color: #0077b5;
+  font-size: 1.25rem;
+  transition: transform 0.3s ease;
 }
 
-@media (max-width: 600px) {
-  :root {
-    --heading-size: 1.5rem;
-    --body-size: 0.9rem;
-    --nav-size: 14px;
-    --footer-size: 0.9rem;
-  }
-  
-  nav {
-    flex-wrap: wrap;
-  }
-
-  .logo {
-    font-size: 20px;
-  }
-  
-  .burger-button {
-    display: block;
-  }
-
-  nav ul {
-    position: fixed;
-    width: 100%;
-    height: 100vh;
-    background-color: var(--background-color);
-    top: 60px;
-    left: -100%;
-    text-align: center;
-    transition: all 0.5s ease;
-    flex-direction: column;
-    z-index: 100;
-    justify-content: flex-start;
-    padding-top: 50px;
-  }
-
-  nav ul li {
-    margin: 20px 0;
-  }
-
-  #check:checked ~ ul {
-    left: 0;
-  }
-  
-  .page-header h1,
-  .blog-header h1,
-  .design-header h1,
-  .hero-heading,
-  .main-title {
-    font-size: 3rem;
-  }
-  
-  .handwriting text {
-    font-size: 3.5rem !important;
-  }
-  
-  .subtitle-svg text {
-    font-size: 1rem !important;
-  }
-  
-  .page-header p,
-  .blog-header p,
-  .design-header p,
-  .subtitle {
-    font-size: 1rem;
-  }
-  
-  .section {
-    padding: 20px;
-    margin: 15px;
-  }
-  
-  .card,
-  .design-box {
-    padding: 15px;
-  }
-
-  .blog-post-button {
-    font-size: 12px;
-    padding: 4px 12px;
-  }
-
-  .portfolio-footer {
-    font-size: 0.9rem;
-  }
-}
-
-@media (max-width: 400px) {
-  :root {
-    --heading-size: 1.3rem;
-    --body-size: 0.85rem;
-  }
-  
-  nav {
-    padding: 10px 15px;
-  }
-  
-  nav .logo {
-    font-size: 18px;
-  }
-  
-  .page-header h1,
-  .blog-header h1,
-  .design-header h1,
-  .hero-heading,
-  .main-title {
-    font-size: 2.5rem;
-  }
-  
-  .handwriting text {
-    font-size: 3rem !important;
-  }
-  
-  .subtitle-svg text {
-    font-size: 0.9rem !important;
-  }
+.linkedin-icon:hover {
+  transform: scale(1.1);
 }

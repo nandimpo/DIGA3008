@@ -1,329 +1,84 @@
-/* Import Crimson Text font */
-@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap');
-
-/* ===== BLOG-SPECIFIC STYLES ===== */
-/* Only unique styles for blog pages that aren't already in main.css */
-
-/* Blog-specific body styling with gradient background */
-html, body {
-  background: linear-gradient(120deg, #5f5143, #d17609);
-  background-size: 200% 200%;
-  background-position: center;
-  transition: background 1s ease;
-  padding-top: 5rem;
+.blog-article-wrapper {
+  max-width: 50rem;
+  background-color: var(--white);
+  margin: 4rem auto;
+  padding: 2rem 2.5rem;
+  border-radius: var(--border-radius);
+  box-shadow: 0 0 1.25rem rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--border-color);
 }
 
-/* Fixed navigation positioning for blog pages */
-nav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 5rem;
-  z-index: 100;
-}
-
-/* Blog article container */
-article {
-  max-width: 56.25rem;
-  margin: 0.5rem auto;
-  padding: 1.875rem;
-  background-color: white;
-  box-shadow: 0 0.3125rem 0.9375rem rgba(0, 0, 0, 0.1);
-  border-radius: 0.5rem;
-}
-
-.h-entry {
-  padding: 1.25rem;
-}
-
-.e-content {
-  padding: 0.9375rem;
-}
-
-/* Override heading font for blog pages to use Crimson Text */
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Crimson Text', serif !important;
-  color: #5F5143 !important;
-  font-weight: 600 !important;
-}
-
-/* Blog post title styling */
-h2.p-name {
-  font-size: 2.25rem;
-  margin-bottom: 0.9375rem;
+.blog-article-wrapper h1 {
   text-align: center;
-  padding: 0.625rem 0;
-  border-bottom: 0.125rem solid #5F5143;
+  font-family: var(--heading-font);
+  font-size: 2rem;
+  color: var(--text-color);
+  margin-bottom: 1rem;
 }
 
-/* Section headings */
-h3 {
+.blog-article-wrapper h2,
+.blog-article-wrapper h3,
+.blog-article-wrapper h4 {
+  font-family: var(--body-font);
   font-size: 1.5rem;
+  color: var(--text-color);
   margin-top: 2rem;
   margin-bottom: 1rem;
 }
 
-/* Blog post date */
-.dt-published {
-  display: block;
-  color: #888;
-  font-style: italic;
-  margin-bottom: 1.25rem;
-  text-align: center;
-}
-
-/* Blog summary text */
-p.p-summary {
-  margin-bottom: 1.25rem;
-  text-align: justify;
-}
-
-/* Blog-specific button styling with green color */
-.next-blog-container {
-  text-align: center;
-  margin: 6rem auto 6rem auto;
-  padding: 2rem 0;
-}
-
-.next-blog-btn,
-article button,
-.container button {
-  background-color: #187040 !important;
-  color: white !important;
-  border: none;
-  padding: 1rem 2.5rem;
-  border-radius: 0.5rem;
-  font-size: 1.1rem;
-  font-weight: 500;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow: 0 0.375rem 0.75rem rgba(24, 112, 64, 0.3);
-  text-transform: none;
-  letter-spacing: normal;
-  display: inline-block;
-  margin: 0 auto;
-}
-
-.next-blog-btn:hover,
-article button:hover,
-.container button:hover {
-  background-color: #145a33 !important;
-  transform: translateY(-0.125rem);
-  box-shadow: 0 0.5rem 1rem rgba(24, 112, 64, 0.4);
-}
-
-.next-blog-btn:active,
-article button:active,
-.container button:active {
-  background-color: #0f4426 !important;
-  transform: translateY(0);
-  box-shadow: 0 0.375rem 0.75rem rgba(24, 112, 64, 0.3);
-}
-
-/* Ensure links inside buttons inherit styling */
-.next-blog-btn a,
-article button a,
-.container button a {
-  text-decoration: none;
-  color: inherit;
-  display: block;
-}
-
-/* Blog navigation buttons container */
-.blog-nav-buttons {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1.25rem;
-  margin: 3rem auto;
-  padding: 2rem 0;
-}
-
-.blog-nav-buttons button {
-  background-color: #187040 !important;
-  color: white !important;
-  border: none;
-  padding: 0.75rem 2rem;
-  border-radius: 0.375rem;
-  cursor: pointer;
+.blog-article-wrapper p,
+.blog-article-wrapper li {
+  font-family: var(--body-font);
   font-size: 1rem;
-  font-weight: 500;
-  transition: all 0.3s ease;
-  box-shadow: 0 0.25rem 0.5rem rgba(24, 112, 64, 0.3);
-}
-
-.blog-nav-buttons button:hover {
-  background-color: #145a33 !important;
-  transform: translateY(-0.125rem);
-  box-shadow: 0 0.375rem 0.75rem rgba(24, 112, 64, 0.4);
-}
-
-.blog-nav-buttons button:active {
-  background-color: #0f4426 !important;
-  transform: translateY(0);
-  box-shadow: 0 0.25rem 0.5rem rgba(24, 112, 64, 0.3);
-}
-
-.blog-nav-buttons a {
-  text-decoration: none;
-  color: inherit;
-}
-
-/* Blog-specific container styles */
-article .container,
-.blog-container {
-  text-align: center;
-  background: white;
-  padding: 3.75rem 2.5rem;
-  border-radius: 0.625rem;
-  box-shadow: 0 0.625rem 1.875rem rgba(0,0,0,0.3);
-  max-width: 50rem;
-  margin: 1.25rem auto;
-}
-
-.blog-title {
-  font-family: 'Crimson Text', serif;
-  color: #5F5143;
-  font-size: 2.2em;
-  font-weight: 600;
-  margin-bottom: 0.625rem;
-  line-height: 1.2;
+  color: var(--text-color);
+  line-height: 1.6;
+  margin-bottom: 1rem;
 }
 
 .blog-date {
-  color: #999;
+  text-align: center;
   font-style: italic;
-  margin-bottom: 2.5rem;
-  font-size: 1.1em;
+  color: var(--text-color);
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
 }
 
-.blog-content {
-  color: #666;
+.blog-article-wrapper hr {
+  border: none;
+  border-top: 1px solid var(--border-color);
+  margin: 1.5rem 0;
+}
+
+.topic-label {
+  font-family: var(--body-font);
+  font-size: 1rem;
+  color: var(--text-color);
+  margin-bottom: 1.5rem;
   line-height: 1.6;
-  margin-bottom: 2.5rem;
-  text-align: left;
 }
 
-.section-title {
-  font-family: 'Crimson Text', serif;
-  color: #5F5143;
-  font-size: 1.8em;
+.next-blog-container {
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+}
+
+.next-blog-btn {
+  background-color: var(--button-color);
+  color: var(--heading-color);
+  font-family: var(--body-font);
+  font-size: 1rem;
   font-weight: 600;
-  margin: 1.875rem 0 1.25rem 0;
-}
-
-/* Blog-specific color demonstration styles */
-.color-demo {
-  display: flex;
-  justify-content: center;
-  gap: 1.25rem;
-  margin: 1.875rem 0;
-  flex-wrap: wrap;
-}
-
-.color-sample {
-  width: 5rem;
-  height: 2.5rem;
+  padding: 0.5rem 1.5rem;
   border-radius: 1.25rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  font-size: 0.75rem;
-  font-weight: bold;
-  box-shadow: 0 0.125rem 0.625rem rgba(0,0,0,0.2);
+  border: none;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s ease;
 }
 
-.color-1 { 
-  background-color: #D2B48C; 
-}
-
-.color-2 { 
-  background-color: #228B22; 
-}
-
-.color-3 { 
-  background-color: #187040; 
-}
-
-.instructions {
-  background-color: #f9f9f9;
-  padding: 1.25rem;
-  border-radius: 0.5rem;
-  margin: 1.25rem 0;
-  border-left: 0.25rem solid #5F5143;
-}
-
-.instructions h3 {
-  color: #5F5143;
-  margin-top: 0;
-}
-
-/* ===== BLOG-SPECIFIC RESPONSIVE DESIGN ===== */
-@media (max-width: 59.5rem) {
-  article {
-    margin: 0.5rem 1.25rem;
-    padding: 1.25rem;
-  }
-
-  article .container,
-  .blog-container {
-    margin: 0.5rem 1.25rem;
-    padding: 1.25rem;
-  }
-
-  h2.p-name, 
-  .blog-title {
-    font-size: 1.75rem;
-  }
-
-  h3 {
-    font-size: 1.25rem;
-  }
-
-  .next-blog-container {
-    margin: 2rem auto;
-    padding: 1.5rem 0;
-  }
-}
-
-@media (max-width: 53.625rem) {
-  nav ul {
-    height: calc(100vh - 5rem);
-    top: 5rem;
-    padding-top: 1.25rem;
-  }
-
-  article, 
-  article .container,
-  .blog-container {
-    margin: 0.5rem 0.625rem;
-    padding: 0.9375rem;
-  }
-
-  .blog-nav-buttons {
-    flex-direction: column;
-    gap: 0.9375rem;
-    margin: 2rem auto;
-    padding: 1.5rem 0;
-  }
-
-  .color-demo {
-    flex-direction: column;
-    align-items: center;
-    gap: 0.9375rem;
-  }
-
-  .next-blog-btn,
-  article button,
-  .container button {
-    padding: 0.75rem 1.5rem;
-    font-size: 0.9rem;
-  }
-
-  .next-blog-container {
-    margin: 1.5rem auto;
-    padding: 1rem 0;
-  }
+.next-blog-btn:hover {
+  background-color: var(--button-hover);
+  color: var(--text-color);
+  transform: scale(1.05);
 }

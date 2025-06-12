@@ -1,70 +1,4 @@
-@font-face {
-  font-family: 'body font';
-  src: url('Fonts/Montserrat-SemiBold.ttf') format('truetype');
-}
-
-@font-face {
-  font-family: 'heading font';
-  src: url(Grown.ttf);
-}
-
-body {
-  margin: 0;
-  font-family: 'body font', sans-serif;
-  background: linear-gradient(135deg, #f3ece2, #dfc9b6);
-  color: #333;
-  font-size: 16px;
-  overflow-x: hidden;
-}
-
-#cursorPulse {
-  position: fixed;
-  width: 30px;
-  height: 30px;
-  background: rgba(24, 112, 64, 0.4);
-  border-radius: 50%;
-  pointer-events: none;
-  transform: translate(-50%, -50%);
-  z-index: 9999;
-}
-
-nav {
-  background-color: #EBE4D2;
-  padding: 10px 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  z-index: 10;
-  position: relative;
-}
-
-.logo {
-  font-family: 'heading font', serif;
-  color: #5f5143;
-  font-size: 1.8rem;
-  font-weight: bold;
-}
-
-nav ul {
-  display: flex;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-nav ul li a {
-  color: #5f5143;
-  text-decoration: none;
-  margin-left: 20px;
-  font-size: 1.2rem;
-}
-
-.linkedin-icon {
-  background-color: #0077b5;
-  padding: 4px 8px;
-  border-radius: 4px;
-  color: white !important;
-}
+/* ===== INDEX-SPECIFIC STYLES ONLY ===== */
 
 .hero {
   position: relative;
@@ -134,18 +68,6 @@ nav ul li a {
   position: relative;
 }
 
-@keyframes draw {
-  to {
-    stroke-dashoffset: 0;
-  }
-}
-
-@keyframes draw-sub {
-  to {
-    stroke-dashoffset: 0;
-  }
-}
-
 @keyframes fadeInText {
   to {
     opacity: 1;
@@ -212,6 +134,7 @@ nav ul li a {
   position: relative;
 }
 
+/* ===== RESPONSIVE INDEX-SPECIFIC ===== */
 @media (max-width: 768px) {
   .hero-overlay h1 {
     font-size: 2.8rem;
@@ -225,7 +148,9 @@ nav ul li a {
   .sections-container {
     top: 88%;
   }
+}
 
+@media (max-width: 600px) {
   nav ul {
     flex-direction: column;
     background: #EBE4D2;
