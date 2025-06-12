@@ -1,9 +1,7 @@
-/* ===== INDEX-SPECIFIC STYLES ONLY ===== */
-
 .hero {
   position: relative;
   text-align: center;
-  min-height: 100vh;
+  height: 100vh;
   overflow: hidden;
   z-index: 1;
 }
@@ -30,42 +28,33 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  padding-top: 60px;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding: 8rem 2rem 2rem;
   text-align: center;
 }
 
-.hero-overlay h1 {
+.hero-heading {
   font-family: 'heading font', serif;
-  color: #C9A635;
-  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
-  font-size: 3.5rem;
-  z-index: 6;
-}
-
-.handwriting-svg {
-  width: 100%;
-  max-width: 800px;
-  display: block;
-  margin: 0 auto;
-  position: relative;
-  z-index: 5;
-}
-
-.hero-description {
-  font-size: 1.2rem;
-  color: #f5f1e6;
-  max-width: 800px;
-  margin-top: 20px;
-  margin-bottom: 40px;
-  padding: 0 20px;
-  text-align: center;
+  font-size: 4rem;
+  color: #EBE4D2; /* updated from white */
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
+  margin-bottom: 0.5rem;
+  animation: fadeInText 1.5s ease-in-out forwards;
   opacity: 0;
-  animation: fadeInText 2s ease forwards;
-  animation-delay: 4s;
-  z-index: 6;
-  position: relative;
+}
+
+.hero-subheading {
+  font-family: 'body font', sans-serif;
+  font-size: 1.8rem;
+  color: #EBE4D2;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+  animation: fadeInText 2.5s ease-in-out forwards;
+  animation-delay: 1s;
+  opacity: 0;
+}
+
+.divider {
+  margin: 0 0.5rem;
+  color: #EBE4D2;
 }
 
 @keyframes fadeInText {
@@ -78,12 +67,10 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 30px;
-  position: absolute;
-  top: 82%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  margin-top: 2rem;
   width: 90%;
-  z-index: 4;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .section {
@@ -136,17 +123,21 @@
 
 /* ===== RESPONSIVE INDEX-SPECIFIC ===== */
 @media (max-width: 768px) {
-  .hero-overlay h1 {
+  .hero-heading {
     font-size: 2.8rem;
   }
 
-  .hero-description {
-    font-size: 1rem;
-    padding: 0 10px;
+  .hero-subheading {
+    font-size: 1.2rem;
+  }
+
+  .hero-overlay {
+    padding-top: 5rem;
   }
 
   .sections-container {
-    top: 88%;
+    margin-top: 1rem;
+    gap: 20px;
   }
 }
 
