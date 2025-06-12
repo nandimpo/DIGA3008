@@ -2,7 +2,7 @@
 .blog-post-button {
   background-color: var(--button-color);
   color: var(--white);
-  padding: 6px 12px;
+  padding: 8px 14px;
   border-radius: 15px;
   font-size: 12px;
   font-family: var(--body-font);
@@ -11,13 +11,15 @@
   cursor: pointer;
   text-decoration: none;
   align-self: flex-start;
-  margin-top: 5px;
+  flex-shrink: 0;
 }
 
 .blog-post-button:hover {
   background-color: var(--button-hover);
   transform: scale(1.05);
-}
+}/* ===== BLOGS PAGE SPECIFIC CSS ===== */
+/* Only include unique elements for blogs page */
+
 /* Blog Container */
 .blog-container {
   max-width: 1200px;
@@ -41,7 +43,7 @@
   overflow: hidden;
   background-color: var(--white);
   box-shadow: 0 0 15px #187040;
-  height: 280px;
+  height: 320px;
   transition: transform 0.3s ease;
   display: flex;
   flex-direction: column;
@@ -53,32 +55,37 @@
 
 .blog-post img {
   width: 100%;
-  height: 70%;
+  height: 65%;
   object-fit: cover;
 }
 
 .blog-post-content {
   position: relative;
-  height: 30%;
-  background-color: var(--white);
-  padding: 10px 15px;
+  height: 35%;
+  background-color: #EBE4D2;
+  padding: 15px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
 .blog-post-title {
-  font-family: var(--heading-font);
-  font-size: 14px;
-  font-weight: bold;
+  font-family: var(--body-font);
+  font-size: 13px;
+  font-weight: 600;
   color: var(--text-color);
-  margin: 0;
-  line-height: 1.2;
+  margin: 0 0 10px 0;
+  line-height: 1.3;
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
-  -webkit-line-clamp: 2;
+  -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
+  flex-grow: 1;
+}
+
+.blog-post-title .blog-number {
+  font-weight: 700;
 }
 
 /* SVG Animations for Blogs Page */
@@ -138,11 +145,11 @@
   }
   
   .blog-post {
-    height: 260px;
+    height: 300px;
   }
   
   .blog-post-title {
-    font-size: 13px;
+    font-size: 12px;
   }
   
   .handwriting text {
@@ -167,16 +174,116 @@
   }
   
   .blog-post {
-    height: 240px;
+    height: 280px;
   }
   
   .blog-post-title {
-    font-size: 12px;
+    font-size: 11px;
+    line-height: 1.2;
   }
   
   .blog-post-button {
     font-size: 11px;
-    padding: 4px 10px;
+    padding: 6px 12px;
   }
 }
 
+/* ===== DESIGN PAGE SPECIFIC CSS ===== */
+/* Only include unique elements for design page */
+
+/* Design Container Layout */
+.design-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+/* Design Grid */
+.design-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+/* Design Box Specific Sizing */
+.design-box {
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+/* Featured Work Sidebar */
+.featured-work {
+  background-color: var(--section-background);
+  padding: 20px;
+  border-radius: 10px;
+  height: 100%;
+  border: 2px solid var(--border-color);
+}
+
+.featured-work h3 {
+  text-align: center;
+  font-size: 1.5rem;
+  color: var(--card-heading-color);
+  margin-bottom: 20px;
+}
+
+.featured-work ul {
+  padding-left: 20px;
+  color: var(--text-color);
+}
+
+.featured-work li {
+  margin-bottom: 10px;
+}
+
+/* Design SVG Animation */
+.design-header svg text {
+  font-family: var(--heading-font);
+  font-size: 80px;
+  fill: var(--heading-color);
+  stroke: var(--soft-yellow);
+  stroke-width: 1.2;
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: none;
+  opacity: 0;
+}
+
+/* Design Page Responsive */
+@media (max-width: 900px) {
+  .design-container {
+    grid-template-columns: 1fr;
+  }
+
+  .design-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .featured-work {
+    margin-top: 20px;
+  }
+
+  .design-header svg text {
+    font-size: 50px;
+  }
+}
+
+@media (max-width: 600px) {
+  .design-header svg text {
+    font-size: 36px;
+  }
+
+  .design-box {
+    height: 130px;
+  }
+
+  .featured-work h3 {
+    font-size: 1.3rem;
+  }
+}
