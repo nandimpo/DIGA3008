@@ -1,12 +1,28 @@
 /* ===== BLOGS PAGE SPECIFIC CSS ===== */
-/* Only include unique elements for blogs page */
 
 /* Blog Container */
 .blog-container {
   max-width: 75rem;
   margin: 0 auto;
-  padding: 1.25rem;
+  padding: 0.625rem 1.25rem; /* Reduced top padding from 1.25rem to 0.625rem */
   margin-bottom: 3.75rem;
+}
+
+/* Blog Header */
+.blog-header {
+  text-align: center;
+  margin-top: -20px; /* Moved up by reducing from 0px to -20px */
+  padding-top: 0px; /* Reduced from 10px to 0px */
+  margin-bottom: 15px; /* Reduced from 30px to 15px */
+}
+
+/* Reduce space between heading and subheading */
+.blog-header #handwrittenHeader {
+  margin-bottom: -10px; /* Reduce space after main heading */
+}
+
+.blog-header #subtitleHeader {
+  margin-top: -15px; /* Pull subtitle closer to main heading */
 }
 
 /* Blog Grid Layout */
@@ -14,7 +30,7 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(18.75rem, 1fr));
   gap: 1.25rem;
-  margin-top: var(--spacing-xl);
+  margin-top: 1rem; /* Reduced from var(--spacing-xl) to 1rem */
   padding-bottom: 2.5rem;
 }
 
@@ -70,18 +86,27 @@
   font-weight: 700;
 }
 
-/* Blog Post Button Positioning */
 .blog-post .blog-post-button {
   position: absolute;
   bottom: 0.75rem;
   left: 0.9375rem;
 }
 
-/* Blogs Page Responsive */
-@media (max-width: 56.25rem) { /* 900px */
+/* Responsive Design */
+@media (max-width: 56.25rem) {
+  .blog-container {
+    padding: 0.5rem 0.9375rem; /* Reduced top padding */
+  }
+  
+  .blog-header {
+    margin-top: -15px; /* Adjusted for tablet */
+    margin-bottom: 10px; /* Reduced spacing */
+  }
+  
   .blog-grid {
     grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
     gap: 0.9375rem;
+    margin-top: 0.75rem; /* Reduced spacing */
     padding-bottom: 1.875rem;
   }
   
@@ -96,15 +121,21 @@
   }
 }
 
-@media (max-width: 37.5rem) { /* 600px */
+@media (max-width: 37.5rem) {
   .blog-container {
-    padding: 0.9375rem;
+    padding: 0.25rem 0.9375rem; /* Further reduced top padding for mobile */
     margin-bottom: 2.5rem;
+  }
+  
+  .blog-header {
+    margin-top: -10px; /* Adjusted for mobile */
+    margin-bottom: 8px; /* Reduced spacing */
   }
   
   .blog-grid {
     grid-template-columns: 1fr;
     gap: 0.9375rem;
+    margin-top: 0.5rem; /* Reduced spacing */
     padding-bottom: 1.25rem;
   }
   

@@ -32,39 +32,85 @@ function lerpColor(color1, color2, factor) {
 // ===== HANDWRITING ANIMATION =====
 
 function initHandwritingAnimation() {
-  // Inject keyframes if they don't exist
-  if (!document.getElementById("handwriting-keyframes")) {
-    const style = document.createElement("style");
-    style.id = "handwriting-keyframes";
-    style.textContent = `
-      @keyframes draw {
-        to { stroke-dashoffset: 0; }
-      }
-      @keyframes draw-sub {
-        to { stroke-dashoffset: 0; }
-      }
-    `;
-    document.head.appendChild(style);
-  }
-
+  console.log('Initializing handwriting animation...');
+  
   const title = document.getElementById("handwrittenPath");
   const subtitle = document.getElementById("subtitlePath");
 
+  if (!title && !subtitle) {
+    console.log('No handwriting elements found');
+    return;
+  }
+
+  // Wait for fonts to load
   document.fonts.ready.then(() => {
+    console.log('Fonts loaded, starting animation');
+    
     if (title) {
-      const titleLength = title.getComputedTextLength();
-      title.style.strokeDasharray = titleLength;
-      title.style.strokeDashoffset = titleLength;
-      title.style.animation = "draw 4s ease forwards";
-      title.style.visibility = "visible";
+      // Set up stroke properties
+      title.style.fill = 'none';
+      title.style.stroke = getComputedStyle(document.documentElement).getPropertyValue('--heading-color').trim();
+      title.style.strokeWidth = '2px';
+      title.style.strokeLinecap = 'round';
+      title.style.strokeLinejoin = 'round';
+      
+      // Calculate text length for animation
+      try {
+        const titleLength = title.getComputedTextLength();
+        title.style.strokeDasharray = titleLength;
+        title.style.strokeDashoffset = titleLength;
+        
+        // Start animation
+        title.style.animation = "draw 4s ease forwards";
+        title.style.visibility = "visible";
+        
+        console.log('Title animation started, length:', titleLength);
+      } catch (error) {
+        console.log('Error with title animation:', error);
+        // Fallback: just show the text
+        title.style.fill = getComputedStyle(document.documentElement).getPropertyValue('--heading-color');
+        title.style.stroke = 'none';
+        title.style.visibility = "visible";
+      }
     }
 
     if (subtitle) {
-      const subLength = subtitle.getComputedTextLength();
-      subtitle.style.strokeDasharray = subLength;
-      subtitle.style.strokeDashoffset = subLength;
-      subtitle.style.animation = "draw-sub 3s ease forwards";
-      subtitle.style.animationDelay = "2.5s";
+      // Set up stroke properties
+      subtitle.style.fill = 'none';
+      subtitle.style.stroke = getComputedStyle(document.documentElement).getPropertyValue('--heading-color').trim();
+      subtitle.style.strokeWidth = '1.5px';
+      subtitle.style.strokeLinecap = 'round';
+      subtitle.style.strokeLinejoin = 'round';
+      
+      // Calculate text length for animation
+      try {
+        const subLength = subtitle.getComputedTextLength();
+        subtitle.style.strokeDasharray = subLength;
+        subtitle.style.strokeDashoffset = subLength;
+        
+        // Start animation with delay
+        subtitle.style.animation = "draw-sub 3s ease forwards";
+        subtitle.style.animationDelay = "2.5s";
+        subtitle.style.visibility = "visible";
+        
+        console.log('Subtitle animation started, length:', subLength);
+      } catch (error) {
+        console.log('Error with subtitle animation:', error);
+        // Fallback: just show the text
+        subtitle.style.fill = getComputedStyle(document.documentElement).getPropertyValue('--heading-color');
+        subtitle.style.stroke = 'none';
+        subtitle.style.visibility = "visible";
+      }
+    }
+  }).catch(err => {
+    console.log('Font loading error:', err);
+    // Fallback without waiting for fonts
+    if (title) {
+      title.style.fill = getComputedStyle(document.documentElement).getPropertyValue('--heading-color');
+      title.style.visibility = "visible";
+    }
+    if (subtitle) {
+      subtitle.style.fill = getComputedStyle(document.documentElement).getPropertyValue('--heading-color');
       subtitle.style.visibility = "visible";
     }
   });
@@ -89,9 +135,12 @@ async function loadRandomQuote() {
 // ===== EVENT LISTENERS =====
 
 function setupEventListeners() {
+  console.log('Setting up event listeners...');
+  
   // Reset handwriting animation on ESC key
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') {
+      console.log('ESC pressed, resetting animation');
       resetHandwritingAnimation();
     }
   });
@@ -102,14 +151,18 @@ function setupEventListeners() {
   
   if (title) {
     title.addEventListener('click', () => {
+      console.log('Title clicked, resetting animation');
       resetHandwritingAnimation();
     });
+    title.style.cursor = 'pointer';
   }
   
   if (subtitle) {
     subtitle.addEventListener('click', () => {
+      console.log('Subtitle clicked, resetting animation');
       resetHandwritingAnimation();
     });
+    subtitle.style.cursor = 'pointer';
   }
 }
 
@@ -117,14 +170,18 @@ function resetHandwritingAnimation() {
   const title = document.getElementById("handwrittenPath");
   const subtitle = document.getElementById("subtitlePath");
 
+  console.log('Resetting handwriting animation...');
+
   // Reset animations
   if (title) {
     title.style.animation = 'none';
+    title.style.visibility = 'hidden';
     title.offsetHeight; // Trigger reflow
   }
   
   if (subtitle) {
     subtitle.style.animation = 'none';
+    subtitle.style.visibility = 'hidden';
     subtitle.offsetHeight; // Trigger reflow
   }
 
@@ -137,10 +194,30 @@ function resetHandwritingAnimation() {
 // ===== INITIALIZATION =====
 
 document.addEventListener("DOMContentLoaded", () => {
+  console.log('DOM loaded, initializing...');
   initHandwritingAnimation();
   setupEventListeners();
   loadRandomQuote();
 });
+
+// Also try to initialize when page is fully loaded
+window.addEventListener('load', () => {
+  console.log('Page fully loaded');
+  // Only reinitialize if elements are still hidden
+  const title = document.getElementById("handwrittenPath");
+  const subtitle = document.getElementById("subtitlePath");
+  
+  if ((title && title.style.visibility === 'hidden') || (subtitle && subtitle.style.visibility === 'hidden')) {
+    console.log('Some elements still hidden, reinitializing...');
+    initHandwritingAnimation();
+  }
+});
+
+// Debug function - call this in console to test
+window.testHandwriting = function() {
+  console.log('Testing handwriting animation...');
+  resetHandwritingAnimation();
+};
 
 // Make lerpColor available globally for other scripts
 window.lerpColor = lerpColor;
