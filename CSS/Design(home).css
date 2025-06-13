@@ -1,6 +1,3 @@
-/* ===== DESIGN PAGE SPECIFIC STYLES ===== */
-
-/* Design Header Title and Subtitle */
 .design-header {
   text-align: center;
   padding: 4rem 1rem 2rem;
@@ -11,41 +8,39 @@
   font-family: var(--heading-font);
   color: var(--heading-color);
   margin-bottom: 1rem;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  text-shadow: 0.125rem 0.125rem 0.25rem rgba(0, 0, 0, 0.2);
 }
 
 .design-header p {
   font-size: 1.25rem;
   color: var(--heading-color);
-  max-width: 800px;
+  max-width: 50rem;
   margin: 0 auto;
   font-family: var(--body-font);
   line-height: 1.6;
 }
 
-/* Design Container Layout */
 .design-container {
   display: grid;
   grid-template-columns: 2fr 1fr;
-  gap: 30px;
-  max-width: 1200px;
+  gap: 1.875rem;
+  max-width: 75rem;
   margin: 0 auto;
   padding: 2rem 1rem 4rem;
 }
 
-/* Design Grid for Cards */
 .design-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
+  gap: 1.25rem;
 }
 
 .design-box {
-  height: 160px;
+  height: 10rem;
   background-color: var(--section-background);
-  border-radius: 12px;
-  border: 2px solid var(--border-color);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05);
+  border-radius: 0.75rem;
+  border: 0.125rem solid var(--border-color);
+  box-shadow: 0 0 1.25rem rgba(0, 255, 128, 0.25);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -59,8 +54,8 @@
 }
 
 .design-box:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+  transform: translateY(-0.3125rem);
+  box-shadow: 0 0 1.5625rem rgba(0, 255, 128, 0.4);
   border-color: var(--accent-color);
 }
 
@@ -70,13 +65,12 @@
   color: var(--accent-color);
 }
 
-/* Featured Work Sidebar */
 .featured-work {
   background-color: var(--section-background);
-  padding: 24px 20px;
-  border-radius: 12px;
+  padding: 1.5rem 1.25rem;
+  border-radius: 0.75rem;
   height: 100%;
-  border: 2px solid var(--border-color);
+  border: 0.125rem solid var(--border-color);
   font-family: var(--body-font);
 }
 
@@ -95,11 +89,10 @@
 }
 
 .featured-work li {
-  margin-bottom: 12px;
+  margin-bottom: 0.75rem;
 }
 
-/* Responsive Adjustments */
-@media (max-width: 900px) {
+@media (max-width: 56.25rem) {
   .design-container {
     grid-template-columns: 1fr;
   }
@@ -109,7 +102,7 @@
   }
 
   .featured-work {
-    margin-top: 30px;
+    margin-top: 1.875rem;
   }
 
   .design-header h1 {
@@ -121,13 +114,13 @@
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 37.5rem) {
   .design-header h1 {
     font-size: 2.25rem;
   }
 
   .design-box {
-    height: 140px;
+    height: 8.75rem;
     font-size: 1rem;
   }
 

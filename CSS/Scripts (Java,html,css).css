@@ -58,12 +58,13 @@
   background: linear-gradient(to bottom, #fdfdfd, #f8f4eb);
   border: 0.125rem solid rgba(209, 118, 9, 0.3);
   border-radius: 1.125rem;
-  box-shadow: 0 0.75rem 2.5rem rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 20px rgba(0, 255, 128, 0.25); /* ✨ Green glow added */
   max-width: 56.25rem;
   overflow: hidden;
   padding: 0;
   backdrop-filter: blur(0.188rem);
 }
+
 
 .card.visible {
   opacity: 1;
