@@ -9,7 +9,7 @@
   font-family: var(--heading-font);
   font-size: 4rem;
   font-weight: bold;
-  color: var(--accent-color);
+  color: #EBE4D2; /* updated from var(--accent-color) to the cream color */
   text-transform: uppercase;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
   position: relative;
@@ -22,7 +22,7 @@
   display: block;
   width: 60px;
   height: 4px;
-  background-color: var(--accent-color);
+  background-color: #EBE4D2; /* match underline with heading color */
   margin: 0.5rem auto 0;
   border-radius: 3px;
 }

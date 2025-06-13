@@ -5,85 +5,103 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Nandi's Website – Animations</title>
 
+  <!-- Styles -->
   <link rel="stylesheet" href="normalize.css" />
   <link rel="stylesheet" href="../CSS/Main.css" />
   <link rel="stylesheet" href="../CSS/Writing.css" />
+
+  <!-- Scripts -->
   <script src="https://kit.fontawesome.com/89fd46d92d.js" crossorigin="anonymous"></script>
   <script src="../JavaScript/Cursor.js" defer></script>
   <script src="../JavaScript/Handwriting.js" defer></script>
-  <script src="../JavaScript/NotebookAnimation.js" defer></script>
 </head>
 
 <body>
   <div id="cursorPulse"></div>
 
+  <!-- Navigation -->
   <nav>
     <input type="checkbox" id="check" />
-    <label for="check" class="burger-button">
-      <i class="fa-solid fa-bars"></i>
-    </label>
+    <label for="check" class="burger-button"><i class="fa-solid fa-bars"></i></label>
     <label class="logo">NM</label>
     <ul>
       <li><a href="../index.html">Home</a></li>
       <li><a href="../Blogs/BlogsHome.html">Blogs</a></li>
       <li><a href="../Design/DesignHome.html">Design</a></li>
       <li><a href="../Scripts/Script (CSS, JAVA, HTML).html">Scripts</a></li>
-      <li><a href="../Portfolio/Portfoliohome.html"class="active">Portfolio</a></li>
-      <li><a href="https://www.linkedin.com/in/nandi-m-4aa89123b" target="https://www.linkedin.com/in/nandi-m-4aa89123b/" class="linkedin-icon" rel="noopener noreferrer">
-        <i class="fa-brands fa-linkedin"></i>
-      </a></li>
+      <li><a href="../Portfolio/Portfoliohome.html" class="active">Portfolio</a></li>
+      <li>
+        <a href="https://www.linkedin.com/in/nandi-m-4aa89123b" target="_blank" rel="noopener noreferrer">
+          <i class="fa-brands fa-linkedin"></i>
+        </a>
+      </li>
     </ul>
   </nav>
 
+  <!-- Page Heading -->
+  <div class="page-heading">
+    <h1 id="mainTitle">Animations</h1>
+    <p class="page-subtitle">
+      Here you can find my animations. Once you are done feel free to explore the rest of my <strong>portfolio</strong>.
+    </p>
+  </div>
+
+  <!-- Animation Cards -->
   <main>
-    <h1 class="notebook-page">Animations</h1>
-
-    <ul class="categories">
-      <li><a href="../Portfolio/Portfoliohome.html">Here you can find my animations. Once you are done feel free to explore the rest of my <b> portfolio.</b></a></li>
-    </ul>
-
-    <div class="image-grid notebook-page">
-      <div class="image-container">
-        <img src="../Images/Portfolio/assisgnnent2-1-ezgif.com-crop.gif" alt="Animation 1">
-        <div class="article-title">Animation 1</div>
-        <div class="article-content">
-          <input type="checkbox" class="read-more-state" id="anim-1" />
-          <div class="read-more-wrap">
-            <span class="content-preview">A simple animated loop of a blinking character with clean lines and strong readability...</span>
-            <span class="read-more-target">This animation showcases basic timing, loop consistency, and expression focus.</span>
+    <section class="section container">
+      <div class="image-grid">
+        <!-- Animation Card 1 -->
+        <div class="image-card">
+          <div class="image-header">Animation 1</div>
+          <div class="image-container">
+            <img src="../Images/Portfolio/assisgnnent2-1-ezgif.com-crop.gif" alt="Animation 1" />
+            <div class="article-content">
+              <input type="checkbox" class="read-more-state" id="anim-1" />
+              <div class="read-more-wrap">
+                <span class="content-preview">A simple animated loop of a blinking character with clean lines and strong readability...</span>
+                <span class="read-more-target">This animation showcases basic timing, loop consistency, and expression focus.</span>
+              </div>
+              <label for="anim-1" class="read-more-trigger"></label>
+            </div>
           </div>
-          <label for="anim-1" class="read-more-trigger"></label>
+        </div>
+
+        <!-- Animation Card 2 -->
+        <div class="image-card">
+          <div class="image-header">Animation 2</div>
+          <div class="image-container">
+            <img src="../Images/Portfolio/Homer front walk cycle.gif" alt="Animation 2" />
+            <div class="article-content">
+              <input type="checkbox" class="read-more-state" id="anim-2" />
+              <div class="read-more-wrap">
+                <span class="content-preview">This is a walk cycle of Homer Simpson.</span>
+                <span class="read-more-target">Homer is drawn in his characteristic style—a heavyset man with a bald head (except for two strands of hair), wearing his typical outfit. He is walking forward.</span>
+              </div>
+              <label for="anim-2" class="read-more-trigger"></label>
+            </div>
+          </div>
+        </div>
+
+        <!-- Animation Card 3 -->
+        <div class="image-card">
+          <div class="image-header">Animation 3</div>
+          <div class="image-container">
+            <img src="../Images/Portfolio/animation3.gif" alt="Animation 3" />
+            <div class="article-content">
+              <input type="checkbox" class="read-more-state" id="anim-3" />
+              <div class="read-more-wrap">
+                <span class="content-preview">Coming soon.</span>
+                <span class="read-more-target">Stay tuned for the next animation drop.</span>
+              </div>
+              <label for="anim-3" class="read-more-trigger"></label>
+            </div>
+          </div>
         </div>
       </div>
-
-      <div class="image-container">
-        <img src="../Images/Portfolio/Homer front walk cycle.gif" alt="Animation 2">
-        <div class="article-title">Animation 2</div>
-        <div class="article-content">
-          <input type="checkbox" class="read-more-state" id="anim-2" />
-          <div class="read-more-wrap">
-            <span class="content-preview">This a walk cycle of Homer Simpson </span>
-            <span class="read-more-target">Homer is drawn in his characteristic style - a heavyset man with a bald head (except for two strands of hair), wearing his typical outfit. He is walking forward. </span>
-          </div>
-          <label for="anim-2" class="read-more-trigger"></label>
-        </div>
-      </div>
-
-      <div class="image-container">
-        <img src="../Images/Portfolio/animation3.gif" alt="Animation 3">
-        <div class="article-title">Animation 3</div>
-        <div class="article-content">
-          <input type="checkbox" class="read-more-state" id="anim-3" />
-          <div class="read-more-wrap">
-            <span class="content-preview">Comming soon. </span>
-            <span class="read-more-target">Comming soom.</span>
-          </div>
-          <label for="anim-3" class="read-more-trigger"></label>
-        </div>
-      </div>
-    </div>
+    </section>
   </main>
 
+  <!-- Footer -->
   <footer class="footer">
     <div class="footer-container">
       <div class="footer-column">
@@ -96,12 +114,13 @@
         <h2>Social</h2>
         <hr />
         <div class="social-icons">
-          <a href="https://www.linkedin.com/in/nandi-m-4aa89123b" target="https://www.linkedin.com/in/nandi-m-4aa89123b/"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="https://www.linkedin.com/in/nandi-m-4aa89123b" target="_blank">
+            <i class="fa-brands fa-linkedin"></i>
+          </a>
         </div>
       </div>
     </div>
     <p class="footer-bottom">©2025 Nandi Mpofu. All rights reserved.</p>
   </footer>
-
 </body>
 </html>

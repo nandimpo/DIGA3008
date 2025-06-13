@@ -2,12 +2,17 @@ document.addEventListener("DOMContentLoaded", () => {
   const mainTitle = document.getElementById("mainTitle");
   const subTitle = document.getElementById("subTitle");
 
-  // Add animation classes
-  setTimeout(() => {
-    mainTitle?.classList.add("title-animate-in");
-  }, 200);
+  // Animate main title with both classes
+  if (mainTitle) {
+    setTimeout(() => {
+      mainTitle.classList.add("title-animate-in", "reveal");
+    }, 200);
+  }
 
-  setTimeout(() => {
-    subTitle?.classList.add("title-animate-in");
-  }, 600);
+  // Animate subtitle if it exists
+  if (subTitle) {
+    setTimeout(() => {
+      subTitle.classList.add("title-animate-in");
+    }, 600);
+  }
 });
