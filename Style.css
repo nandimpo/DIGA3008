@@ -5,7 +5,6 @@
   background-position: center;
   background-repeat: no-repeat;
   z-index: 1;
-
   min-height: 100vh;
   max-height: 100vh;
   overflow: hidden;
@@ -41,7 +40,7 @@
   font-family: 'heading font', serif;
   font-size: 4rem;
   color: #EBE4D2;
-  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
+  text-shadow: 0.125rem 0.125rem 0.375rem rgba(0, 0, 0, 0.4);
   margin-bottom: 0.5rem;
   animation: fadeInText 1.5s ease-in-out forwards;
   opacity: 0;
@@ -52,12 +51,13 @@
   font-size: 1.4rem;
   color: #EBE4D2;
   opacity: 0.85;
-  letter-spacing: 0.3px;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25);
+  letter-spacing: 0.02em;
+  text-shadow: 0.063rem 0.063rem 0.188rem rgba(0, 0, 0, 0.25);
   animation: fadeInText 2.5s ease-in-out forwards;
   animation-delay: 1s;
   opacity: 0;
 }
+
 .divider {
   margin: 0 0.5rem;
   color: #EBE4D2;
@@ -82,11 +82,10 @@
   }
 }
 
-/* === Sections Layout === */
 .sections-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(17.5rem, 1fr));
+  gap: 1.875rem;
   margin-top: 2rem;
   width: 90%;
   margin-left: auto;
@@ -95,9 +94,9 @@
 
 .section {
   background: #EBE4D2;
-  padding: 20px;
-  border-radius: 15px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 1.25rem;
+  border-radius: 0.938rem;
+  box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.1);
   text-align: center;
 }
 
@@ -108,7 +107,7 @@
 }
 
 .description {
-  margin: 15px 0;
+  margin: 0.938rem 0;
   color: #444;
   font-size: 1rem;
   line-height: 1.6;
@@ -119,8 +118,8 @@
   background-color: #E1B808;
   color: #5F5143;
   text-decoration: none;
-  padding: 10px 20px;
-  border-radius: 25px;
+  padding: 0.625rem 1.25rem;
+  border-radius: 1.563rem;
   font-weight: bold;
   transition: 0.3s;
 }
@@ -130,7 +129,6 @@
   transform: scale(1.05);
 }
 
-/* === Recent Work Section === */
 .recent-work-section {
   position: relative;
   z-index: 2;
@@ -146,10 +144,10 @@
 
 .recent-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
   gap: 1.5rem;
   padding: 0 2rem;
-  max-width: 1200px;
+  max-width: 75rem;
   margin: 0 auto 1.5rem;
 }
 
@@ -159,10 +157,10 @@
 
 .recent-item img {
   width: 100%;
-  max-height: 220px;
+  max-height: 13.75rem;
   object-fit: cover;
-  border-radius: 4px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  border-radius: 0.25rem;
+  box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.15);
   transition: transform 0.3s ease;
 }
 
@@ -173,7 +171,7 @@
 .work-title {
   font-family: var(--heading-font);
   font-size: 1rem;
-  color: #D17609; /* <-- your orange color */
+  color: #D17609;
   margin-top: 0.5rem;
 }
 
@@ -183,7 +181,6 @@
   color: #D17609;
 }
 
-/* === About Section === */
 .about-section {
   background-color: #EBE4D2;
   color: #5F5143;
@@ -195,13 +192,13 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  max-width: 1200px;
+  max-width: 75rem;
   margin: auto;
   gap: 2rem;
 }
 
 .about-text {
-  flex: 1 1 400px;
+  flex: 1 1 25rem;
 }
 
 .about-text h2 {
@@ -227,31 +224,29 @@
 }
 
 .about-image {
-  flex: 1 1 400px;
+  flex: 1 1 25rem;
   text-align: center;
 }
 
 .about-image img {
   width: 100%;
-  max-width: 500px;
-  border-radius: 15px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  max-width: 31.25rem;
+  border-radius: 0.938rem;
+  box-shadow: 0 0.5rem 1.25rem rgba(0, 0, 0, 0.2);
 }
 
-/* === Footer Text === */
 .footer-text {
   text-align: center;
   background: #EBE4D2;
   color: #5F5143;
-  padding: 10px;
+  padding: 0.625rem;
   font-size: 0.9rem;
   font-family: 'heading font', serif;
   z-index: 10;
   position: relative;
 }
 
-/* === Responsive Adjustments === */
-@media (max-width: 768px) {
+@media (max-width: 48em) {
   .hero-heading {
     font-size: 2.8rem;
   }
@@ -266,7 +261,7 @@
 
   .sections-container {
     margin-top: 1rem;
-    gap: 20px;
+    gap: 1.25rem;
   }
 
   .about-text h2 {
@@ -283,13 +278,13 @@
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 37.5em) {
   nav ul {
     flex-direction: column;
     background: #EBE4D2;
     width: 100%;
     position: absolute;
-    top: 60px;
+    top: 3.75rem;
     left: 0;
     display: none;
   }
@@ -299,7 +294,7 @@
   }
 
   nav ul li {
-    margin: 10px 0;
+    margin: 0.625rem 0;
   }
 
   nav ul li a {

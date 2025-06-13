@@ -21,18 +21,22 @@
   --button-color: #D17609;
   --button-hover: #E1B808;
   --white: #ffffff;
+
   --heading-font: 'heading font', serif;
   --body-font: 'body font', sans-serif;
+
   --heading-size: 2rem;
   --body-size: 1rem;
   --nav-size: 1rem;
   --footer-size: 1rem;
+
   --spacing-xs: 0.25rem;
   --spacing-sm: 0.5rem;
   --spacing-md: 1rem;
   --spacing-lg: 1.5rem;
   --spacing-xl: 2rem;
   --spacing-xxl: 3rem;
+
   --border-radius: 0.625rem;
 }
 
@@ -51,9 +55,15 @@ html, body {
   position: relative;
   scroll-behavior: smooth;
   line-height: 1.6;
+  font-size: 100%;
 }
 
-h1:not(svg text), h2:not(svg text), h3:not(svg text), h4:not(svg text), h5:not(svg text), h6:not(svg text) {
+h1:not(svg text),
+h2:not(svg text),
+h3:not(svg text),
+h4:not(svg text),
+h5:not(svg text),
+h6:not(svg text) {
   font-family: var(--heading-font);
   font-size: var(--heading-size);
   font-weight: bold;
@@ -80,7 +90,7 @@ a:hover {
 }
 
 ul, ol {
-  padding-left: 20px;
+  padding-left: 1.25em;
 }
 
 li {
@@ -144,7 +154,7 @@ nav ul li a.active {
   margin: 1.5rem auto;
   border-radius: var(--border-radius);
   max-width: 75rem;
-  border: 2px solid var(--border-color);
+  border: 0.125rem solid var(--border-color);
 }
 
 .container {
@@ -155,7 +165,7 @@ nav ul li a.active {
 
 .card {
   background-color: var(--section-background);
-  border: 2px solid var(--border-color);
+  border: 0.125rem solid var(--border-color);
   border-radius: var(--border-radius);
   padding: 1.25rem;
   margin: 1.25rem 0;
@@ -171,7 +181,7 @@ nav ul li a.active {
   font-family: var(--body-font);
   font-size: var(--body-size);
   padding: 0.75rem 1.5rem;
-  border: 2px solid var(--border-color);
+  border: 0.125rem solid var(--border-color);
   background-color: var(--accent-color);
   color: var(--text-color);
   border-radius: 0.3125rem;
@@ -223,7 +233,7 @@ nav ul li a.active {
 }
 
 .footer-column {
-  flex: 1 1 300px;
+  flex: 1 1 18.75rem;
   text-align: left;
 }
 
@@ -236,7 +246,7 @@ nav ul li a.active {
 
 .footer-column hr {
   border: none;
-  border-top: 2px solid var(--border-color);
+  border-top: 0.125rem solid var(--border-color);
   width: 4rem;
   margin-bottom: 1rem;
 }
@@ -270,7 +280,7 @@ nav ul li a.active {
   margin-top: 2rem;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 48em) {
   .footer-container {
     flex-direction: column;
     align-items: center;
@@ -306,7 +316,7 @@ nav ul li a.active {
 
 .title-hidden {
   opacity: 0;
-  transform: translateY(40px);
+  transform: translateY(2.5rem);
 }
 
 .title-animate-in {
@@ -317,7 +327,7 @@ nav ul li a.active {
 
 #mainTitle, #subTitle {
   opacity: 0;
-  transform: translateY(40px);
+  transform: translateY(2.5rem);
   transition: all 1.2s ease-out;
 }
 
@@ -335,7 +345,7 @@ nav ul li a.active {
   padding: 1rem;
   text-align: center;
   background-color: rgba(255, 255, 255, 0.05);
-  border-left: 4px solid var(--button-color);
+  border-left: 0.25rem solid var(--button-color);
 }
 
 #cursorPulse {
@@ -348,8 +358,8 @@ nav ul li a.active {
   z-index: 9999;
   transition: background-color 0.2s ease, opacity 0.3s ease;
   background-color: rgba(24, 112, 64, var(--cursor-opacity, 0.4));
-  left: var(--cursor-x, 0px);
-  top: var(--cursor-y, 0px);
+  left: var(--cursor-x, 0%);
+  top: var(--cursor-y, 0%);
   opacity: 1;
 }
 
