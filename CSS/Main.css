@@ -318,3 +318,52 @@ nav ul li a.active {
     display: block;
   }
 }
+/* === JS-Controlled Title Animation === */
+.title-hidden {
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+.title-animate-in {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 1.2s ease-out;
+}
+/* === JS-Controlled Title Animation (REQUIRED default state) === */
+#mainTitle, #subTitle {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 1.2s ease-out;
+}
+
+.title-animate-in {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+/* === Quote Block (optional styling for visibility) === */
+#daily-quote {
+  font-size: 1.25rem;
+  font-style: italic;
+  color: var(--text-color);
+  margin: 2rem auto;
+  max-width: 50rem;
+  padding: 1rem;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-left: 4px solid var(--button-color);
+}
+
+/* === Enhanced .cursor-pulse === */
+#cursorPulse {
+  position: fixed;
+  width: 1.875rem;
+  height: 1.875rem;
+  background-color: rgba(24, 112, 64, 0.4);
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  opacity: 1;
+  transition: background-color 0.2s ease, opacity 0.3s ease;
+}

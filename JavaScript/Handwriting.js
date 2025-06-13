@@ -1,23 +1,12 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const title = document.getElementById("handwrittenPath");
-  const subtitle = document.getElementById("subtitlePath");
+  const mainTitle = document.getElementById("mainTitle");
+  const subTitle = document.getElementById("subTitle");
 
-  document.fonts.ready.then(() => {
-    if (title) {
-      const titleLength = title.getComputedTextLength();
-      title.style.strokeDasharray = titleLength;
-      title.style.strokeDashoffset = titleLength;
-      title.style.animation = "draw 4s ease forwards";
-      title.style.visibility = "visible";
-    }
+  setTimeout(() => {
+    mainTitle.classList.add("title-animate-in");
+  }, 200);
 
-    if (subtitle) {
-      const subLength = subtitle.getComputedTextLength();
-      subtitle.style.strokeDasharray = subLength;
-      subtitle.style.strokeDashoffset = subLength;
-      subtitle.style.animation = "draw-sub 3s ease forwards";
-      subtitle.style.animationDelay = "2.5s";
-      subtitle.style.visibility = "visible";
-    }
-  });
+  setTimeout(() => {
+    subTitle.classList.add("title-animate-in");
+  }, 600);
 });
