@@ -91,7 +91,7 @@
   cursor: pointer;
 }
 
-/* === Responsive Typography === */
+
 @media (max-width: 56.25em) {
   .blogs-header h1 {
     font-size: 3rem;
