@@ -1,163 +1,86 @@
-@font-face {
-  font-family: 'body font';
-  src: url('../Fonts/Montserrat-SemiBold.ttf') format('truetype');
-}
-
-@font-face {
-  font-family: 'heading font';
-  src: url('../Fonts/Grown.ttf') format('truetype');
-}
-
-:root {
-  --background-color: #EBE4D2;
-  --text-color: #5F5143;
-  --accent-color: #E1B808;
-  --heading-bg: #5F5143;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: 'body font', sans-serif;
-  background-color: var(--background-color);
-  color: var(--text-color);
-  min-height: 100vh;
-  line-height: 1.6;
-  display: flex;
-  flex-direction: column;
-}
-
-#cursorPulse {
-  position: fixed;
-  width: 30px;
-  height: 30px;
-  background: rgba(24, 112, 64, 0.4);
-  border-radius: 50%;
-  pointer-events: none;
-  transform: translate(-50%, -50%);
-  z-index: 9999;
-}
-
-nav {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  height: 80px;
-  background-color: var(--background-color);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 10px 20px;
-  z-index: 100;
-}
-
-.logo {
-  font-family: 'heading font';
-  font-size: 24px;
-  color: var(--text-color);
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 15px;
-}
-
-nav ul li a {
-  font-family: 'heading font';
-  text-decoration: none;
-  color: var(--text-color);
-  transition: color 0.3s;
-}
-
-nav ul li a.active,
-nav ul li a:hover {
-  color: var(--accent-color);
-}
-
-.linkedin-icon {
-  color: white;
-  background-color: #0077b5;
-  padding: 5px 8px;
-  border-radius: 5px;
-}
-
-#check,
-.burger-button {
-  display: none;
-}
-
+/* === SECTION BACKGROUND GRADIENT === */
 .script-sections {
-  padding: 120px 20px 20px;
+  padding: 60px 20px 40px; /* Reduced from 120px to 60px */
+  background: linear-gradient(to bottom, #EBE4D2, #f5f1e3);
 }
 
+/* === ENHANCED CARD STYLES === */
 .card {
   opacity: 0;
   transform: translateY(50px);
   transition: all 0.6s ease-out;
-  margin-bottom: 30px;
-  border: 3px solid var(--background-color);
-  border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  margin: 2rem auto;
+  background-color: var(--white);
+  border: 2px solid var(--border-color);
+  border-radius: 18px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  max-width: 900px;
+  overflow: hidden;
+  padding: 0;
 }
 
+/* === HEADER WITH ICON === */
 .card h2 {
   background-color: var(--heading-bg);
-  color: var(--background-color);
-  font-family: 'heading font';
-  font-size: 28px;
-  padding: 20px;
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
+  color: var(--heading-color);
+  font-family: var(--heading-font);
+  font-size: 1.75rem;
+  padding: 1rem 1.5rem;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  border-bottom: 2px solid var(--border-color);
 }
 
+.card h2 i {
+  font-size: 1.5rem;
+  color: var(--accent-color);
+  margin-top: 0.1rem;
+}
+
+/* === DESCRIPTION === */
 .card .description {
-  padding: 20px;
-  background-color: var(--heading-bg);
-  color: var(--background-color);
+  padding: 1.5rem;
+  background-color: var(--white);
+  color: var(--text-color);
+  font-family: var(--body-font);
+  font-size: 1rem;
+  line-height: 1.7;
+  text-align: justify;
 }
 
+/* === READ MORE BUTTON === */
 .read-more-btn {
-  margin: 15px 20px;
-  padding: 8px 30px;
+  margin: 1rem 1.5rem 1.5rem;
+  padding: 0.6rem 1.5rem;
   background-color: var(--accent-color);
   color: var(--text-color);
-  font-weight: bold;
+  font-weight: 600;
   border-radius: 25px;
   border: none;
   cursor: pointer;
-  font-family: 'body font';
+  font-family: var(--body-font);
+  display: inline-block;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-.dropdown-content {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.5s ease, padding 0.3s ease;
-  background-color: var(--background-color);
-  color: var(--text-color);
-  margin: 0 20px 20px;
-  padding: 0 20px;
-  border-radius: 8px;
+.read-more-btn:hover {
+  background-color: var(--button-hover);
+  transform: translateY(-2px);
 }
 
-.dropdown-content.open {
-  max-height: 150px;
-  padding: 15px 20px;
-}
-
+/* === FOOTER TEXT AREA === */
 footer.footer-text {
   text-align: center;
   padding: 25px 10px;
-  font-family: 'heading font';
+  font-family: var(--heading-font);
   font-size: 1rem;
   background-color: var(--background-color);
   margin-top: auto;
 }
 
+/* === RESPONSIVE NAVIGATION === */
 @media (max-width: 768px) {
   .burger-button {
     display: block;
@@ -184,5 +107,9 @@ footer.footer-text {
 
   #check:checked ~ ul {
     left: 0;
+  }
+
+  .card {
+    margin: 2rem 1rem;
   }
 }
