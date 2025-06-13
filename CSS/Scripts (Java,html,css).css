@@ -7,9 +7,11 @@
 
 .scripts-heading-wrapper h1 {
   font-family: var(--heading-font);
-  font-size: 3rem;
+  font-size: 4rem;
   font-weight: bold;
-  color: var(--heading-color);
+  color: var(--accent-color);
+  text-transform: uppercase;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
   position: relative;
   display: inline-block;
   margin-bottom: 0.5rem;
@@ -19,7 +21,7 @@
   content: '';
   display: block;
   width: 60px;
-  height: 3px;
+  height: 4px;
   background-color: var(--accent-color);
   margin: 0.5rem auto 0;
   border-radius: 3px;
@@ -30,6 +32,19 @@
   font-size: 1.25rem;
   font-weight: normal;
   color: var(--white);
+  margin-top: 0.5rem;
+}
+
+/* === TITLE ANIMATION CLASSES === */
+.title-hidden {
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+.title-animate-in {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 1s ease, transform 1s ease;
 }
 
 /* === SCRIPT SECTION BACKGROUND === */
