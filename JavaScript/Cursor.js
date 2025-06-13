@@ -1,5 +1,3 @@
-// ===== CURSOR PULSE ENHANCED =====
-
 class CursorPulse {
   constructor() {
     this.cursor = null;
@@ -7,12 +5,21 @@ class CursorPulse {
     this.increasing = true;
     this.intervalId = null;
     this.isActive = true;
+    this.lastX = 0;
+    this.lastY = 0;
+
+    // Bind methods so they can be removed later
+    this.hide = this.hide.bind(this);
+    this.show = this.show.bind(this);
+    this.handleVisibilityChange = this.handleVisibilityChange.bind(this);
+    this.handleKeydown = this.handleKeydown.bind(this);
   }
 
   init() {
     this.cursor = document.getElementById('cursorPulse');
     if (!this.cursor) return;
 
+    this.cursor.classList.add('cursor-pulse');
     this.setupMouseTracking();
     this.setupPulseAnimation();
     this.setupEventListeners();
@@ -22,10 +29,13 @@ class CursorPulse {
   setupMouseTracking() {
     let ticking = false;
     document.addEventListener('mousemove', (e) => {
-      if (!ticking && this.cursor && this.isActive) {
+      this.lastX = e.clientX;
+      this.lastY = e.clientY;
+
+      if (!ticking && this.isActive) {
         requestAnimationFrame(() => {
-          this.cursor.style.left = `${e.clientX}px`;
-          this.cursor.style.top = `${e.clientY}px`;
+          this.cursor.style.setProperty('--cursor-x', `${this.lastX}px`);
+          this.cursor.style.setProperty('--cursor-y', `${this.lastY}px`);
           ticking = false;
         });
         ticking = true;
@@ -41,33 +51,28 @@ class CursorPulse {
       if (this.pulseAlpha >= 0.6) this.increasing = false;
       if (this.pulseAlpha <= 0.2) this.increasing = true;
 
-      if (this.cursor) {
-        this.cursor.style.backgroundColor = `rgba(24, 112, 64, ${this.pulseAlpha.toFixed(2)})`;
-      }
+      this.cursor.style.setProperty('--cursor-opacity', this.pulseAlpha.toFixed(2));
     }, 50);
   }
 
   setupEventListeners() {
-    // Hide/show cursor
-    document.addEventListener('mouseleave', () => this.hide());
-    document.addEventListener('mouseenter', () => this.show());
-    
-    // Pause on visibility change
-    document.addEventListener('visibilitychange', () => {
-      document.hidden ? this.pause() : this.resume();
-    });
-
-    // Keyboard controls
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'c' && !e.ctrlKey) {
-        e.preventDefault();
-        this.toggle();
-      }
-      if (e.key === 'Escape') this.reset();
-    });
+    document.addEventListener('mouseleave', this.hide);
+    document.addEventListener('mouseenter', this.show);
+    document.addEventListener('visibilitychange', this.handleVisibilityChange);
+    document.addEventListener('keydown', this.handleKeydown);
   }
 
-  // ===== API FUNCTIONS =====
+  handleVisibilityChange() {
+    document.hidden ? this.pause() : this.resume();
+  }
+
+  handleKeydown(e) {
+    if (e.key === 'c' && !e.ctrlKey) {
+      e.preventDefault();
+      this.toggle();
+    }
+    if (e.key === 'Escape') this.reset();
+  }
 
   async loadSettings() {
     try {
@@ -91,16 +96,14 @@ class CursorPulse {
     }
   }
 
-  // ===== CONTROL METHODS =====
-
   show() {
     this.isActive = true;
-    if (this.cursor) this.cursor.style.opacity = '1';
+    this.cursor.classList.remove('hidden');
   }
 
   hide() {
     this.isActive = false;
-    if (this.cursor) this.cursor.style.opacity = '0';
+    this.cursor.classList.add('hidden');
   }
 
   toggle() {
@@ -129,33 +132,19 @@ class CursorPulse {
 
   destroy() {
     if (this.intervalId) clearInterval(this.intervalId);
-  }
-}
-
-// ===== SIMPLE API EXAMPLE =====
-
-async function fetchMotivationalQuote() {
-  try {
-    const response = await fetch('https://api.quotable.io/random?tags=motivational');
-    const data = await response.json();
-    
-    const quoteElement = document.getElementById('daily-quote');
-    if (quoteElement) {
-      quoteElement.textContent = `"${data.content}" — ${data.author}`;
-    }
-  } catch (error) {
-    console.log('Quote fetch failed:', error);
+    document.removeEventListener('mouseleave', this.hide);
+    document.removeEventListener('mouseenter', this.show);
+    document.removeEventListener('visibilitychange', this.handleVisibilityChange);
+    document.removeEventListener('keydown', this.handleKeydown);
   }
 }
 
 // ===== INITIALIZATION =====
-
 let cursorInstance = null;
 
 document.addEventListener("DOMContentLoaded", () => {
   cursorInstance = new CursorPulse();
   cursorInstance.init();
-  fetchMotivationalQuote();
 });
 
 window.addEventListener('beforeunload', () => {

@@ -162,19 +162,17 @@
   object-fit: cover;
   border-radius: 4px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  opacity: 0.85;
-  transition: transform 0.3s ease, opacity 0.3s ease;
+  transition: transform 0.3s ease;
 }
 
 .recent-item img:hover {
   transform: scale(1.02);
-  opacity: 1;
 }
 
 .work-title {
   font-family: var(--heading-font);
   font-size: 1rem;
-  color: #D17609; /* orange */
+  color: #D17609; /* <-- your orange color */
   margin-top: 0.5rem;
 }
 
