@@ -8,7 +8,7 @@ class CursorPulse {
     this.lastX = 0;
     this.lastY = 0;
 
-    // Bind methods so they can be removed later
+  
     this.hide = this.hide.bind(this);
     this.show = this.show.bind(this);
     this.handleVisibilityChange = this.handleVisibilityChange.bind(this);
@@ -139,7 +139,7 @@ class CursorPulse {
   }
 }
 
-// ===== INITIALIZATION =====
+
 let cursorInstance = null;
 
 document.addEventListener("DOMContentLoaded", () => {

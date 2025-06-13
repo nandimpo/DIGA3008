@@ -9,11 +9,15 @@ const colors = [
 let colorIndex = 0;
 let angle = 120;
 let step = 0;
-let shift = 0; 
+let shift = 0;
 
 const transitionSteps = 100;
 const intervalTime = 50;
 
+/**
+ * Linearly interpolates between two hex colors.
+ * Adapted from https://gist.github.com/rosszurowski/67f04465c424a9bc0dae
+ */
 function lerpColor(a, b, t) {
   const ah = parseInt(a.replace('#', ''), 16),
         bh = parseInt(b.replace('#', ''), 16);

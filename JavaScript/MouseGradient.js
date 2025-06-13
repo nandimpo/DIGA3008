@@ -1,4 +1,4 @@
-// ===== DYNAMIC BACKGROUND ENHANCED =====
+
 
 class DynamicBackground {
   constructor() {
@@ -34,28 +34,28 @@ class DynamicBackground {
   }
 
   setupEventListeners() {
-    // Center gradient when mouse leaves
+  
     document.addEventListener('mouseleave', () => {
       this.bg.style.background = `radial-gradient(circle at 50% 50%, ${this.color} 0%, transparent ${this.intensity}%)`;
     });
 
-    // Pause on visibility change
+    
     document.addEventListener('visibilitychange', () => {
       this.isActive = !document.hidden;
     });
 
-    // Keyboard controls
+    
     document.addEventListener('keydown', (e) => {
       if (e.key === 'b' && !e.ctrlKey) {
         e.preventDefault();
         this.toggle();
       }
-      if (e.key === '1') this.changeColor('#d17609'); // Orange
-      if (e.key === '2') this.changeColor('#e1b808'); // Yellow
-      if (e.key === '3') this.changeColor('#5f5143'); // Brown
+      if (e.key === '1') this.changeColor('#d17609'); 
+      if (e.key === '2') this.changeColor('#e1b808'); 
+      if (e.key === '3') this.changeColor('#5f5143'); 
     });
 
-    // Touch support
+  
     document.addEventListener('touchmove', (e) => {
       if (e.touches.length > 0 && this.isActive) {
         const touch = e.touches[0];
@@ -66,7 +66,7 @@ class DynamicBackground {
     });
   }
 
-  // ===== API FUNCTIONS =====
+  
 
   async loadSettings() {
     try {
@@ -77,7 +77,7 @@ class DynamicBackground {
         this.intensity = settings.intensity || this.intensity;
       }
       
-      // Load daily color
+    
       await this.fetchDailyColor();
     } catch (error) {
       console.log('Using default settings');
@@ -112,7 +112,7 @@ class DynamicBackground {
     }
   }
 
-  // ===== CONTROLS =====
+  
 
   toggle() {
     this.isActive = !this.isActive;
@@ -129,7 +129,7 @@ class DynamicBackground {
   }
 }
 
-// ===== SIMPLE API =====
+
 
 async function fetchQuote() {
   try {
@@ -145,7 +145,7 @@ async function fetchQuote() {
   }
 }
 
-// ===== INITIALIZATION =====
+
 
 let bgInstance = null;
 
