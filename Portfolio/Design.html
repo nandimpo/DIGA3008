@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Nandi's Website – Design Games</title>
+  <title>Nandi's Website – Design (Games)</title>
   <link rel="stylesheet" href="normalize.css" />
   <link rel="stylesheet" href="../CSS/Main.css" />
   <link rel="stylesheet" href="../CSS/Writing.css" />
@@ -18,73 +18,80 @@
 
   <nav>
     <input type="checkbox" id="check" />
-    <label for="check" class="burger-button">
-      <i class="fa-solid fa-bars"></i>
-    </label>
+    <label for="check" class="burger-button"><i class="fa-solid fa-bars"></i></label>
     <label class="logo">NM</label>
     <ul>
       <li><a href="../index.html">Home</a></li>
       <li><a href="../Blogs/BlogsHome.html">Blogs</a></li>
       <li><a href="../Design/DesignHome.html">Design</a></li>
       <li><a href="../Scripts/Script (CSS, JAVA, HTML).html">Scripts</a></li>
-      <li><a href="../Portfolio/Portfoliohome.html"class="active">Portfolio</a></li>
+      <li><a href="../Portfolio/Portfoliohome.html" class="active">Portfolio</a></li>
       <li>
-        <a href="https://www.linkedin.com/in/nandi-m-4aa89123b" class="linkedin-icon" target="https://www.linkedin.com/in/nandi-m-4aa89123b/" rel="noopener noreferrer">
+        <a href="https://www.linkedin.com/in/nandi-m-4aa89123b" class="linkedin-icon" target="_blank" rel="noopener noreferrer">
           <i class="fa-brands fa-linkedin"></i>
         </a>
       </li>
     </ul>
   </nav>
 
+  <!-- Heading Section -->
+  <div class="page-heading notebook-page">
+    <h1 id="mainTitle">Design Games</h1>
+    <p class="page-subtitle">
+      Here you can find my Game Design samples. Once you are done feel free to explore the rest of my <strong>portfolio</strong>.
+    </p>
+  </div>
+
   <main>
-    <h1 class="notebook-page">Design Games</h1>
-    <ul class="categories">
-      <li><a href="Portfoliohome.html">Here you can find my Game Designs samples. Once you are done feel free to explore the rest of my <b>portfolio.</b></a></li>
-    </ul>
-
-    <div class="image-grid notebook-page">
-      <div class="image-container">
-        <img src="../Images/Design(games)/sign language- memory.png" alt="sign language" />
-        <div class="article-title">Sign Language Card Game.</div>
-        <div class="article-content">
-          <input type="checkbox" class="read-more-state" id="post-1" />
-          <div class="read-more-wrap">
-            <span class="content-preview">This is a Sign Language Memory Card Game.</span>
-            <span class="read-more-target">CLICK THE CARDS TO FLIP THEM. MEMORISE THE SIGN. CLICK ANOTHER CARD. MATCH THE CARDS BEFORE THE TIME RUNS OUT!</span>
+    <section class="section container notebook-page">
+      <div class="image-grid">
+        <!-- Game 1 -->
+        <div class="image-container">
+          <img src="../Images/Design(games)/sign language- memory.png" alt="sign language" />
+          <div class="article-title">Sign Language Card Game</div>
+          <div class="article-content">
+            <input type="checkbox" class="read-more-state" id="post-1" />
+            <div class="read-more-wrap">
+              <span class="content-preview">This is a Sign Language Memory Card Game.</span>
+              <span class="read-more-target">CLICK THE CARDS TO FLIP THEM. MEMORISE THE SIGN. CLICK ANOTHER CARD. MATCH THE CARDS BEFORE THE TIME RUNS OUT!</span>
+            </div>
+            <label for="post-1" class="read-more-trigger"></label>
           </div>
-          <label for="post-1" class="read-more-trigger"></label>
+        </div>
+
+        <!-- Game 2 -->
+        <div class="image-container">
+          <img src="../Images/Design(games)/Horror Wedding Game 2025-01-05 21-40-14 (1).gif" alt="3D horror game" />
+          <div class="article-title">First-Person 3D Horror Game</div>
+          <div class="article-content">
+            <input type="checkbox" class="read-more-state" id="post-2" />
+            <div class="read-more-wrap">
+              <span class="content-preview">In this first-person 3D horror game, players explore a chilling narrative about a toxic relationship...</span>
+              <span class="read-more-target">Set in a haunting environment, they encounter supernatural elements symbolizing emotional abuse...</span>
+            </div>
+            <label for="post-2" class="read-more-trigger"></label>
+          </div>
+        </div>
+
+        <!-- Game 3 -->
+        <div class="image-container">
+          <img src="../Images/Writing/placeholder.jpg" alt="Game 3" />
+          <div class="article-title">Game 3</div>
+          <div class="article-content">
+            <input type="checkbox" class="read-more-state" id="post-3" />
+            <div class="read-more-wrap">
+              <span class="content-preview">Content preview for the third game design would go here...</span>
+              <span class="read-more-target">Full content for the third game design would go here...</span>
+            </div>
+            <label for="post-3" class="read-more-trigger"></label>
+          </div>
         </div>
       </div>
-
-      <div class="image-container">
-        <img src="../Images/Design(games)/Horror Wedding Game 2025-01-05 21-40-14 (1).gif" alt="3D horror game" />
-        <div class="article-title">First person 3D Horror game.</div>
-        <div class="article-content">
-          <input type="checkbox" class="read-more-state" id="post-2" />
-          <div class="read-more-wrap">
-            <span class="content-preview">In this first-person 3D horror game, players explore a chilling narrative about a toxic relationship...</span>
-            <span class="read-more-target">Set in a haunting environment, they encounter supernatural elements symbolizing emotional abuse...</span>
-          </div>
-          <label for="post-2" class="read-more-trigger"></label>
-        </div>
-      </div>
-
-      <div class="image-container">
-        <img src="../Images/Writing/placeholder.jpg" alt="Game 3" />
-        <div class="article-title">Game 3</div>
-        <div class="article-content">
-          <input type="checkbox" class="read-more-state" id="post-3" />
-          <div class="read-more-wrap">
-            <span class="content-preview">Content preview for the third game design would go here...</span>
-            <span class="read-more-target">Full content for the third game design would go here...</span>
-          </div>
-          <label for="post-3" class="read-more-trigger"></label>
-        </div>
-      </div>
-    </div>
+    </section>
   </main>
 
-   <footer class="footer">
+  <!-- Footer -->
+  <footer class="footer">
     <div class="footer-container">
       <div class="footer-column">
         <h2>Contact</h2>
@@ -96,12 +103,13 @@
         <h2>Social</h2>
         <hr />
         <div class="social-icons">
-          <a href="https://www.linkedin.com/in/nandi-m-4aa89123b" target="https://www.linkedin.com/in/nandi-m-4aa89123b/"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="https://www.linkedin.com/in/nandi-m-4aa89123b" target="_blank">
+            <i class="fa-brands fa-linkedin"></i>
+          </a>
         </div>
       </div>
     </div>
     <p class="footer-bottom">©2025 Nandi Mpofu. All rights reserved.</p>
   </footer>
-
 </body>
 </html>

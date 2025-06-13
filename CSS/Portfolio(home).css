@@ -20,6 +20,7 @@
   color: var(--heading-color); /* Already set to #EBE4D2 via main.css */
   margin-bottom: 1rem;
   text-align: center;
+  text-transform: uppercase; /* <- Add this line */
 }
 
 #subTitle {
