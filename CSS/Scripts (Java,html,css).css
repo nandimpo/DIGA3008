@@ -1,28 +1,69 @@
-/* === SECTION BACKGROUND GRADIENT === */
-.script-sections {
-  padding: 60px 20px 40px; /* Reduced from 120px to 60px */
-  background: linear-gradient(to bottom, #EBE4D2, #f5f1e3);
+/* === PAGE HEADER SECTION === */
+.scripts-heading-wrapper {
+  text-align: center;
+  padding: 5rem 1rem 1rem;
+  background-color: #5F5143;
 }
 
-/* === ENHANCED CARD STYLES === */
+.scripts-heading-wrapper h1 {
+  font-family: var(--heading-font);
+  font-size: 3rem;
+  font-weight: bold;
+  color: var(--heading-color);
+  position: relative;
+  display: inline-block;
+  margin-bottom: 0.5rem;
+}
+
+.scripts-heading-wrapper h1::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background-color: var(--accent-color);
+  margin: 0.5rem auto 0;
+  border-radius: 3px;
+}
+
+.scripts-heading-wrapper h2 {
+  font-family: var(--body-font);
+  font-size: 1.25rem;
+  font-weight: normal;
+  color: var(--white);
+}
+
+/* === SCRIPT SECTION BACKGROUND === */
+.script-sections {
+  padding: 1rem 20px 4rem;
+  background: linear-gradient(to bottom, #5F5143 60%, #4e4439);
+}
+
+/* === CARD BASE === */
 .card {
   opacity: 0;
-  transform: translateY(50px);
+  transform: translateY(40px);
   transition: all 0.6s ease-out;
-  margin: 2rem auto;
-  background-color: var(--white);
-  border: 2px solid var(--border-color);
+  margin: 2.5rem auto;
+  background: linear-gradient(to bottom, #fdfdfd, #f8f4eb);
+  border: 2px solid rgba(209, 118, 9, 0.3);
   border-radius: 18px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1);
   max-width: 900px;
   overflow: hidden;
   padding: 0;
+  backdrop-filter: blur(3px);
 }
 
-/* === HEADER WITH ICON === */
+/* === CARD ENTRY === */
+.card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* === CARD HEADER === */
 .card h2 {
-  background-color: var(--heading-bg);
-  color: var(--heading-color);
+  background: linear-gradient(to right, #f5f1e3, #EBE4D2);
+  color: #5F5143;
   font-family: var(--heading-font);
   font-size: 1.75rem;
   padding: 1rem 1.5rem;
@@ -33,16 +74,19 @@
   border-bottom: 2px solid var(--border-color);
 }
 
+/* === CARD ICON BADGE === */
 .card h2 i {
-  font-size: 1.5rem;
-  color: var(--accent-color);
-  margin-top: 0.1rem;
+  font-size: 1.2rem;
+  background-color: var(--accent-color);
+  color: var(--main-bg);
+  padding: 0.4rem;
+  border-radius: 50%;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* === DESCRIPTION === */
+/* === CARD DESCRIPTION === */
 .card .description {
   padding: 1.5rem;
-  background-color: var(--white);
   color: var(--text-color);
   font-family: var(--body-font);
   font-size: 1rem;
@@ -55,32 +99,37 @@
   margin: 1rem 1.5rem 1.5rem;
   padding: 0.6rem 1.5rem;
   background-color: var(--accent-color);
-  color: var(--text-color);
-  font-weight: 600;
+  color: var(--main-bg);
+  font-weight: 700;
   border-radius: 25px;
   border: none;
   cursor: pointer;
   font-family: var(--body-font);
   display: inline-block;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
 }
 
 .read-more-btn:hover {
   background-color: var(--button-hover);
-  transform: translateY(-2px);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
 }
 
-/* === FOOTER TEXT AREA === */
-footer.footer-text {
-  text-align: center;
-  padding: 25px 10px;
-  font-family: var(--heading-font);
-  font-size: 1rem;
-  background-color: var(--background-color);
-  margin-top: auto;
+/* === HOVER EFFECT === */
+.card:hover {
+  border-left: 6px solid var(--accent-color);
+  transform: translateY(-6px);
 }
 
-/* === RESPONSIVE NAVIGATION === */
+/* === SPACING BETWEEN CARDS === */
+.card + .card {
+  margin-top: 3rem;
+  border-top: 1px dashed #d3c2a5;
+  padding-top: 2rem;
+}
+
+/* === RESPONSIVE === */
 @media (max-width: 768px) {
   .burger-button {
     display: block;
