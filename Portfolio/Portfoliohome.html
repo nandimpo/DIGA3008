@@ -4,18 +4,26 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Nandi's Website – Portfolio</title>
+
+  <!-- Styles -->
   <link rel="stylesheet" href="normalize.css" />
   <link rel="stylesheet" href="../CSS/Main.css" />
   <link rel="stylesheet" href="../CSS/Portfolio(home).css" />
 
+  <!-- FontAwesome Icons -->
+  <script src="https://kit.fontawesome.com/89fd46d92d.js" crossorigin="anonymous" defer></script>
+
+  <!-- JS Scripts -->
   <script src="../JavaScript/Cursor.js" defer></script>
   <script src="../JavaScript/Handwriting.js" defer></script>
-  <script src="../JavaScript/NotebookAnimation.js" defer></script>
+  <script src="../JavaScript/MouseGradient.js" defer></script>
 </head>
-<body>
-  
-  <div id="cursorPulse"></div>
 
+<body>
+  <!-- Custom Cursor -->
+  <div id="cursorPulse" class="cursor-pulse"></div>
+
+  <!-- Navigation -->
   <nav>
     <input type="checkbox" id="check" />
     <label for="check" class="burger-button"><span class="burger-icon">☰</span></label>
@@ -25,55 +33,58 @@
       <li><a href="../Blogs/BlogsHome.html">Blogs</a></li>
       <li><a href="../Design/DesignHome.html">Design</a></li>
       <li><a href="../Scripts/Script (CSS, JAVA, HTML).html">Scripts</a></li>
-      <li><a href="../Portfolio/Portfoliohome.html"class="active">Portfolio</a></li>
-       <a href="https://www.linkedin.com/in/nandi-m-4aa89123b" class="linkedin-icon" target="https://www.linkedin.com/in/nandi-m-4aa89123b/" rel="noopener noreferrer">
-          <i class="fa-brands fa-linkedin"></i>
-        </a>
+      <li><a href="../Portfolio/Portfoliohome.html" class="active">Portfolio</a></li>
+      <a href="https://www.linkedin.com/in/nandi-m-4aa89123b" class="linkedin-icon" target="_blank" rel="noopener noreferrer">
+        <i class="fa-brands fa-linkedin"></i>
+      </a>
     </ul>
   </nav>
 
- 
+  <!-- Main Portfolio Content -->
   <div class="portfolio-container">
     <div class="portfolio-header">
-      <svg class="handwriting-svg" viewBox="0 0 800 300" preserveAspectRatio="xMidYMid meet">
-        <text id="handwrittenPath" x="400" y="100" text-anchor="middle"
-              font-family="heading font" font-size="48" fill="#E1B808" stroke="#E1B808" stroke-width="2"
-              dominant-baseline="middle">
-          My Portfolio
-        </text>
-        <text id="subtitlePath" x="400" y="180" text-anchor="middle"
-              font-family="body font" font-size="24" fill="#f5f1e6" stroke="#f5f1e6" stroke-width="1.5"
-              dominant-baseline="middle">
-          A showcase of animation, design, and writing!
-        </text>
-      </svg>
-
+      <h1 id="mainTitle">My Portfolio</h1>
+      <p id="subTitle">A showcase of animation, design, and writing!</p>
       <p class="portfolio-intro">
-        I am Nandi Mpofu and I am from Johannesburg. I am an animator, designer, and writer. I am currently proficient in English and French writing. The software I'm most comfortable with includes Unity, Blender, and the Photoshop suite. I'm particularly interested in design—specifically editorial design and production design. My biggest strength is communication design. I love being in spaces where I can use my design skills to communicate ideas effectively.I have been developing my skills over the past four years and I have worked at events and magazines. 
+        I am Nandi Mpofu and I am from Johannesburg. I am an animator, designer, and writer. I am currently proficient in English and French writing. The software I'm most comfortable with includes Unity, Blender, and the Photoshop suite. I'm particularly interested in design—specifically editorial design and production design. My biggest strength is communication design. 
       </p>
     </div>
 
-    
-    <div class="notebook">
-      <div class="notebook-page">
-        <a href="./Animation.html" class="portfolio-button">Animation</a>
-        <p class="category-description">Here you will find all my animations thus far.</p>
-
-        <a href="Writing.Html" class="portfolio-button">Writing</a>
-        <p class="category-description">This section includes writing in English and French.</p>
+    <!-- Skills & Tools Card -->
+    <section class="skills-section">
+      <h2>Tools & Technologies</h2>
+      
+      <div class="skills-icons">
+        <div class="skill-item">
+          <i class="fa-solid fa-cube skill-icon"></i>
+          <div class="skill-label">Unity</div>
+        </div>
+        <div class="skill-item">
+          <i class="fa-solid fa-gears skill-icon"></i>
+          <div class="skill-label">Blender</div>
+        </div>
+        <div class="skill-item">
+          <i class="fa-solid fa-code skill-icon"></i>
+          <div class="skill-label">C#</div>
+        </div>
+        <div class="skill-item">
+          <i class="fa-solid fa-pen-nib skill-icon"></i>
+          <div class="skill-label">Adobe Animate</div>
+        </div>
       </div>
-      <div class="notebook-page">
-        <a href="Design.html" class="portfolio-button">Design</a>
-        <p class="category-description">Here you will find my Designs – specifically Game Design.</p>
 
-        <a href="./Essays.Html" class="portfolio-button">Essays</a>
-        <p class="category-description">This section includes all my essays.</p>
+      <!-- Portfolio Section Links -->
+      <div class="portfolio-buttons">
+        <a href="./Animation.html" class="portfolio-link">Animation</a>
+        <a href="./Writing.html" class="portfolio-link">Writing</a>
+        <a href="./Design.html" class="portfolio-link">Design</a>
+        <a href="./Essays.html" class="portfolio-link">Essays</a>
       </div>
-    </div>
+    </section>
   </div>
 
-  
-<footer class="footer">
+  <!-- Footer -->
+  <footer class="footer">
     <div class="footer-container">
       <div class="footer-column">
         <h2>Contact</h2>
@@ -85,13 +96,14 @@
         <h2>Social</h2>
         <hr />
         <div class="social-icons">
-          <a href="https://www.linkedin.com/in/nandi-m-4aa89123b" target="https://www.linkedin.com/in/nandi-m-4aa89123b/"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="https://www.linkedin.com/in/nandi-m-4aa89123b" target="_blank" rel="noopener noreferrer">
+            <i class="fa-brands fa-linkedin"></i>
+          </a>
         </div>
       </div>
     </div>
     <p class="footer-bottom">©2025 Nandi Mpofu. All rights reserved.</p>
   </footer>
-
 </body>
 </html>
 

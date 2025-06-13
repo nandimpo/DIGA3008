@@ -1,19 +1,13 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const pages = document.querySelectorAll(".notebook-page");
-  if (!pages.length) return;
+  const mainTitle = document.getElementById("mainTitle");
+  const subTitle = document.getElementById("subTitle");
 
-  const revealOnScroll = (entries, observer) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("reveal");
-        observer.unobserve(entry.target);
-      }
-    });
-  };
+  // Add animation classes
+  setTimeout(() => {
+    mainTitle?.classList.add("title-animate-in");
+  }, 200);
 
-  const observer = new IntersectionObserver(revealOnScroll, {
-    threshold: 0.3
-  });
-
-  pages.forEach(page => observer.observe(page));
+  setTimeout(() => {
+    subTitle?.classList.add("title-animate-in");
+  }, 600);
 });
