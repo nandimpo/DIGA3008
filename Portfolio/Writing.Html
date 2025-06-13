@@ -1,86 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nandi's website</title>
-    <link rel="stylesheet" href="normalize.css">
-    <link rel="stylesheet" href="../CSS/Main.css" />
-    <link rel="stylesheet" href="../CSS/Writing.css">
-    <script src="https://kit.fontawesome.com/89fd46d92d.js" crossorigin="anonymous"></script>
-    <script src="../JavaScript/Cursor.js" defer></script>
-    <script src="../JavaScript/Handwriting.js" defer></script>
-    <script src="../JavaScript/NotebookAnimation.js" defer></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nandi's Essays</title>
+  <link rel="stylesheet" href="normalize.css" />
+  <link rel="stylesheet" href="../CSS/Main.css" />
+  <link rel="stylesheet" href="../CSS/Blogs.css" />
+  <script src="https://kit.fontawesome.com/89fd46d92d.js" crossorigin="anonymous"></script>
+  <script src="../JavaScript/Gradient.js" defer></script>
+  <script src="../JavaScript/Cursor.js" defer></script>
 </head>
 <body>
-    <div id="cursorPulse"></div>
 
-    <nav>
-        <input type="checkbox" id="check" />
-        <label for="check" class="burger-button">
-            <i class="fa-solid fa-bars"></i>
-        </label>
-        <label class="logo">NM</label>
-        <ul>
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="../Blogs/BlogsHome.html">Blogs</a></li>
-            <li><a href="../Design/DesignHome.html">Design</a></li>
-            <li><a href="../Scripts/Scriptshome.html">Scripts</a></li>
-            <li><a href="../Portfolio/Portfoliohome.html"class="active">Portfolio</a></li>
-            <li><a href="https://www.linkedin.com/in/nandi-m-4aa89123b" class="linkedin-icon" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i></a></li>
-        </ul>
-    </nav>
+  <nav>
+    <input type="checkbox" id="check" />
+    <label for="check" class="burger-button"><i class="fa-solid fa-bars"></i></label>
+    <label class="logo">NM</label>
+    <ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../Blogs/Blogshome.html" >Blogs</a></li>
+      <li><a href="../Design/DesignHome.html">Design</a></li>
+      <li><a href="../Scripts/Scriptshome.html">Scripts</a></li>
+      <li><a href="../Portfolio/Portfoliohome.html"class="active">Portfolio</a></li>
+      <a href="https://www.linkedin.com/in/nandi-m-4aa89123b" class="linkedin-icon" target="https://www.linkedin.com/in/nandi-m-4aa89123b/" rel="noopener noreferrer">
+          <i class="fa-brands fa-linkedin"></i>
+        </a>
+    </ul>
+  </nav>
 
-    <main>
-        <h1 class="notebook-page">Writing</h1>
-        
-        <ul class="categories">
-            <li><a href="Portfoliohome.html">Here you can find my writing samples. Once you are done feel free to explore the rest of my <b> portfolio.</b></a></li>
-        </ul>
-        
-        <div class="image-grid notebook-page">
-            <div class="image-container">
-                <img src="../Images/Writing/Leonora Miano.jpg" alt="Leonora Miano">
-                <div class="article-title">French- Explication du texte</div>
-                <div class="article-content">
-                    <input type="checkbox" class="read-more-state" id="post-1" />
-                    <div class="read-more-wrap">
-                        <span class="content-preview">Cette explication du texte examinera comment Leonora Miano a utilisé 'Sacrifices' pour créer la conscience diasporique...</span>
-                        <span class="read-more-target">... (full content continues) ...</span>
-                    </div>
-                    <label for="post-1" class="read-more-trigger"></label>
-                </div>
-            </div>
+  <div class="cursor-pulse" id="cursorPulse"></div>
 
-            <div class="image-container">
-                <img src="../Images/Writing/Rnb cover.jpg" alt="Rnb cover">
-                <div class="article-title">Article- Where Is the Love in South African Music?</div>
-                <div class="article-content">
-                    <input type="checkbox" class="read-more-state" id="post-2" />
-                    <div class="read-more-wrap">
-                        <span class="content-preview">Social media has transformed the relationship between artist and consumer...</span>
-                        <span class="read-more-target">... (full content continues) ...</span>
-                    </div>
-                    <label for="post-2" class="read-more-trigger"></label>
-                </div>
-            </div>
+  <div class="blog-article-wrapper">
+    <h1>Sujet de dissertation : Sacrifices de Léonora Miano.</h1>
+    <p class="blog-date">26 mars 2025</p>
 
-            <div class="image-container">
-                <img src="../Images/Writing/placeholder.jpg" alt="Writing 3">
-                <div class="article-title">Writing 3</div>
-                <div class="article-content">
-                    <input type="checkbox" class="read-more-state" id="post-3" />
-                    <div class="read-more-wrap">
-                        <span class="content-preview">Content preview for the third writing sample would go here...</span>
-                        <span class="read-more-target">Full content for the third writing sample would go here...</span>
-                    </div>
-                    <label for="post-3" class="read-more-trigger"></label>
-                </div>
-            </div>
-        </div>
-    </main>
+    <p> Cette explication du texte examinera comment Leonora Miano a utilisé 'Sacrifices' pour créer la conscience diasporique. Miano utilise l'écriture, la survie et la résistance pour construire une conscience diasporique. Dans cette pièce de théâtre, elle utilise ces thèmes pour renforcer l'idée d'une connectivité consciente entre les Africains - nous sommes une seule communauté même si nous vivons dans des endroits différents (Mishra, 2020).</p>
+    <p> Sacrifices est une pièce de théâtre de l'écrivaine camerounaise Leonora Miano qui explore certains aspects de l'histoire des Maroons jamaïcains. Elle explore l'histoire de la communauté des marronnages. Le texte présente deux conceptions de l'héroïsme. Ceux qui refusent de se retirer dans les montagnes et ceux qui restent dans les plaines. Dans le texte, King Maroon (Dor) se voit proposer un accord de paix qui concernera les deux groupes. Les personnages dans le texte sont Jahred, Dor, Maresha, Lois, Kaleb et Sir Charles. Le thème central est celui des révoltes d'esclaves dans les Caraïbes (Miller, 2017). Ce texte est une forme de conscience diasporique.</p>
+    <p>La conscience diasporique est l'état d'une personne consciente de son identité dispersée. La personne sait que son identité est répartie dans différentes parties du monde. Les personnages de la diaspora ne peuvent donc pas s'identifier à la communauté d'accueil ou d'origine (Newland & Patrick). Les personnages se retrouvent donc dans une situation terrible, souffrant de la perte de leurs racines. Même s'ils s'efforcent de survivre dans un nouveau pays (Nazir & Sher, 2023). L'objectif de la conscience diasporique est de faire prendre conscience aux gens qu'ils sont dispersés à cause de la migration (Lone, Sharma et Lone, 2023). La migration crée une identité de survie et de résistance. Miano tente de créer une conscience diasporique à travers l'écriture de cette pièce de plusieurs façons. </p>
+<h3> L'écriture comme tentative de construction d'une conscience diasporique. </h3>
+<p> La première façon Miano utilise pour créer une conscience diasporique est à travers l'acte d'écriture. Miano est une écrivaine camerounaise. Cependant, elle a choisi d'écrire sur la communauté maroonne en Jamaïque. La communauté maroonne est une partie importante de la diaspora africaine. C'est un groupe d'Africains qui ont été forcés d'émigrer de leur pays d'origine, l'Afrique (Roberts, 2022). Quand ils ont émigré, ils ont créé de nouvelles communautés dans les Amériques. Miano a exploré ce concept dans ses écrits. Dans ses écrits, elle présente deux communautés africaines qui ont été forcées de se créer en dehors de l'Afrique.</p>
+<p> La communauté qui est au centre de l'écriture est en haut. Ils sont esclaves en fuite qui se sont échappés dans la montagne. Leur fuite est une manière de montrer qu'ils ne s'identifient pas à l'identité d'esclave. Elle explique qu'ils ont commencé une nouvelle vie dans les montagnes parce qu'elles étaient difficiles d'accès pour les colonisateurs. Dans leur nouvelle communauté, ils ont créé des formes de leadership sous la forme du King Maroon. Ils ont des rituels où ils dansent et chantent, comme le montre la phrase « puisque tout le monde est occupé à boire et à danser ». La communauté secondaire est en bas (Miano, 2015). Ils sont toujours réduits en esclavage, mais ils aident les communautés en haut, comme le montre cette phrase de Jahred : « Nous avons fait de notre mieux pour vous fournir des vivres et envoyer de nouveaux combattants ». Cela montre qu'il existe une relation entre les nouvelles communautés, même si elles sont séparées. Cela suggère que la communauté d'en bas aide celles d'en haut parce qu'elles viennent de la même patrie, même si leurs idéologies diffèrent.</p>
+<p> En écrivant sur ces deux communautés de la diaspora, Miano crée une conscience diasporique. Elle est africaine, mais en écrivant sur la communauté jamaïcaine, elle montre au lecteur qu'elle est consciente que l'identité africaine est dispersée à travers le monde. En écrivant sur cette communauté, elle crée un pont dans la diaspora africaine. Elle montre que, même s'ils sont jamaïcains, ils sont connectés à l'Afrique. En écrivant sur cette communauté, elle sensibilise le lecteur à la dispersion des communautés africaines dans le monde. Elle informe le lecteur que la dispersion ne s'est pas arrêtée quand les Africains sont arrivés aux Amériques. Mais qu'elle s'est poursuivie une fois qu'ils y sont arrivés. La séparation des deux communautés en est la preuve en haut et en bas. Elle fait prendre conscience au lecteur que l'un des effets de la migration est la division de la communauté.</p>
+<p>Aussi Miano crée une conscience diasporique dans le péritexte. Sur le péritexte Miano référence un poème de Julien Delmaire qui référence la liberté. Delmaire est né en France. Il est poète et romancier afropéen. Il vit en Europe mais a des racines en Afrique (Seagull Books, 2025). En faisant référence à un écrivain afropéen, elle crée une connexion entre elle et les Africains d'Europe. Elle montre au lecteur qu'elle est consciente des autres Africains de la diaspora. De même, en utilisant le poème dans le péritexte, elle fait prendre conscience au lecteur que l'identité africaine est dispersée dans le monde entier, y compris en Europe. Cependant, cette dispersion ne modifie pas la connexion qui l'unit à l'Afrique, parce qu'elle est capable de créer un pont entre elle-même et les écrivains afropéens en reconnaissant leur travail.</p>
+<p> Aussi dans la quatrième de couverture Miano référence De black star line en des sankofas. La Black Star Line (BSL) de Marcus Garvey était une compagnie de navigation à vapeur détenue, exploitée et financée par des personnes d'origine africaine (Hancock, 2018). Sankofa est un mot ancestral du peuple Akan du Ghana, en Afrique de l'Ouest. Il signifie « Aller le reprendre » ou « Revenir le chercher ». Le symbole du sankofa est l'image d'un oiseau mythique dont les pieds sont tournés vers l'avant. La tête est tournée vers l'arrière. L'oiseau tient un œuf dans sa bouche. (Slater, 2019).</p>
 
-    <footer class="footer">
+<p> Miano fait référence à De black star line et Sankofa montre au lecteur qu'elle est consciente de la dispersion des identités africaines. Elle fait également prendre conscience au lecteur que les identités africaines sont dispersées en Afrique et en Amérique du Nord. En outre, en faisant référence au « sankofa », elle fait comprendre au lecteur que les Africains ont besoin de redécouvrir et de revisiter l'histoire pour faire face aux problèmes et aux défis actuels. Par conséquent, pour comprendre notre identité actuelle dans la diaspora africaine, nous devons être conscients du passé. Grâce à De black star line et au sankofa, Miano construit une conscience diasporique.</p>
+<h3>La survie comme tentative de construction d'une conscience diasporique</h3>
+
+<p> Miano tente de construire une conscience diasporique à travers l'écriture de cette pièce en utilisant des thèmes comme la résistance et la survie. Pour les gens de la diaspora, la survie et la résilience font partie de leur identité. Les diasporas font en sorte que les gens se sentent dissociés de leur pays d'origine. Toute leur vie, ils luttent pour trouver leur place à la fois dans leur pays d'origine et dans le pays étranger (Nazir & Sher, 2023). C'est pourquoi la diaspora africaine est en constante lutte avec son identité.</p>
+<p> Miano parle de la lutte pour l'identité et d'autres luttes. Elle utilise les personnages pour exprimer la lutte que les gens de la diaspora peuvent avoir avec l'identité. Par exemple dans cette phrase « Notre communauté …Préserver notre peuple c'est refuser sa division » (Miano, 2015) Zakhor exprime qu'il ne sait pas à qui s'identifier parce que sa famille vit en haut et en bas. Son peuple lutte pour son identité parce qu'il a été physiquement divisé. Au contraire, King Maroon exprime une lutte différente en termes d'identité. Contrairement à Zakhor dans cette phrase « Le peuple ce sont d'abord ceux... qui révèrent nos ancêtres et pas le dieu du maître ». Il a du mal à reconnaître l'identité des habitants des basses terres. Au contraire, son identité est enracinée en haut. Il a du mal à se reconnaître dans ceux des basses terres bien qu'il en soit originaire.</p>
+<p> Aussi, Lois a du mal à s'identifier. Dans cette phrase « Pourquoi nous raconter tant de fables alors que ...venus ? Le Pays d'avant, le Blanc nous l'a arraché » (Miano, 2015) Lois exprime sa lutte. Elle exprime la triste réalité de la diaspora, à savoir qu'il est impossible pour les Africains de retourner sur leur terre ancestrale. Pour ce faire, elle appelle l'Afrique « Le Pays d'avant ». C'est là que se situe la lutte pour l'identité, même si les Africains veulent s'identifier à l'Afrique, ils ne le peuvent pas. Ils sont obligés de s'identifier à cette nouvelle terre. Cependant, Maresha exprime une autre perspective sur l'identité dans la diaspora dans cette phrase Maresha « Le pays qui est en nous est plus vaste que la terre qui nous fut arrachée » (Miano, 2015). Elle est consciente de cette diaspora. Elle affirme que l'identité n'est pas liée à un lieu mais qu'elle se trouve à l'intérieur de tous les Africains et que la lutte pour cette identité dans la diaspora consiste à accepter cette réalité.</p>
+<p> Aussi, Miano parle d'autres luttes parmi les gens de la diaspora sont confrontés. Par exemple, elle met l'accent sur les luttes internes sont confrontées les mères. Dans cette phrase « Je n'ai pas pu l'assassiner ... l'a vendu Je l'avais à peine sevré », Maresha parle de sa lutte interne pour tuer son enfant ou en faire un esclave.</p>  
+<p> Miano utilise le thème de la lutte dans ses écrits pour sensibiliser le lecteur à la diaspora. Elle utilise ce thème pour montrer que les membres de la diaspora luttent pour leur identité. Elle propose au lecteur une solution à ce problème sous la forme de Maresha. Elle exprime que les membres de la diaspora ne devraient pas lier leur identité à un lieu, mais plutôt que leur identité est en eux-mêmes. Elle affirme que même s'ils se trouvent dans un autre endroit, ils resteront en Afrique. De cette manière, Miano crée des ponts dans la diaspora.</p>
+<h3>La résistance comme tentative de construction d'une conscience diasporique.</h3>
+<p> La résistance est un thème central de la pièce. Elle est également synonyme de la communauté Maroon. La communauté maronne est l'un des premiers exemples de résistance terrestre dans les colonies d'esclaves. Ces communautés ont contribué au développement de l'actuelle diaspora africaine (Roberts, 2022).</p>
+
+<p> Les communautés résistent en réaction à l'oppression. Cette résistance prend de nombreuses formes, comme la fuite. Les communautés maroons ont résisté en fuyant leur esclavagiste. Elles ont également créé de nouvelles communautés dans les montagnes. C'est une forme de résistance fondée sur la terre, parce qu'ils ont récupéré leurs terres dans les montagnes. Ils refusent également de travailler sur la terre en tant qu'esclaves africains (Roberts, 2022).
+</p>
+
+<p>Le choix de Miano d'utiliser la communauté maronne comme référence crée une conscience diasporique. Elle rend le lecteur conscient d'une communauté connue pour sa résistance. Elle fait donc prendre conscience au lecteur de comment et pourquoi la résistance fait partie de l'identité dans la diaspora.</p>
+
+<p>Miano utilise des personnages pour exprimer l'importance de la résistance dans la diaspora. Dans cette phrase « Le courage. Consiste-t-il dans la fuite devant l'épreuve ou dans la capacité à l'affronter ... arrêt ici même » (Miano, 2015). Lois exprime un autre type de résistance. Elle exprime que le fait que les esclaves restent dans la plantation est courageux et constitue une forme de résistance. Ils ne s'enfuient pas, mais choisissent de rester sur leurs terres. Ils refusent d'être chassés par les colonisateurs. Cela montre que la résistance fait partie intégrante de la diaspora et qu'elle est présente en haut et en bas.</p>
+<p>De même, dans cette phrase « Ils ne valent pas mieux que nous, dont les gestes quotidiens sont de subtile insoumission » (Miano, 2015), Lois fait référence à la résistance quotidienne sur la plantation. Elle explique que la résistance ne doit pas nécessairement prendre la forme d'un déménagement dans les montagnes. Au contraire, cette résistance peut être petite, comme le fait de rester sur la plantation.</p>
+<p> Un autre personnage qui aborde le thème de la résistance est le King Maroon. Dans cette phrase « Ceux qui parlent notre langue et pas celle du maître ... du maître », il parle d'une forme de résistance culturelle. Il refuse de parler la langue du colonisateur et insiste pour parler sa langue. Cela montre l'une des méthodes utilisées par les membres de la diaspora pour résister. Ce phénomène est encore présent aujourd'hui : les Africains déménagent mais parlent leur langue maternelle.</p>
+<p> Miano utilise des personnages comme Dor et Lois pour faire prendre conscience au lecteur de l'importance de la résistance dans la diaspora. Quand les gens émigrent en dehors de leur pays d'origine, ils sont obligés de résister au quotidien, comme le mentionne Lois. Ils sont forcés de résister par la terre ou par la culture. Donc, la résistance devient une partie de leur identité. L'accent qu'elle met sur la résistance fait le lecteur conscient de celle-ci et de la diaspora.</p>
+<h3>Conclusion</h3>
+<p> En conclusion, l'objectif de la conscience diasporique est de faire prendre conscience aux gens qu'ils sont dispersés à cause de la migration. Miano atteint cet objectif en essayant de construire une conscience diasporique à travers l'écriture de cette pièce. Tout d'abord, elle utilise l'art de l'écriture pour sensibiliser le lecteur à d'autres identités diasporiques. Elle est une écrivaine camerounaise, mais elle écrit sur une communauté jamaïcaine. De plus, dans le péritexte, elle fait référence à d'autres communautés et idéologies africaines par exemple sankofa et De black star line. Elle utilise également un poème d'un écrivain afropéen, Julien Delmaire. Ses références à ces différentes parties de l'Afrique créent des liens entre elle et ces concepts. Elle relie également ces concepts entre eux. Cela permet au lecteur de se faire compte que tous les membres de la diaspora sont liés.</p>
+<p> Miano explore également des thèmes tels que la survie et la résistance dans la communauté maronne. Elle fait constamment référence à ces idées. Cela permet au lecteur de prendre conscience des effets de la migration sur les Africains. Quand les gens de la diaspora émigrent, ils sont obligés de survivre et de s'adapter au quotidien. Sacrifices fait un excellent travail pour créer une conscience diasporique parce qu'elle aborde et relie de nombreuses parties de la diaspora africaine.
+
+
+</p>
+
+<h3>Liste de référence</h3>
+    <ul>
+      <li>Slater, J. (2019) 'Sankofa—the Need to Turn Back to Move Forward: Addressing Reconstruction Challenges that Face Africa and South Africa Today', University of South Africa [Online]. </li>
+      <li> Hancock, B. (2018) 'Marcus Garvey's The Black Star Line: Hopes, Dreams, and the S.S. Yarmouth', Journal of Caribbean History, 52(1), pp. 68-104. doi: 10.1353/jch.2018.0002.</li>
+      <li>Lone, S.A., Sharma, M. and Lone, G.A. (2023) 'A study on the diasporic consciousness in contemporary of Rohinton Mistry novels', IJARIIE, 9(1), pp. 735-739. ISSN(O)-2395-4396. </li>
+      <li>Miano, L. (2015) Sacrifices [Play].  </li>
+      <li>Miller, J. (2017) 'Remapping the Memory of Slavery: Leonora Miano's Theatrical Dream, Red in blue trilogie', in Transatlantic Memories of Slavery, pp. 165-182. doi: 10.1007/978-3-319-50577-0_9. </li>
+    <li> Mishra, P.K. (2020) 'Formation of Diasporic Consciousness and Ideology', International Journal of English Research, 6(5), pp. 23-25. </li>
+    <li>Nazir, S. and Sher, M. (2023) 'Diasporic Consciousness: Family, History, Identity, and Language in Selected Poems by Sujata Bhatt', City University Research Journal of Literature and Linguistics, 3(1), pp. 1-13. </li>
+    <li> Newland, K. and Patrick, E. (2004) Beyond Remittances: The Role of Diaspora in Poverty Reduction in their Countries of Origin, A Scoping Study. Washington, DC: Migration Policy Institute for the Department of International Development.</li>
+    <li> Roberts, T. (2022) 'Cultural Resistance in the African Diaspora: A Historical and Contemporary Analysis of Land-Based Community Care', CMC Senior Theses. Claremont McKenna College, Claremont, pp. 1-56.</li>
+    <li> Seagull Books (2025) 'Julien Delmaire', Seagull Books [Online]. </li>
+    
+    
+    </ul>
+  </div>
+
+  <div class="next-blog-container">
+    <a href="Writing 2.html" class="next-blog-btn">Next Writing</a>
+  </div>
+
+  <footer class="footer">
     <div class="footer-container">
       <div class="footer-column">
         <h2>Contact</h2>
@@ -101,4 +114,3 @@
 
 </body>
 </html>
-
