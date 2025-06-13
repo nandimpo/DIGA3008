@@ -9,15 +9,17 @@
   <link rel="stylesheet" href="../CSS/Main.css" />
   <link rel="stylesheet" href="../CSS/Design(home).css" />
 
+  <script src="https://kit.fontawesome.com/89fd46d92d.js" crossorigin="anonymous" defer></script>
   <script src="../JavaScript/Cursor.js" defer></script>
   <script src="../JavaScript/Card Entrance.js" defer></script>
   <script src="../JavaScript/Handwriting.js" defer></script>
-  <script src="https://kit.fontawesome.com/89fd46d92d.js" crossorigin="anonymous" defer></script>
 </head>
 <body>
 
+  <!-- Custom Cursor -->
   <div id="cursorPulse" class="cursor-pulse"></div>
 
+  <!-- Navigation -->
   <nav>
     <input type="checkbox" id="check" />
     <label for="check" class="burger-button"><i class="fa-solid fa-bars"></i></label>
@@ -29,49 +31,67 @@
       <li><a href="../Blogs/BlogsHome.html">Blogs</a></li>
       <li><a href="../Design/DesignHome.html" class="active">Design</a></li>
       <li>
-        <a href="https://www.linkedin.com/in/nandi-m-4aa89123b" target="https://www.linkedin.com/in/nandi-m-4aa89123b/" class="linkedin-icon">
+        <a href="https://www.linkedin.com/in/nandi-m-4aa89123b" target="_blank" class="linkedin-icon">
           <i class="fa-brands fa-linkedin"></i>
         </a>
       </li>
     </ul>
   </nav>
 
-  <div class="design-header">
-    <svg width="100%" height="150px" viewBox="0 0 600 150" xmlns="http://www.w3.org/2000/svg">
-      <text id="handwrittenPath" x="50%" y="100" text-anchor="middle">
-        DESIGN
-      </text>
-    </svg>
-
-    <p>
-      The goal of my website is for users to understand who I am as a designer. I would also like my website to be user friendly.
-      Therefore, it will be clear, understandable and accessible. I would like my website to be warm, welcoming and inviting.
+  <!-- Hero Section -->
+  <header class="design-header">
+    <h1 id="mainTitle" class="title-hidden">DESIGN</h1>
+    <p id="subTitle" class="title-hidden">
+      The goal of my website is for users to understand who I am as a designer. I would also like my website to be user-friendly.
+      Therefore, it will be clear, understandable, and accessible. I would like my website to be warm, welcoming, and inviting.
     </p>
-  </div>
+  </header>
 
-  <div class="design-container">
-    <div class="design-grid">
-      <a href="Wireframes.html" class="card design-box">Wireframes</a>
-      <a href="Designresearch.html" class="card design-box">Design Research</a>
-      <a href="DesignInspiration.html" class="card design-box">Design Inspiration</a>
-      <a href="Style Guides.html" class="card design-box">Style Guides</a>
-      <a href="Style process documentation.html" class="card design-box">Style Process Documentation</a>
-      <a href="Documentation of your IxD process.html" class="card design-box">Documentation of my IxD Process</a>
-    </div>
+  <!-- Main Content -->
+  <main class="design-container">
+    <!-- Grid Section -->
+    <section class="design-grid">
+      <a href="Wireframes.html" class="card design-box">
+        <i class="fa-solid fa-pencil-ruler"></i>
+        Wireframes
+      </a>
+      <a href="Designresearch.html" class="card design-box">
+        <i class="fa-solid fa-chart-line"></i>
+        Design Research
+      </a>
+      <a href="DesignInspiration.html" class="card design-box">
+        <i class="fa-solid fa-lightbulb"></i>
+        Design Inspiration
+      </a>
+      <a href="Style Guides.html" class="card design-box">
+        <i class="fa-solid fa-palette"></i>
+        Style Guides
+      </a>
+      <a href="Style process documentation.html" class="card design-box">
+        <i class="fa-solid fa-file-alt"></i>
+        Style Process Documentation
+      </a>
+      <a href="Documentation of your IxD process.html" class="card design-box">
+        <i class="fa-solid fa-diagram-project"></i>
+        IxD Process Documentation
+      </a>
+    </section>
 
-    <div class="featured-work">
+    <!-- Sidebar: Featured Work -->
+    <aside class="featured-work">
       <h3>Featured Work</h3>
       <ul>
-        <li>Wireframes: Initial sketches and structural layouts</li>
-        <li>Design Research: Market analysis and user insights</li>
-        <li>Design Inspiration: Sources that influenced my creative direction</li>
-        <li>Style Guides: Color palettes, typography, and visual elements</li>
-        <li>Process Documentation: Step-by-step development methodology</li>
-        <li>IxD Documentation: Interaction design decisions and implementation</li>
+        <li><i class="fa-solid fa-pencil-ruler"></i> <strong>Wireframes:</strong> Initial sketches and structural layouts</li>
+        <li><i class="fa-solid fa-chart-line"></i> <strong>Design Research:</strong> Market analysis and user insights</li>
+        <li><i class="fa-solid fa-lightbulb"></i> <strong>Design Inspiration:</strong> Sources that influenced my creative direction</li>
+        <li><i class="fa-solid fa-palette"></i> <strong>Style Guides:</strong> Color palettes, typography, and visual elements</li>
+        <li><i class="fa-solid fa-file-alt"></i> <strong>Process Documentation:</strong> Step-by-step development methodology</li>
+        <li><i class="fa-solid fa-diagram-project"></i> <strong>IxD Documentation:</strong> Interaction design decisions and implementation</li>
       </ul>
-    </div>
-  </div>
+    </aside>
+  </main>
 
+  <!-- Footer -->
   <footer class="footer">
     <div class="footer-container">
       <div class="footer-column">
@@ -84,7 +104,7 @@
         <h2>Social</h2>
         <hr />
         <div class="social-icons">
-          <a href="https://www.linkedin.com/in/nandi-m-4aa89123b" target="https://www.linkedin.com/in/nandi-m-4aa89123b/"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="https://www.linkedin.com/in/nandi-m-4aa89123b" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
         </div>
       </div>
     </div>

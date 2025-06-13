@@ -1,78 +1,104 @@
 /* ===== DESIGN PAGE SPECIFIC STYLES ===== */
-/* Only include styles here that are unique to the design page */
 
-/* SVG Text Animation - Unique to design page */
-.design-header svg text {
-  font-family: 'heading font';
-  font-size: 80px;
-  fill: var(--heading-color);
-  stroke: var(--soft-yellow);
-  stroke-width: 1.2;
-  stroke-dasharray: 1000;
-  stroke-dashoffset: 1000;
-  animation: none;
-  opacity: 0;
+/* Design Header Title and Subtitle */
+.design-header {
+  text-align: center;
+  padding: 4rem 1rem 2rem;
 }
 
-@keyframes draw {
-  to {
-    stroke-dashoffset: 0;
-    opacity: 1;
-  }
+.design-header h1 {
+  font-size: 4rem;
+  font-family: var(--heading-font);
+  color: var(--heading-color);
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-/* Design Container Layout - Unique grid layout for design page */
+.design-header p {
+  font-size: 1.25rem;
+  color: var(--heading-color);
+  max-width: 800px;
+  margin: 0 auto;
+  font-family: var(--body-font);
+  line-height: 1.6;
+}
+
+/* Design Container Layout */
 .design-container {
   display: grid;
   grid-template-columns: 2fr 1fr;
-  gap: 20px;
+  gap: 30px;
   max-width: 1200px;
-  margin: 40px auto;
-  padding: 0 20px;
+  margin: 0 auto;
+  padding: 2rem 1rem 4rem;
 }
 
-/* Design Grid - Specific to design page layout */
+/* Design Grid for Cards */
 .design-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
 }
 
-/* Design Box Specific Sizing - Different from standard cards */
 .design-box {
-  height: 150px;
+  height: 160px;
+  background-color: var(--section-background);
+  border-radius: 12px;
+  border: 2px solid var(--border-color);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05);
   display: flex;
-  align-items: center;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
   text-decoration: none;
+  color: var(--text-color);
+  font-size: 1.1rem;
+  font-family: var(--body-font);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
 }
 
-/* Featured Work Sidebar - Unique to design page */
+.design-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+  border-color: var(--accent-color);
+}
+
+.design-box i {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: var(--accent-color);
+}
+
+/* Featured Work Sidebar */
 .featured-work {
   background-color: var(--section-background);
-  padding: 20px;
-  border-radius: 10px;
+  padding: 24px 20px;
+  border-radius: 12px;
   height: 100%;
   border: 2px solid var(--border-color);
+  font-family: var(--body-font);
 }
 
 .featured-work h3 {
   text-align: center;
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   color: var(--card-heading-color);
-  margin-bottom: 20px;
+  margin-bottom: 1.25rem;
+  font-family: var(--heading-font);
 }
 
 .featured-work ul {
-  padding-left: 20px;
+  padding-left: 1.25rem;
   color: var(--text-color);
+  line-height: 1.6;
 }
 
 .featured-work li {
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 }
 
-/* Design Page Responsive Styles */
+/* Responsive Adjustments */
 @media (max-width: 900px) {
   .design-container {
     grid-template-columns: 1fr;
@@ -83,24 +109,33 @@
   }
 
   .featured-work {
-    margin-top: 20px;
+    margin-top: 30px;
   }
 
-  .design-header svg text {
-    font-size: 50px;
+  .design-header h1 {
+    font-size: 3rem;
+  }
+
+  .design-header p {
+    font-size: 1.1rem;
   }
 }
 
 @media (max-width: 600px) {
-  .design-header svg text {
-    font-size: 36px;
+  .design-header h1 {
+    font-size: 2.25rem;
   }
 
   .design-box {
-    height: 130px;
+    height: 140px;
+    font-size: 1rem;
+  }
+
+  .design-box i {
+    font-size: 1.5rem;
   }
 
   .featured-work h3 {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
   }
 }
