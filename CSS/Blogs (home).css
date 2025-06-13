@@ -1,34 +1,50 @@
+/* === BLOGS HEADER === */
+.blogs-header {
+  text-align: center;
+  padding: 4rem 1rem 2rem;
+}
 
+.blogs-header h1 {
+  font-size: 4rem;
+  font-family: var(--heading-font);
+  color: var(--heading-color);
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  text-transform: uppercase;
+}
+
+.blogs-header p {
+  font-size: 1.25rem;
+  color: var(--heading-color);
+  max-width: 800px;
+  margin: 0 auto;
+  font-family: var(--body-font);
+  line-height: 1.6;
+}
+
+/* === BLOGS GRID === */
 .blog-container {
   max-width: 75rem;
   margin: 0 auto;
-  padding: 0.625rem 1.25rem;
-  margin-bottom: 3.75rem;
-}
-
-.blog-header {
-  text-align: center;
-  margin-top: -1.25rem;
-  margin-bottom: 0.9375rem;
+  padding: 0.625rem 1.25rem 3.75rem;
 }
 
 .blog-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(18.75rem, 1fr));
   gap: 1.25rem;
-  margin-top: 1rem;
-  padding-bottom: 2.5rem;
 }
 
 .blog-post {
   position: relative;
   border-radius: var(--border-radius);
   overflow: hidden;
-  background-color: var( Ebebe);
+  background-color: var(--section-background);
   box-shadow: 0 0 0.9375rem #187040;
   height: 20rem;
   display: flex;
   flex-direction: column;
+  transition: transform 0.3s ease;
 }
 
 .blog-post:hover {
@@ -75,4 +91,25 @@
   font-size: 0.875rem;
   border: none;
   cursor: pointer;
+}
+
+/* === Responsive Typography === */
+@media (max-width: 900px) {
+  .blogs-header h1 {
+    font-size: 3rem;
+  }
+
+  .blogs-header p {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .blogs-header h1 {
+    font-size: 2.25rem;
+  }
+
+  .blog-post-button {
+    font-size: 0.8rem;
+  }
 }
